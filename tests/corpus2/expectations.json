@@ -1,0 +1,6729 @@
+[
+ {
+  "file": "10-apache-access.log",
+  "line": 1,
+  "text": "www.fakecorp.org:443",
+  "cat": "D",
+  "note": "vhost = organization domain: keep or alias (policy)"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 1,
+  "text": "151.101.1.69",
+  "cat": "R",
+  "note": "public IP at start of line"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 2,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host (vhost and referer)"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 2,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "workstation private IP"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 2,
+  "text": " lea.moreau [",
+  "cat": "R",
+  "note": "authenticated user (%u field)"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 2,
+  "text": "lea.moreau%40fakecorp.org",
+  "cat": "R",
+  "note": "email encoded %40 in the query"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 2,
+  "text": "id=4412",
+  "cat": "K",
+  "note": "numeric record id: not personal data by itself"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 2,
+  "text": "lang=fr",
+  "cat": "K",
+  "note": "technical parameter"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 3,
+  "text": " melamrani -",
+  "cat": "R",
+  "note": "ident field (RFC 1413): rare but real, it is a username"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 3,
+  "text": "/static/css/main.css",
+  "cat": "K",
+  "note": "static resource"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 4,
+  "text": "::ffff:93.184.216.34",
+  "cat": "R",
+  "note": "IPv4 mapped in IPv6"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 5,
+  "text": "93.184.216.34",
+  "cat": "R",
+  "note": "same client as the previous line in IPv4 form"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 6,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 6,
+  "text": "+http://www.google.com/bot.html",
+  "cat": "K",
+  "note": "public bot URL: not personal data"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 7,
+  "text": "::1",
+  "cat": "K",
+  "note": "IPv6 loopback"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 8,
+  "text": "{{sk_test}}4eC39HqLyjWDarjtT1zdp7dc",
+  "cat": "S",
+  "note": "Stripe API key in the query"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 8,
+  "text": "limit=10",
+  "cat": "K",
+  "note": "pagination parameter"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 9,
+  "text": "A1B2C3D4E5F60718293A4B5C6D7E8F90",
+  "cat": "S",
+  "note": "session id in the path (jsessionid): allows session replay"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 9,
+  "text": "next=%2Fcompte",
+  "cat": "K",
+  "note": "redirect path"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 10,
+  "text": "4%2F0AX4XfWhZ9kQ3mN7pR1sT5uV",
+  "cat": "S",
+  "note": "OAuth authorization code"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 10,
+  "text": "state=xyz987",
+  "cat": "K",
+  "note": "state parameter (anti-CSRF): short technical value"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 11,
+  "text": "~sobrien",
+  "cat": "R",
+  "note": "a user's home directory in the URL"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 12,
+  "text": "jb.delafontaine",
+  "cat": "R",
+  "note": "user id in the path"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 13,
+  "text": "Siobh%C3%A1n+O%27Brien",
+  "cat": "R",
+  "note": "name in a search (URL-encoded) (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 14,
+  "text": "@angular/core",
+  "cat": "K",
+  "note": "npm package: looks like an @handle but is not one"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 15,
+  "text": "logo@2x.png",
+  "cat": "K",
+  "note": "image resolution suffix: not an email"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 16,
+  "text": "v1.2.3.4",
+  "cat": "K",
+  "note": "version in the path: looks like an IP"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 17,
+  "text": "\"140.82.112.3, 10.30.4.5, 10.30.4.6\"",
+  "cat": "R",
+  "note": "X-Forwarded-For: one public IP and two private"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 17,
+  "text": "rt=0.012",
+  "cat": "K",
+  "note": "query duration"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 17,
+  "text": "uct=\"0.000\"",
+  "cat": "K",
+  "note": "upstream duration"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 18,
+  "text": "\\x16\\x03\\x01\\x02\\x00\\x01\\x00\\x01\\xFC\\x03\\x03",
+  "cat": "K",
+  "note": "start of a TLS handshake sent on the HTTP port, as-is in the log"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 19,
+  "text": "hugo.lambert@example.net",
+  "cat": "R",
+  "note": "email in the referer"
+ },
+ {
+  "file": "10-apache-access.log",
+  "line": 19,
+  "text": "nom=Lambert&prenom=Hugo",
+  "cat": "R",
+  "note": "first and last name in explicitly named parameters"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 1,
+  "text": "AH00094",
+  "cat": "K",
+  "note": "Apache message code"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 2,
+  "text": "151.101.1.69:51234",
+  "cat": "R",
+  "note": "client IP:port"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 2,
+  "text": "/var/www/html/.htpasswd",
+  "cat": "K",
+  "note": "system path"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 3,
+  "text": "10.30.4.5",
+  "cat": "R",
+  "note": "application private IP"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 3,
+  "text": "91.198.174.192:44012",
+  "cat": "R",
+  "note": "client"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 3,
+  "text": "'app_crm'",
+  "cat": "D",
+  "note": "application service account: keep (it explains the error) or alias"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 3,
+  "text": "(using password: YES)",
+  "cat": "K",
+  "note": "fixed text: contains no password"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 4,
+  "text": "'lmoreau'",
+  "cat": "R",
+  "note": "username in single quotes in a SQL message"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 4,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 5,
+  "text": "S3cr3t-Pa55!",
+  "cat": "S",
+  "note": "password as argument in a call trace"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 5,
+  "text": "mysql:host=db-p...",
+  "cat": "K",
+  "note": "truncated by PHP: not a complete value"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 6,
+  "text": "/home/lmoreau/public_html",
+  "cat": "R",
+  "note": "home directory"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 7,
+  "text": "~sobrien",
+  "cat": "R",
+  "note": "home directory in the URL"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 7,
+  "text": "/../../etc/passwd",
+  "cat": "K",
+  "note": "traversal payload: technical content"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 8,
+  "text": "Undefined index: email",
+  "cat": "K",
+  "note": "word \"email\" with no value"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 9,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "SMTP account email"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 9,
+  "text": "smtp.fakecorp.org",
+  "cat": "D",
+  "note": "organization public host"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 10,
+  "text": "camille.petit@example.com",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 10,
+  "text": "Camille Petit",
+  "cat": "R",
+  "note": "display name before the email"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 11,
+  "text": "' OR 1=1--",
+  "cat": "K",
+  "note": "SQLi payload: attack content to keep"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 11,
+  "text": "ZNr7vH8AAAEAAFAbQ9EAAAAA",
+  "cat": "K",
+  "note": "unique_id ModSecurity"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 12,
+  "text": "104.16.132.229:40404",
+  "cat": "R",
+  "note": "client"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 12,
+  "text": "10.30.1.20",
+  "cat": "R",
+  "note": "server private IP"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 13,
+  "text": "line 1337",
+  "cat": "K",
+  "note": "line number"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 14,
+  "text": "0123456789abcdef0123456789abcdef",
+  "cat": "S",
+  "note": "PHP session id"
+ },
+ {
+  "file": "11-apache-error-php.log",
+  "line": 14,
+  "text": "/var/lib/php/sessions",
+  "cat": "K",
+  "note": "system path"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 1,
+  "text": "Microsoft Internet Information Services 10.0",
+  "cat": "K",
+  "note": "header"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 4,
+  "text": "#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip",
+  "cat": "K",
+  "note": "header line: must stay intact, it describes the columns"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 5,
+  "text": "10.30.1.20",
+  "cat": "R",
+  "note": "server private IP"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 5,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "client"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 5,
+  "text": " 443 - ",
+  "cat": "K",
+  "note": "the dash (empty username) must remain a dash"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 6,
+  "text": "https://mail.fakecorp.org/owa/auth/logon.aspx",
+  "cat": "D",
+  "note": "referer on the organization domain"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 7,
+  "text": "lea.moreau%40fakecorp.org",
+  "cat": "R",
+  "note": "encoded email"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 7,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "cleartext password in the query (misconfigured OWA)"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 7,
+  "text": "destination=%2fowa",
+  "cat": "K",
+  "note": "technical parameter"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 8,
+  "text": "FAKECORP\\lea.moreau",
+  "cat": "R",
+  "note": "DOMAIN\\user account"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 8,
+  "text": "MacOutlook/16.78.0.230",
+  "cat": "K",
+  "note": "mail client"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 9,
+  "text": "m.elamrani@fakecorp.org",
+  "cat": "R",
+  "note": "UPN in the cs-username field"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 9,
+  "text": "2148074254",
+  "cat": "K",
+  "note": "Win32 code: a 10-digit number that is not a phone"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 10,
+  "text": "svc_backup",
+  "cat": "D",
+  "note": "service account: keep or alias"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 11,
+  "text": "camille.petit%40example.com",
+  "cat": "R",
+  "note": "encoded email"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 11,
+  "text": "0612345678",
+  "cat": "R",
+  "note": "FR phone without separator in the query"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 11,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 12,
+  "text": "sobrien",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 12,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 12,
+  "text": "Siobhan_OBrien",
+  "cat": "R",
+  "note": "name in a filename (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 13,
+  "text": "127.0.0.1",
+  "cat": "K",
+  "note": "loopback"
+ },
+ {
+  "file": "12-iis-w3c.log",
+  "line": 14,
+  "text": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "cat": "S",
+  "note": "JWT in the query"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 7,
+  "text": "id.orig_h",
+  "cat": "K",
+  "note": "column header"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 9,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "source private IP"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 9,
+  "text": "140.82.112.3",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 9,
+  "text": "CYk4kQ3r5vL2mHqEj9",
+  "cat": "K",
+  "note": "Zeek connection uid"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 9,
+  "text": "github.com",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 10,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 10,
+  "text": "(empty)",
+  "cat": "K",
+  "note": "empty Zeek value"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 11,
+  "text": "lea.moreau",
+  "cat": "R",
+  "note": "HTTP Basic username extracted by Zeek"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 11,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "HTTP Basic password extracted by Zeek"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 11,
+  "text": "FpL3mA1b2C3d4E5f6",
+  "cat": "K",
+  "note": "Zeek file id"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 12,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "email in the URI"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 12,
+  "text": "185.199.108.153",
+  "cat": "R",
+  "note": "public IP (and identical HTTP host)"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 13,
+  "text": "{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ",
+  "cat": "S",
+  "note": "GitHub token in the URI"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 13,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "13-zeek-http.log",
+  "line": 13,
+  "text": "CV_Siobhan_OBrien",
+  "cat": "R",
+  "note": "name in a filename (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 1,
+  "text": "#fields",
+  "cat": "K",
+  "note": "header"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 2,
+  "text": "lmoreau-pc.fakecorp.local",
+  "cat": "R",
+  "note": "hostname that contains a user identifier"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 2,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "private address (source and reply)"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 3,
+  "text": "github.com",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 3,
+  "text": "140.82.112.3",
+  "cat": "R",
+  "note": "reply public IP"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 4,
+  "text": "srv-dc01.fakecorp.local",
+  "cat": "R",
+  "note": "domain controller"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 4,
+  "text": "_ldap._tcp.dc._msdcs",
+  "cat": "K",
+  "note": "standard SRV record"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 5,
+  "text": "wpad.fakecorp.local",
+  "cat": "R",
+  "note": "internal name"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 5,
+  "text": "NXDOMAIN",
+  "cat": "K",
+  "note": "response code"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 6,
+  "text": "mehdi-el-amrani-macbook.local",
+  "cat": "R",
+  "note": "mDNS hostname with first and last name"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 7,
+  "text": "dGhpcyBpcyBleGZpbA.data.evil-example.test",
+  "cat": "K",
+  "note": "base64 subdomain: DNS exfiltration indicator, keep"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 8,
+  "text": "ocsp.digicert.com",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "14-zeek-dns.log",
+  "line": 8,
+  "text": "13.107.42.14",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 1,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "source public IP"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 1,
+  "text": "10.30.1.20",
+  "cat": "R",
+  "note": "target private IP"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 1,
+  "text": "\"flow_id\":1769513242871650",
+  "cat": "K",
+  "note": "flow_id: 16-digit integer, must be neither rounded nor replaced"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 1,
+  "text": "1:Y5OkI2SxzLq6Dpm8dVBYcmY+3Vs=",
+  "cat": "K",
+  "note": "community_id: flow hash, useful for correlation"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 1,
+  "text": "\"signature_id\":2001219",
+  "cat": "K",
+  "note": "rule id"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 1,
+  "text": "ET SCAN Potential SSH Scan",
+  "cat": "K",
+  "note": "rule text"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 2,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 2,
+  "text": "github.com",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 2,
+  "text": "\"status\":200",
+  "cat": "K",
+  "note": "numeric HTTP status: must remain a number"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 2,
+  "text": "\"length\":123456",
+  "cat": "K",
+  "note": "size"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 3,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 3,
+  "text": "user=lea.moreau",
+  "cat": "R",
+  "note": "identifier in the URL"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 3,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "password in the URL"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 4,
+  "text": "mehdi-el-amrani-macbook.local",
+  "cat": "R",
+  "note": "hostname with first and last name"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 4,
+  "text": "\"id\":4242",
+  "cat": "K",
+  "note": "DNS id"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 5,
+  "text": "10.30.4.52",
+  "cat": "R",
+  "note": "private IP in the DNS reply (rdata)"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 5,
+  "text": "\"ttl\":120",
+  "cat": "K",
+  "note": "lifetime"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "104.16.132.229",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "CN=mail.fakecorp.org",
+  "cat": "D",
+  "note": "organization domain name in the certificate"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "e7d705a3286e19ea42f587b344ee6865",
+  "cat": "K",
+  "note": "JA3 fingerprint: TLS client hash, useful for detection"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "04:A1:B2:C3:D4:E5:F6:07:18:29",
+  "cat": "K",
+  "note": "certificate serial number: colon-separated byte sequence that must not be taken for a MAC or IPv6"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "\"version\":\"TLS 1.3\"",
+  "cat": "K",
+  "note": "version"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "Let's Encrypt",
+  "cat": "K",
+  "note": "public certificate authority, not a person"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 6,
+  "text": "CN=R3",
+  "cat": "K",
+  "note": "name of a public intermediate CA"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 7,
+  "text": "\"user\":\"lea.moreau\"",
+  "cat": "R",
+  "note": "NTLM account"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 7,
+  "text": "\"host\":\"PC-LMOREAU\"",
+  "cat": "R",
+  "note": "workstation name"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 7,
+  "text": "srv-files01",
+  "cat": "R",
+  "note": "file server in a UNC path"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 7,
+  "text": "STATUS_SUCCESS",
+  "cat": "K",
+  "note": "SMB status"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 7,
+  "text": "\"session_id\":4398046511121",
+  "cat": "K",
+  "note": "SMB session id (13-digit integer)"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 7,
+  "text": "bulletins_Moreau_Lea",
+  "cat": "R",
+  "note": "name in a filename (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 8,
+  "text": "aa:bb:cc:11:22:33",
+  "cat": "R",
+  "note": "MAC address"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 8,
+  "text": "\"hostname\":\"PC-LMOREAU\"",
+  "cat": "R",
+  "note": "workstation name"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 8,
+  "text": "\"lease_time\":86400",
+  "cat": "K",
+  "note": "lease duration"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 9,
+  "text": "lea.moreau",
+  "cat": "R",
+  "note": "username in the path"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 9,
+  "text": "d41d8cd98f00b204e9800998ecf8427e",
+  "cat": "K",
+  "note": "MD5"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 9,
+  "text": "\"gaps\":false",
+  "cat": "K",
+  "note": "boolean"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 9,
+  "text": "\"size\":45312",
+  "cat": "K",
+  "note": "size"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 10,
+  "text": "185.199.108.153",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 10,
+  "text": "OpenSSH_9.6",
+  "cat": "K",
+  "note": "software version"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 10,
+  "text": "OpenSSH_8.9p1",
+  "cat": "K",
+  "note": "software version"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 11,
+  "text": "{{AKIA}}IOSFODNN7EXAMPLE",
+  "cat": "S",
+  "note": "AWS access key in a rule message"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 11,
+  "text": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  "cat": "S",
+  "note": "AWS secret key in the payload"
+ },
+ {
+  "file": "15-suricata-eve.ndjson",
+  "line": 11,
+  "text": "\"severity\":1",
+  "cat": "K",
+  "note": "severity (number)"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 1,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "client private IP"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 1,
+  "text": " lea.moreau ",
+  "cat": "R",
+  "note": "authenticated user"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 1,
+  "text": "140.82.112.3",
+  "cat": "R",
+  "note": "destination public IP"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 1,
+  "text": "1697270400.123",
+  "cat": "K",
+  "note": "epoch timestamp with milliseconds: not a phone number nor an IP"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 1,
+  "text": "TCP_MISS/200",
+  "cat": "K",
+  "note": "cache result"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 2,
+  "text": "www.google.com:443",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 2,
+  "text": " - HIER",
+  "cat": "K",
+  "note": "empty user (dash)"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 2,
+  "text": "216.58.214.174",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 3,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "password in the URL"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 3,
+  "text": "http://lea.moreau:",
+  "cat": "R",
+  "note": "identifier in the URL (userinfo)"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 3,
+  "text": "m.elamrani",
+  "cat": "R",
+  "note": "user from the dedicated field"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 4,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "IPv6 client"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 4,
+  "text": "error:invalid-request",
+  "cat": "K",
+  "note": "error pseudo-URL"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 4,
+  "text": "HIER_NONE/-",
+  "cat": "K",
+  "note": "empty value"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 5,
+  "text": "hugo.lambert%40example.net",
+  "cat": "R",
+  "note": "encoded email"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 5,
+  "text": "FAKECORP%5Csobrien",
+  "cat": "R",
+  "note": "DOMAIN\\user encoded (%5C)"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 5,
+  "text": "utm_source=newsletter",
+  "cat": "K",
+  "note": "campaign parameter"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 6,
+  "text": "pc-lmoreau.fakecorp.local",
+  "cat": "R",
+  "note": "client logged by DNS name"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 6,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 6,
+  "text": "~sobrien",
+  "cat": "R",
+  "note": "home directory"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 7,
+  "text": "{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ",
+  "cat": "S",
+  "note": "token in the URL"
+ },
+ {
+  "file": "16-squid-access.log",
+  "line": 7,
+  "text": "TCP_MISS_ABORTED/000",
+  "cat": "K",
+  "note": "cache result"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 1,
+  "text": "\"Date\",\"Time\",\"User\",\"ClientIP\",\"Method\",\"URL\",\"Category\",\"Bytes\",\"Action\"",
+  "cat": "K",
+  "note": "header line: column names must not be modified"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 2,
+  "text": "\"lea.moreau@fakecorp.org\"",
+  "cat": "R",
+  "note": "user (email) in the User column"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 2,
+  "text": "\"10.30.4.17\"",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 2,
+  "text": "\"12345\"",
+  "cat": "K",
+  "note": "octets"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 3,
+  "text": "\"-\"",
+  "cat": "K",
+  "note": "empty user"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 3,
+  "text": "0612345678",
+  "cat": "R",
+  "note": "phone in the URL (the comma in the field must not break the CSV)"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 3,
+  "text": "q=dupont,jean",
+  "cat": "R",
+  "note": "name in a search (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 4,
+  "text": "\"FAKECORP\\sobrien\"",
+  "cat": "R",
+  "note": "DOMAIN\\user"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 4,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "recipient email"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 4,
+  "text": "Facture \"\"2026-0451\"\"",
+  "cat": "K",
+  "note": "doubled CSV quotes inside the field: escaping must not be broken"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 5,
+  "text": "\"\",",
+  "cat": "K",
+  "note": "empty quoted field"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 5,
+  "text": "cloud.example.net:443",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 6,
+  "text": "\"jb.delafontaine@fakecorp.org\"",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 6,
+  "text": "\"2606:4700:4700::1111\"",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 7,
+  "text": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "cat": "S",
+  "note": "JWT in the URL"
+ },
+ {
+  "file": "17-proxy-export.csv",
+  "line": 7,
+  "text": "\"m.elamrani@fakecorp.org\"",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 1,
+  "text": "utilisateur;nom_complet;ip_publique;ip_attribuee;appareil;mac;debut",
+  "cat": "K",
+  "note": "header"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "lea.moreau;",
+  "cat": "R",
+  "note": "login id"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "Léa Moreau",
+  "cat": "R",
+  "note": "full name"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "10.30.50.12",
+  "cat": "R",
+  "note": "assigned private IP"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "aa:bb:cc:11:22:33",
+  "cat": "R",
+  "note": "MAC address"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "48,8566;2,3522",
+  "cat": "R",
+  "note": "precise GPS coordinates (decimal comma)"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "1048576;524288",
+  "cat": "K",
+  "note": "octets"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "5.2.1.1234",
+  "cat": "K",
+  "note": "VPN client version: looks like an IP"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 2,
+  "text": "FR",
+  "cat": "K",
+  "note": "country code"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 3,
+  "text": "Mehdi El Amrani",
+  "cat": "R",
+  "note": "full name"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 3,
+  "text": "iPhone de Mehdi",
+  "cat": "R",
+  "note": "device name that contains a first name"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 3,
+  "text": "33,5731;-7,5898",
+  "cat": "R",
+  "note": "coordinates with negative value"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 4,
+  "text": "Jean-Baptiste de La Fontaine",
+  "cat": "R",
+  "note": "name with particle and hyphen"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 4,
+  "text": "Galaxy-S23-de-Jean-Baptiste",
+  "cat": "R",
+  "note": "device name with first name"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 4,
+  "text": ";;2026-10-14",
+  "cat": "K",
+  "note": "empty MAC field: separators must remain"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 4,
+  "text": ";;;;5.1.9.890",
+  "cat": "K",
+  "note": "series of empty fields"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 5,
+  "text": "ext_pbernard",
+  "cat": "R",
+  "note": "contractor account"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 5,
+  "text": "Paul Bernard (prestataire)",
+  "cat": "R",
+  "note": "full name with precision in parentheses"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 6,
+  "text": "Nguyễn Văn An",
+  "cat": "R",
+  "note": "Vietnamese name with diacritics"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 6,
+  "text": "nguyen.van.an",
+  "cat": "R",
+  "note": "identifier"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 6,
+  "text": "10,8231;106,6297",
+  "cat": "R",
+  "note": "coordinates"
+ },
+ {
+  "file": "18-vpn-sessions.csv",
+  "line": 7,
+  "text": "admin;Administrateur;",
+  "cat": "K",
+  "note": "generic admin account: keep"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "\"userName\":\"lea.moreau\"",
+  "cat": "R",
+  "note": "IAM username"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "user/lea.moreau",
+  "cat": "R",
+  "note": "same name in the ARN"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "source IP"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "\"eventVersion\":\"1.08\"",
+  "cat": "K",
+  "note": "format version: looks like a float, must remain a string"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "\"readOnly\":false",
+  "cat": "K",
+  "note": "boolean"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "\"MFAUsed\":\"Yes\"",
+  "cat": "K",
+  "note": "indicator"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "123456789012",
+  "cat": "D",
+  "note": "AWS account id: identifies the organization"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "{{AIDA}}IOSFODNN7EXAMPLE",
+  "cat": "D",
+  "note": "IAM user internal id"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 1,
+  "text": "eu-west-3",
+  "cat": "K",
+  "note": "region"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 2,
+  "text": "\"sourceIPAddress\":\"ec2.amazonaws.com\"",
+  "cat": "K",
+  "note": "the field contains an AWS service name instead of an IP: keep"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 2,
+  "text": "i-0123456789abcdef0",
+  "cat": "K",
+  "note": "instance id"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 2,
+  "text": "role/ec2-ssm",
+  "cat": "K",
+  "note": "role name"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 3,
+  "text": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  "cat": "S",
+  "note": "AWS secret key in the response"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 3,
+  "text": "{{AKIA}}IOSFODNN7EXAMPLE",
+  "cat": "S",
+  "note": "access key id"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 3,
+  "text": "jb.delafontaine",
+  "cat": "R",
+  "note": "user (several times)"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 3,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "source private IP"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 3,
+  "text": "\"status\":\"Active\"",
+  "cat": "K",
+  "note": "state"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 4,
+  "text": "\"sourceIPAddress\":\"AWS Internal\"",
+  "cat": "K",
+  "note": "symbolic value: not an IP"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 4,
+  "text": "\"readOnly\":true",
+  "cat": "K",
+  "note": "boolean"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 4,
+  "text": "fakecorp-hr-payroll",
+  "cat": "D",
+  "note": "bucket name that contains the organization name"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 4,
+  "text": "Moreau_Lea_10.pdf",
+  "cat": "R",
+  "note": "name in an S3 key (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 4,
+  "text": "\"principalId\":\"\"",
+  "cat": "K",
+  "note": "empty string: must stay empty"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 5,
+  "text": "sobrien",
+  "cat": "R",
+  "note": "user in a free-text error message"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 5,
+  "text": "jb.delafontaine",
+  "cat": "R",
+  "note": "other user in the same message"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 5,
+  "text": "\"errorCode\":\"AccessDenied\"",
+  "cat": "K",
+  "note": "error code"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 5,
+  "text": "is not authorized to perform: iam:CreateUser on resource:",
+  "cat": "K",
+  "note": "error message: the denied action is the useful information for the analyst"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 5,
+  "text": "because no identity-based policy allows the iam:CreateUser action",
+  "cat": "K",
+  "note": "end of error message (must not be swallowed)"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "\"value\":\"lea.moreau@fakecorp.org\"",
+  "cat": "R",
+  "note": "email in a key/value pair whose sibling key is \"Owner\""
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "\"value\":\"srv-lmoreau-test\"",
+  "cat": "R",
+  "note": "hostname that contains an identifier"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "\"value\":\"4412\"",
+  "cat": "K",
+  "note": "cost center"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "ip-10-30-2-15",
+  "cat": "R",
+  "note": "private DNS name that encodes the IP with hyphens"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "\"privateIpAddress\":\"10.30.2.15\"",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "\"ipAddress\":\"52.96.166.130\"",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 6,
+  "text": "t3.micro",
+  "cat": "K",
+  "note": "instance type"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 7,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 7,
+  "text": "\"userName\":\"HIDDEN_DUE_TO_SECURITY_REASONS\"",
+  "cat": "K",
+  "note": "AWS symbolic value"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 7,
+  "text": "\"arn\":\"\"",
+  "cat": "K",
+  "note": "empty string"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 8,
+  "text": ":lea.moreau",
+  "cat": "R",
+  "note": "session name after the principal id colon"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 8,
+  "text": "assumed-role/Admin/lea.moreau",
+  "cat": "R",
+  "note": "session name in the ARN"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 8,
+  "text": "\"userName\":\"Admin\"",
+  "cat": "K",
+  "note": "generic role name"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 8,
+  "text": "aws-cli/2.13.0 Python/3.11.4 Linux/6.18.44",
+  "cat": "K",
+  "note": "versions in a user-agent"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 8,
+  "text": "45.33.32.156",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 9,
+  "text": "Tmp-P@ss2026!",
+  "cat": "S",
+  "note": "password in a field named password"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 9,
+  "text": "\"passwordResetRequired\":true",
+  "cat": "K",
+  "note": "boolean"
+ },
+ {
+  "file": "19-cloudtrail.ndjson",
+  "line": 9,
+  "text": "\"userName\":\"jb.delafontaine\"",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 5,
+  "text": "\"userDisplayName\": \"Léa Moreau\"",
+  "cat": "R",
+  "note": "display name"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 6,
+  "text": "\"userPrincipalName\": \"lea.moreau@fakecorp.org\"",
+  "cat": "R",
+  "note": "UPN"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 7,
+  "text": "1d1f0000-0000-0000-0000-00000000000b",
+  "cat": "D",
+  "note": "user object id"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 9,
+  "text": "\"appDisplayName\": \"Microsoft Teams\"",
+  "cat": "K",
+  "note": "application"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 10,
+  "text": "\"ipAddress\": \"91.198.174.192\"",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 11,
+  "text": "\"clientAppUsed\": \"Browser\"",
+  "cat": "K",
+  "note": "client type"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 12,
+  "text": "1d1f0000-0000-0000-0000-00000000001f",
+  "cat": "K",
+  "note": "correlation id"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 14,
+  "text": "\"isInteractive\": true",
+  "cat": "K",
+  "note": "boolean"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 17,
+  "text": "\"errorCode\": 0",
+  "cat": "K",
+  "note": "zero error code"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 19,
+  "text": "\"additionalDetails\": null",
+  "cat": "K",
+  "note": "null must stay null"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 23,
+  "text": "\"displayName\": \"PC-LMOREAU\"",
+  "cat": "R",
+  "note": "device name"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 25,
+  "text": "\"browser\": \"Chrome 118.0.5993\"",
+  "cat": "K",
+  "note": "browser version"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 28,
+  "text": "\"city\": \"Lyon\"",
+  "cat": "D",
+  "note": "city"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 32,
+  "text": "\"latitude\": 45.764043",
+  "cat": "R",
+  "note": "latitude: number to keep as a number"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 33,
+  "text": "\"longitude\": 4.835659",
+  "cat": "R",
+  "note": "longitude"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 40,
+  "text": "\"userDisplayName\": \"Siobhán O'Brien\"",
+  "cat": "R",
+  "note": "name with apostrophe and accent"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 44,
+  "text": "\"ipAddress\": \"2606:4700:4700::1111\"",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 50,
+  "text": "\"errorCode\": 50126",
+  "cat": "K",
+  "note": "numeric error code"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 55,
+  "text": "\"deviceId\": \"\"",
+  "cat": "K",
+  "note": "empty string"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 60,
+  "text": "\"location\": null",
+  "cat": "K",
+  "note": "null must stay null"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 65,
+  "text": "Hugo Lambert",
+  "cat": "R",
+  "note": "guest display name"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 66,
+  "text": "hugo.lambert_example.net#EXT#@fakecorp.onmicrosoft.com",
+  "cat": "R",
+  "note": "guest UPN: the original email is encoded with _ and #EXT#"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 83,
+  "text": "\"state\": \"Île-de-France\"",
+  "cat": "D",
+  "note": "region"
+ },
+ {
+  "file": "20-azure-signin.json",
+  "line": 86,
+  "text": "\"latitude\": 48.8566",
+  "cat": "R",
+  "note": "latitude"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "PC-LMOREAU.fakecorp.local",
+  "cat": "R",
+  "note": "FQDN in <Computer>"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": ">PC-LMOREAU$<",
+  "cat": "R",
+  "note": "machine account = hostname + $"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": ">lea.moreau<",
+  "cat": "R",
+  "note": "user in a <Data> element"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": ">10.30.4.17<",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "<Data Name=\"LogonType\">3<",
+  "cat": "K",
+  "note": "session type"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": ">%%1842<",
+  "cat": "K",
+  "note": "Windows resource value"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "xmlns=\"http://schemas.microsoft.com/win/2004/08/events/event\"",
+  "cat": "K",
+  "note": "XML namespace: do not touch"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+  "cat": "K",
+  "note": "provider GUID"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "S-1-5-18",
+  "cat": "K",
+  "note": "SYSTEM account SID"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "SystemTime=\"2026-10-14T06:01:12.123456700Z\"",
+  "cat": "K",
+  "note": "timestamp"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 1,
+  "text": "S-1-5-21-3623811015-3361044348-30300820-1104",
+  "cat": "D",
+  "note": "domain SID + user RID: identifies the domain and the person"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 2,
+  "text": ">sobrien<",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 2,
+  "text": ">185.199.108.153<",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 2,
+  "text": "\"SubjectUserName\">-<",
+  "cat": "K",
+  "note": "empty value (dash)"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 2,
+  "text": "\"WorkstationName\">-<",
+  "cat": "K",
+  "note": "empty value"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 2,
+  "text": ">0xc000006d<",
+  "cat": "K",
+  "note": "status code"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 3,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "password in a command line (quotes as &quot; entities)"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 3,
+  "text": "srv-files01",
+  "cat": "R",
+  "note": "server in a UNC path"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 3,
+  "text": "FAKECORP\\lea.moreau",
+  "cat": "R",
+  "note": "DOMAIN\\user"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 3,
+  "text": "&amp;&amp; dir",
+  "cat": "K",
+  "note": "XML entities: transforming them would break the XML"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 3,
+  "text": "C:\\Windows\\System32\\net.exe",
+  "cat": "K",
+  "note": "system path"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 4,
+  "text": "Jean-Baptiste de La Fontaine",
+  "cat": "R",
+  "note": "full name with particle"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 4,
+  "text": "jb.delafontaine@fakecorp.org",
+  "cat": "R",
+  "note": "UPN"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 4,
+  "text": "homes\\jb.delafontaine",
+  "cat": "R",
+  "note": "personal folder"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 4,
+  "text": ">-<",
+  "cat": "K",
+  "note": "empty ProfilePath"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 5,
+  "text": "PC-ATTACKER",
+  "cat": "R",
+  "note": "name of the machine the lock came from (in the TargetDomainName field)"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 5,
+  "text": ">srv-dc01$<",
+  "cat": "R",
+  "note": "domain controller machine account"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 6,
+  "text": "::ffff:10.30.4.52",
+  "cat": "R",
+  "note": "private IPv4 mapped in IPv6"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 6,
+  "text": ">m.elamrani<",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 6,
+  "text": "\\\\*\\paie",
+  "cat": "D",
+  "note": "share name: may be sensitive"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 6,
+  "text": "\\??\\C:\\Shares\\Paie",
+  "cat": "K",
+  "note": "local path"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 7,
+  "text": "MICROSOFT_AUTHENTICATION_PACKAGE_V1_0",
+  "cat": "K",
+  "note": "package name"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 7,
+  "text": ">PC-LMOREAU<",
+  "cat": "R",
+  "note": "workstation"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "password in curl -u"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "curl -u lea.moreau:",
+  "cat": "R",
+  "note": "username before the password"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "SHA256=E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "cat": "K",
+  "note": "SHA-256"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "IMPHASH=0123456789ABCDEF0123456789ABCDEF",
+  "cat": "K",
+  "note": "imphash"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "10.0.19041.1",
+  "cat": "K",
+  "note": "file version: looks like an IP"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "{a1b2c3d4-0000-0000-0000-001122334455}",
+  "cat": "K",
+  "note": "process GUID"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 8,
+  "text": "Users\\lea.moreau\\AppData",
+  "cat": "R",
+  "note": "user profile in a path"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 9,
+  "text": "lmoreau-pc.fakecorp.local",
+  "cat": "R",
+  "note": "hostname"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 9,
+  "text": "::ffff:10.30.4.17;10.30.4.17;",
+  "cat": "R",
+  "note": "results: two writings of the same private IP separated by ;"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 10,
+  "text": "52.96.166.130",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 10,
+  "text": "ec2-52-96-166-130.eu-west-3.compute.amazonaws.com",
+  "cat": "R",
+  "note": "DNS name containing the IP already replaced elsewhere on the line: the IP is reread inside (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 11,
+  "text": "'Summer2026!'",
+  "cat": "S",
+  "note": "cleartext password in ConvertTo-SecureString"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 11,
+  "text": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "cat": "S",
+  "note": "JWT in an Authorization header"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 11,
+  "text": "FAKECORP\\lea.moreau",
+  "cat": "R",
+  "note": "account (in PSCredential: the class name itself should be kept)"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 11,
+  "text": "c7f9a0b1-2d3e-4f5a-8b6c-7d8e9f0a1b2c",
+  "cat": "K",
+  "note": "GUID"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 11,
+  "text": "New-Object PSCredential",
+  "cat": "K",
+  "note": "PowerShell command, not a person name"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 12,
+  "text": "S3cr3tRoot",
+  "cat": "S",
+  "note": "password glued to -p in a CDATA block"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 12,
+  "text": "db-prod-02.fakecorp.local",
+  "cat": "R",
+  "note": "database host"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 12,
+  "text": "<![CDATA[",
+  "cat": "K",
+  "note": "start of CDATA: XML markers must remain"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 12,
+  "text": "]]>",
+  "cat": "K",
+  "note": "end of CDATA"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 12,
+  "text": ">svc_backup<",
+  "cat": "D",
+  "note": "service account"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 13,
+  "text": "Kowalski-Dubois</Data>",
+  "cat": "R",
+  "note": "name written with a numeric entity (&#xEB; = ë)"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 13,
+  "text": "zoe.kowalski-dubois@fakecorp.org",
+  "cat": "R",
+  "note": "UPN"
+ },
+ {
+  "file": "21-windows-events-xml.log",
+  "line": 13,
+  "text": ">zkowalski<",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "CEF:0|Fakevendor|AuthGuard|2.1|100|Login failed|5|",
+  "cat": "K",
+  "note": "CEF header: |-separated fields including version 2.1"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "src"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "10.30.1.20",
+  "cat": "R",
+  "note": "private dst"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "suser=lea.moreau",
+  "cat": "R",
+  "note": "source user"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "duser=root",
+  "cat": "K",
+  "note": "generic account"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "shost=pc-lmoreau",
+  "cat": "R",
+  "note": "workstation name"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "srv-files01.fakecorp.local",
+  "cat": "R",
+  "note": "host"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "aa:bb:cc:11:22:33",
+  "cat": "R",
+  "note": "source MAC"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "00:16:3e:5a:7b:9c",
+  "cat": "R",
+  "note": "destination MAC"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "rt=1697270072000",
+  "cat": "K",
+  "note": "epoch timestamp in milliseconds"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "Léa Moreau",
+  "cat": "R",
+  "note": "name in a free-text message (value with spaces until the next key)"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "cs1=bad password",
+  "cat": "K",
+  "note": "spaced value of a custom field"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "cn1=3",
+  "cat": "K",
+  "note": "counter"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "from workstation",
+  "cat": "K",
+  "note": "\"workstation\" label: only the workstation name should be replaced"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 1,
+  "text": "cn1Label=attempts",
+  "cat": "K",
+  "note": "CEF label name, not a secret"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 2,
+  "text": "Winter2026!",
+  "cat": "S",
+  "note": "password (in the URL and in cs2 with escaped =)"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 2,
+  "text": "suser=sobrien",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 2,
+  "text": "C:\\\\Users\\\\sobrien",
+  "cat": "R",
+  "note": "profile path (doubled CEF backslashes)"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 2,
+  "text": "cs3=a\\|b",
+  "cat": "K",
+  "note": "escaped pipe: the escape must stay as-is"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 3,
+  "text": "m.elamrani@fakecorp.org",
+  "cat": "R",
+  "note": "user email"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 3,
+  "text": "d41d8cd98f00b204e9800998ecf8427e",
+  "cat": "K",
+  "note": "fingerprint"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 3,
+  "text": "fsize=45312",
+  "cat": "K",
+  "note": "size"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 3,
+  "text": "Siobhan_OBrien",
+  "cat": "R",
+  "note": "name in a filename (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 4,
+  "text": "4111 1111 1111 1111",
+  "cat": "R",
+  "note": "card number (valid Luhn) in a free message"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 4,
+  "text": "spt=51234",
+  "cat": "K",
+  "note": "source port"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 5,
+  "text": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "cat": "S",
+  "note": "JWT in a custom field"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 5,
+  "text": "Bearer ",
+  "cat": "K",
+  "note": "the word Bearer remains"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 6,
+  "text": "LEEF:2.0|Fakevendor|AuthGuard|2.1|LoginFail|^|",
+  "cat": "K",
+  "note": "LEEF header with declared ^ delimiter"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 6,
+  "text": "usrName=lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 6,
+  "text": "identSrc=10.30.4.17",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 6,
+  "text": "domain=FAKECORP",
+  "cat": "D",
+  "note": "NetBIOS domain"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 6,
+  "text": "resource=srv-files01",
+  "cat": "R",
+  "note": "server name"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 6,
+  "text": "devTime=Oct 14 2026 08:06:00",
+  "cat": "K",
+  "note": "space-separated readable date in a value"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 7,
+  "text": "48.8566,2.3522",
+  "cat": "R",
+  "note": "GPS coordinates in a custom field"
+ },
+ {
+  "file": "22-cef-leef.log",
+  "line": 7,
+  "text": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.88 Safari/537.36",
+  "cat": "K",
+  "note": "user-agent: keep entirely (versions like 118.0.5993.88 and 537.36 look like IPs)"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 1,
+  "text": "acct=\"sobrien\"",
+  "cat": "R",
+  "note": "account in the nested msg"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 1,
+  "text": "hostname=185.199.108.153 addr=185.199.108.153",
+  "cat": "R",
+  "note": "duplicate IP"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 1,
+  "text": "auid=4294967295",
+  "cat": "K",
+  "note": "auditd \"undefined\" value (2^32-1): not a phone"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 1,
+  "text": "ses=4294967295",
+  "cat": "K",
+  "note": "same"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 1,
+  "text": "audit(1697270072.123:456)",
+  "cat": "K",
+  "note": "timestamp and event serial number"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 1,
+  "text": "op=PAM:authentication",
+  "cat": "K",
+  "note": "operation type"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 2,
+  "text": "hostname=PC-LMOREAU",
+  "cat": "R",
+  "note": "workstation name"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 2,
+  "text": "addr=10.30.4.17",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 2,
+  "text": "id=1001",
+  "cat": "K",
+  "note": "numeric uid"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 2,
+  "text": "terminal=/dev/pts/0",
+  "cat": "K",
+  "note": "terminal"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 3,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "password in an EXECVE argument"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 3,
+  "text": "a2=\"lea.moreau:",
+  "cat": "R",
+  "note": "user before the password"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 3,
+  "text": "argc=4",
+  "cat": "K",
+  "note": "argument count"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 4,
+  "text": "6375726C202D75206C65612E6D6F726561753A53756D6D657232303236212068747470733A2F2F696E7472616E65742E66616B65636F72702E6C6F63616C2F617069",
+  "cat": "D",
+  "note": "command line hex-encoded by auditd: contains a password, but invisible without decoding"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 5,
+  "text": "arch=c000003e",
+  "cat": "K",
+  "note": "architecture"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 5,
+  "text": "syscall=59",
+  "cat": "K",
+  "note": "system call number"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 5,
+  "text": "key=\"priv_esc\"",
+  "cat": "K",
+  "note": "rule key"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 5,
+  "text": "a3=7ffc1234",
+  "cat": "K",
+  "note": "pointer"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 6,
+  "text": "/home/lea.moreau/",
+  "cat": "R",
+  "note": "home directory"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 6,
+  "text": "dev=08:01",
+  "cat": "K",
+  "note": "device number: looks like a time"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 6,
+  "text": "rdev=00:00",
+  "cat": "K",
+  "note": "same"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 6,
+  "text": "mode=0100600",
+  "cat": "K",
+  "note": "file mode"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 6,
+  "text": "inode=262344",
+  "cat": "K",
+  "note": "inode"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 7,
+  "text": "cwd=\"/home/lea.moreau\"",
+  "cat": "R",
+  "note": "current directory"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 7,
+  "text": "cmd=2F7573722F62696E2F636174202F6574632F736861646F77",
+  "cat": "K",
+  "note": "command \"/usr/bin/cat /etc/shadow\" in hexadecimal: nothing personal in it"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 8,
+  "text": " lea.moreau :",
+  "cat": "R",
+  "note": "user who runs sudo"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 8,
+  "text": "PWD=/home/lea.moreau",
+  "cat": "R",
+  "note": "current directory"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 8,
+  "text": "USER=root",
+  "cat": "K",
+  "note": "generic target account"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 8,
+  "text": "COMMAND=/usr/bin/cat /etc/shadow",
+  "cat": "K",
+  "note": "command, text with no personal data"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 8,
+  "text": "srv-web01",
+  "cat": "R",
+  "note": "hostname"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 9,
+  "text": "logname=lea.moreau",
+  "cat": "R",
+  "note": "login name"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 9,
+  "text": "ruser=lea.moreau",
+  "cat": "R",
+  "note": "remote user"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 9,
+  "text": "rhost=  user=",
+  "cat": "K",
+  "note": "empty rhost: the two spaces and the next key must remain"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 10,
+  "text": "(to root)",
+  "cat": "K",
+  "note": "target account"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 10,
+  "text": "lea.moreau on",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 11,
+  "text": "name=jb.delafontaine",
+  "cat": "R",
+  "note": "new account"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 11,
+  "text": "home=/home/jb.delafontaine",
+  "cat": "R",
+  "note": "home directory"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 11,
+  "text": "UID=1005",
+  "cat": "K",
+  "note": "numeric uid"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 11,
+  "text": "shell=/bin/bash",
+  "cat": "K",
+  "note": "shell"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 12,
+  "text": "changed for sobrien",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 12,
+  "text": "pam_unix(passwd:chauthtok)",
+  "cat": "K",
+  "note": "PAM module"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 13,
+  "text": "FOR lea.moreau,",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 13,
+  "text": "FROM tty1",
+  "cat": "K",
+  "note": "terminal"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 14,
+  "text": "for lea.moreau",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 14,
+  "text": "SHA256:q3XvK0lYk1m5P7nJbGf0eE3a1Jx4yq0Z8s0t5uH2vRk",
+  "cat": "K",
+  "note": "SSH key fingerprint: technical id to keep"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 15,
+  "text": "Invalid user admin",
+  "cat": "K",
+  "note": "generic account from the attack dictionary"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 15,
+  "text": "185.199.108.153",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 16,
+  "text": "of user lea.moreau.",
+  "cat": "R",
+  "note": "account followed by a period"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 17,
+  "text": "(lea.moreau) CMD",
+  "cat": "R",
+  "note": "account in parentheses"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 17,
+  "text": "/home/lea.moreau/backup.sh",
+  "cat": "R",
+  "note": "home path"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 17,
+  "text": "2>&1",
+  "cat": "K",
+  "note": "shell redirection"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 18,
+  "text": ":1.45",
+  "cat": "K",
+  "note": "D-Bus bus name: looks like a decimal number"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 18,
+  "text": "fr_FR.UTF-8",
+  "cat": "K",
+  "note": "locale"
+ },
+ {
+  "file": "23-linux-audit-auth.log",
+  "line": 18,
+  "text": "for unix-session:3",
+  "cat": "K",
+  "note": "polkit session id, not an account"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 1,
+  "text": "unknown[185.199.108.153]",
+  "cat": "R",
+  "note": "unknown client with IP in brackets"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 1,
+  "text": "mx1",
+  "cat": "R",
+  "note": "hostname"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 2,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "recipient"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 2,
+  "text": "spammer@evil-example.test",
+  "cat": "R",
+  "note": "sender"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 2,
+  "text": "554 5.7.1",
+  "cat": "K",
+  "note": "SMTP code"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 2,
+  "text": "proto=ESMTP",
+  "cat": "K",
+  "note": "protocol"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 2,
+  "text": "helo=<mail.evil-example.test>",
+  "cat": "D",
+  "note": "sender HELO name"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 3,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "sender"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 3,
+  "text": "4F2A1B2C3D",
+  "cat": "K",
+  "note": "queue id"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 3,
+  "text": "size=4521",
+  "cat": "K",
+  "note": "size"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 4,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "recipient"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 4,
+  "text": "[10.30.1.25]:25",
+  "cat": "R",
+  "note": "relay private IP"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 4,
+  "text": "delays=0.1/0.01/0.2/0.9",
+  "cat": "K",
+  "note": "delays: looks like an IP"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 4,
+  "text": "dsn=2.0.0",
+  "cat": "K",
+  "note": "DSN code"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 4,
+  "text": "7A8B9C0D1E",
+  "cat": "K",
+  "note": "queue id"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 5,
+  "text": "4F2A1B2C3D@mail.example.net",
+  "cat": "D",
+  "note": "message id that contains a sender hostname"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 6,
+  "text": "pc-lmoreau.fakecorp.local[10.30.4.17]",
+  "cat": "R",
+  "note": "client with name and IP"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 6,
+  "text": "sasl_username=lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "SASL account"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 6,
+  "text": "sasl_method=PLAIN",
+  "cat": "K",
+  "note": "method"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 7,
+  "text": "user=<lea.moreau@fakecorp.org>",
+  "cat": "R",
+  "note": "user in angle brackets"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 7,
+  "text": "rip=91.198.174.192",
+  "cat": "R",
+  "note": "remote IP"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 7,
+  "text": "lip=10.30.1.25",
+  "cat": "R",
+  "note": "local IP"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 7,
+  "text": "session=<abc123XYZ+/0>",
+  "cat": "K",
+  "note": "Dovecot session id (base64)"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 7,
+  "text": "mpid=12345",
+  "cat": "K",
+  "note": "pid"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 8,
+  "text": "imap(lea.moreau@fakecorp.org)",
+  "cat": "R",
+  "note": "user in parentheses after the service name"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 8,
+  "text": "in=123 out=456",
+  "cat": "K",
+  "note": "volumes"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 9,
+  "text": "user=<h.lambert@example.net>",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 9,
+  "text": "rip=185.199.108.153",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 10,
+  "text": "UGFzc3dvcmQ6",
+  "cat": "K",
+  "note": "base64 of \"Password:\": protocol prompt, not a secret"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 10,
+  "text": "unknown[185.199.108.153]",
+  "cat": "R",
+  "note": "client"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 11,
+  "text": "AGxlYS5tb3JlYXVAZmFrZWNvcnAub3JnAFN1bW1lcjIwMjYh",
+  "cat": "D",
+  "note": "SASL PLAIN reply in base64: contains the id and password, invisible without decoding"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 12,
+  "text": "user=lea.moreau,",
+  "cat": "R",
+  "note": "user in a comma-separated key=value list"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 12,
+  "text": "rhost=::1,raddr=::1",
+  "cat": "K",
+  "note": "IPv6 loopback"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 12,
+  "text": "required_score=5.0",
+  "cat": "K",
+  "note": "score"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 12,
+  "text": "rport=39222",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 13,
+  "text": "s=default d=example.net",
+  "cat": "K",
+  "note": "sender DKIM selector and domain"
+ },
+ {
+  "file": "24-mail-postfix-dovecot.log",
+  "line": 14,
+  "text": "6B7C8D9E0F",
+  "cat": "K",
+  "note": "queue id"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 1,
+  "text": "bounce+abc123@mail.example.net",
+  "cat": "R",
+  "note": "return address (VERP)"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 2,
+  "text": "[93.184.216.34]",
+  "cat": "R",
+  "note": "emitting server IP"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 3,
+  "text": "4F2A1B2C3D",
+  "cat": "K",
+  "note": "Postfix queue id"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 3,
+  "text": "mx1.fakecorp.org",
+  "cat": "D",
+  "note": "organization receiving server"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 4,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "recipient in a folded line"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 4,
+  "text": "Tue, 14 Oct 2026 08:01:12 +0200 (CEST)",
+  "cat": "K",
+  "note": "RFC 2822 date"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 5,
+  "text": "[192.168.1.57]",
+  "cat": "R",
+  "note": "sender workstation private IP"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 5,
+  "text": "[91.198.174.192]",
+  "cat": "R",
+  "note": "sender public IP"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 6,
+  "text": "[91.198.174.192]",
+  "cat": "R",
+  "note": "origin IP"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 7,
+  "text": "Hugo Lambert",
+  "cat": "R",
+  "note": "display name"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 7,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 8,
+  "text": "L=C3=A9a_Moreau",
+  "cat": "R",
+  "note": "MIME-encoded display name (Q-encoding): \"Léa Moreau\""
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 8,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 9,
+  "text": "Mehdi El Amrani",
+  "cat": "R",
+  "note": "display name without quotes"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 9,
+  "text": "O'Brien, Siobhán",
+  "cat": "R",
+  "note": "display name \"Lastname, Firstname\" with apostrophe and accent"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 9,
+  "text": "sobrien@fakecorp.org",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 10,
+  "text": "RmFjdHVyZSBuwrAgMjAyNi0wNDUxIOKAlCBNbWUgTWFydGlu",
+  "cat": "D",
+  "note": "MIME base64-encoded subject containing a name (invoice line with Mme Martin)"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 11,
+  "text": "Mme Martin",
+  "cat": "R",
+  "note": "name after a courtesy title"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 11,
+  "text": "Lemaire & Fils",
+  "cat": "D",
+  "note": "company name"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 12,
+  "text": "20261014080112.4F2A1B2C3D",
+  "cat": "K",
+  "note": "local part of the message id"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 13,
+  "text": "smtp.mailfrom=bounce+abc123@mail.example.net",
+  "cat": "R",
+  "note": "sender address in an authentication result"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 13,
+  "text": "header.d=example.net",
+  "cat": "K",
+  "note": "DKIM domain"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 13,
+  "text": "spf=pass",
+  "cat": "K",
+  "note": "SPF result"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 14,
+  "text": "a=rsa-sha256",
+  "cat": "K",
+  "note": "algorithm"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 15,
+  "text": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+  "cat": "K",
+  "note": "DKIM hash in base64: not a secret"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 15,
+  "text": "dGhpcyBpcyBhIGZha2Ugc2lnbmF0dXJlIGZvciB0ZXN0aW5nIHB1cnBvc2VzIG9ubHk=",
+  "cat": "K",
+  "note": "DKIM signature in base64"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 16,
+  "text": "Microsoft Outlook 16.0",
+  "cat": "K",
+  "note": "mail client"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 17,
+  "text": "AQHb3Zp0kYqLmN8oRtS1uV2wXyZ4aA==",
+  "cat": "K",
+  "note": "Outlook conversation thread index"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 18,
+  "text": "charset=\"utf-8\"",
+  "cat": "K",
+  "note": "character set"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 20,
+  "text": "Bonjour Léa",
+  "cat": "D",
+  "note": "first name alone in the body"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 20,
+  "text": "Bonjour",
+  "cat": "K",
+  "note": "courtesy phrase: only the first name should be replaced"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 20,
+  "text": "Léa",
+  "cat": "R",
+  "note": "first name alone whose full name is known in the same file (To header): must receive the person's alias"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 21,
+  "text": "FR76 3000 6000 0112 3456 7890 189",
+  "cat": "R",
+  "note": "spaced IBAN"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 21,
+  "text": "AGRIFRPP",
+  "cat": "K",
+  "note": "BIC: public bank code"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 22,
+  "text": "06 12 34 56 78",
+  "cat": "R",
+  "note": "mobile"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 22,
+  "text": "+33 (0)4 72 00 00 00",
+  "cat": "R",
+  "note": "landline with (0)"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 22,
+  "text": "04.72.11.22.33",
+  "cat": "R",
+  "note": "landline with dots"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 23,
+  "text": "12 rue des Lilas, 69003 Lyon",
+  "cat": "R",
+  "note": "postal address"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 23,
+  "text": "3 mai 1987",
+  "cat": "R",
+  "note": "date of birth in full words"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 24,
+  "text": "Summer2026!",
+  "cat": "S",
+  "note": "password announced in the text"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 26,
+  "text": "Hugo Lambert",
+  "cat": "R",
+  "note": "name in the signature"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 27,
+  "text": "Example Net SAS",
+  "cat": "D",
+  "note": "company name"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 28,
+  "text": "01 23 45 67 89",
+  "cat": "R",
+  "note": "landline"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 28,
+  "text": "06 98 76 54 32",
+  "cat": "R",
+  "note": "mobile"
+ },
+ {
+  "file": "25-email-message.eml",
+  "line": 28,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "email in the signature"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 1,
+  "text": "lea.moreau@crm",
+  "cat": "R",
+  "note": "user@database"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 1,
+  "text": "user=lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 1,
+  "text": "cipher=TLS_AES_256_GCM_SHA384",
+  "cat": "K",
+  "note": "cipher suite"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 1,
+  "text": "bits=256",
+  "cat": "K",
+  "note": "key size"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 1,
+  "text": "[1234]",
+  "cat": "K",
+  "note": "pid"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 2,
+  "text": "host=10.30.4.17",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 2,
+  "text": "port=51234",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 3,
+  "text": "user \"app_crm\"",
+  "cat": "D",
+  "note": "service account"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 4,
+  "text": "camille.petit@example.com",
+  "cat": "R",
+  "note": "literal email in a WHERE"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 4,
+  "text": "0612345678",
+  "cat": "R",
+  "note": "literal phone"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 4,
+  "text": "1987-05-03",
+  "cat": "R",
+  "note": "literal date of birth (birth_date column)"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 4,
+  "text": "SELECT * FROM customers",
+  "cat": "K",
+  "note": "SQL"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 5,
+  "text": "4111111111111111",
+  "cat": "R",
+  "note": "card number"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 5,
+  "text": "CAMILLE PETIT",
+  "cat": "R",
+  "note": "cardholder in uppercase"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 5,
+  "text": "FR7630006000011234567890189",
+  "cat": "R",
+  "note": "IBAN"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 5,
+  "text": "INSERT INTO payments (card_number, holder, iban)",
+  "cat": "K",
+  "note": "SQL structure with column names"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 6,
+  "text": "$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ01234",
+  "cat": "S",
+  "note": "bcrypt hash"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 6,
+  "text": "{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ",
+  "cat": "S",
+  "note": "token"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 6,
+  "text": "WHERE id = 4412",
+  "cat": "K",
+  "note": "numeric id"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 7,
+  "text": "S3cr3t!2026",
+  "cat": "S",
+  "note": "password in CREATE ROLE"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 7,
+  "text": "CREATE ROLE svc_report",
+  "cat": "D",
+  "note": "service role name"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 8,
+  "text": "$1 = 'camille.petit@example.com'",
+  "cat": "R",
+  "note": "bound parameter containing an email"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 8,
+  "text": "$2 = '2026-10-14 08:00:00'",
+  "cat": "K",
+  "note": "datetime parameter"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 8,
+  "text": "$3 = '4412'",
+  "cat": "K",
+  "note": "identifier"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 9,
+  "text": "duration: 2.345 ms",
+  "cat": "K",
+  "note": "duration"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 9,
+  "text": "interval '7 days'",
+  "cat": "K",
+  "note": "interval"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 10,
+  "text": "lea.moreau@10.30.4.17",
+  "cat": "R",
+  "note": "user@IP from the MySQL general log"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 10,
+  "text": "2026-10-14T06:01:12.123456Z",
+  "cat": "K",
+  "note": "timestamp"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 11,
+  "text": "jean.dupont@example.com",
+  "cat": "R",
+  "note": "literal email"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 11,
+  "text": "'Dupont%'",
+  "cat": "D",
+  "note": "literal name in a LIKE"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 12,
+  "text": "'root'@'localhost'",
+  "cat": "K",
+  "note": "generic account on localhost"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 13,
+  "text": "[10.30.4.5]",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 13,
+  "text": "@ web01",
+  "cat": "R",
+  "note": "hostname"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 13,
+  "text": "Id:    47",
+  "cat": "K",
+  "note": "thread id"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 14,
+  "text": "Query_time: 2.345678",
+  "cat": "K",
+  "note": "duration"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 14,
+  "text": "Rows_examined: 145000",
+  "cat": "K",
+  "note": "counter"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 15,
+  "text": "timestamp=1697270072",
+  "cat": "K",
+  "note": "epoch"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 16,
+  "text": "'Lambert', 'Hugo'",
+  "cat": "R",
+  "note": "first and last name: named nom/prenom columns in the same query"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 16,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 16,
+  "text": "06 98 76 54 32",
+  "cat": "R",
+  "note": "phone"
+ },
+ {
+  "file": "26-sql-databases.log",
+  "line": 16,
+  "text": "5 impasse des Roses, 31000 Toulouse",
+  "cat": "R",
+  "note": "address"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 1,
+  "text": "192.168.1.50",
+  "cat": "R",
+  "note": "private IP in a nested log line"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 1,
+  "text": "hugo.lambert@example.net",
+  "cat": "R",
+  "note": "email in the nested string"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 1,
+  "text": "\"stream\":\"stdout\"",
+  "cat": "K",
+  "note": "flow"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 1,
+  "text": "2026-10-14T08:00:00.123456789Z",
+  "cat": "K",
+  "note": "timestamp with 9 decimals"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 2,
+  "text": "lea.moreau",
+  "cat": "R",
+  "note": "user in a doubly encoded JSON (JSON in a JSON string)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 2,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "IP in the nested JSON"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 2,
+  "text": "took_ms",
+  "cat": "K",
+  "note": "nested JSON key"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 3,
+  "text": "lea.moreau",
+  "cat": "R",
+  "note": "user in a string containing ANSI sequences (\\u001b)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 3,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 3,
+  "text": "\\u001b[32mINFO\\u001b[0m",
+  "cat": "K",
+  "note": "ANSI escape sequences: do not break the encoding"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 4,
+  "text": "Winter2026!",
+  "cat": "S",
+  "note": "password in a free message (trailing \\r\\n)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 4,
+  "text": "user jb.delafontaine",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"username\":\"lea.moreau@fakecorp.org\"",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"sourceIPs\":[\"10.30.4.17\"]",
+  "cat": "R",
+  "note": "IP array"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"groups\":[\"system:authenticated\",\"fakecorp-devs\"]",
+  "cat": "K",
+  "note": "groups: not people"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"auditID\"",
+  "cat": "K",
+  "note": "key"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "kubectl/v1.29.0",
+  "cat": "K",
+  "note": "client version"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"code\":200",
+  "cat": "K",
+  "note": "numeric HTTP code"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"fakecorp-prod\"",
+  "cat": "D",
+  "note": "namespace name containing the organization name"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 5,
+  "text": "\"resource\":\"secrets\"",
+  "cat": "K",
+  "note": "Kubernetes API resource: never personal data (and essential for analysis)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 6,
+  "text": "system:serviceaccount:kube-system:replicaset-controller",
+  "cat": "K",
+  "note": "standard Kubernetes service account"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 6,
+  "text": "\"sourceIPs\":[\"::1\"]",
+  "cat": "K",
+  "note": "IPv6 loopback"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 6,
+  "text": "\"resource\":\"replicasets\"",
+  "cat": "K",
+  "note": "Kubernetes API resource: never personal data (and essential for analysis)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 7,
+  "text": "UzNjcjN0LWs4cyE=",
+  "cat": "S",
+  "note": "password base64-encoded in a Secret"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 7,
+  "text": "bm90aWZpY2F0aW9uc0BmYWtlY29ycC5vcmc=",
+  "cat": "D",
+  "note": "base64-encoded identifier"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 7,
+  "text": "\"sourceIPs\":[\"10.30.4.17\",\"91.198.174.192\"]",
+  "cat": "R",
+  "note": "two IPs in the array"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 7,
+  "text": "\"resource\":\"secrets\"",
+  "cat": "K",
+  "note": "Kubernetes API resource: never personal data (and essential for analysis)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "\"value\":\"S3cr3t!2026\"",
+  "cat": "S",
+  "note": "value of a {name: DB_PASSWORD, value: …} pair: meaning comes from the sibling \"name\" key"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "\"value\":\"db-prod-02.fakecorp.local\"",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "\"value\":\"lea.moreau@fakecorp.org\"",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "\"value\":\"info\"",
+  "cat": "K",
+  "note": "log level"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "\"value\":\"12\"",
+  "cat": "K",
+  "note": "PASSWORD_MIN_LENGTH: rule and not a secret"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ",
+  "cat": "S",
+  "note": "token"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 8,
+  "text": "registry.fakecorp.org/crm:3.12.4.1",
+  "cat": "K",
+  "note": "image with four-number tag"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 9,
+  "text": "10.30.2.11",
+  "cat": "R",
+  "note": "node IP"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 9,
+  "text": "system:node:node-01",
+  "cat": "D",
+  "note": "node name"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 9,
+  "text": "\"resource\":\"nodes\"",
+  "cat": "K",
+  "note": "Kubernetes API resource: never personal data (and essential for analysis)"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 10,
+  "text": "\"username\":\"system:anonymous\"",
+  "cat": "K",
+  "note": "standard anonymous user"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 10,
+  "text": "\"sourceIPs\":[\"91.198.174.192\",\"10.30.2.1\"]",
+  "cat": "R",
+  "note": "two IPs"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 10,
+  "text": "\"code\":403",
+  "cat": "K",
+  "note": "HTTP code"
+ },
+ {
+  "file": "27-docker-k8s.ndjson",
+  "line": 10,
+  "text": "\"resource\":\"secrets\"",
+  "cat": "K",
+  "note": "Kubernetes API resource: never personal data (and essential for analysis)"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 1,
+  "text": "10.30.4.17#51234",
+  "cat": "R",
+  "note": "BIND client IP:port (separated by #)"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 1,
+  "text": "lmoreau-pc.fakecorp.local",
+  "cat": "R",
+  "note": "hostname with identifier"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 1,
+  "text": "(10.30.1.10)",
+  "cat": "R",
+  "note": "internal DNS server IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 1,
+  "text": "@0x7f1234567890",
+  "cat": "K",
+  "note": "client memory address"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 2,
+  "text": "91.198.174.192#4444",
+  "cat": "R",
+  "note": "external client"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 2,
+  "text": "+E(0)K",
+  "cat": "K",
+  "note": "query flags"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 3,
+  "text": "185.199.108.153#53",
+  "cat": "R",
+  "note": "client"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 3,
+  "text": "fakecorp.org/ANY/IN",
+  "cat": "K",
+  "note": "request type"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 4,
+  "text": "from 10.30.4.17",
+  "cat": "R",
+  "note": "client IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 4,
+  "text": "github.com",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 5,
+  "text": "140.82.112.3",
+  "cat": "R",
+  "note": "reply public IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 6,
+  "text": "lmoreau-pc.fakecorp.local",
+  "cat": "R",
+  "note": "hostname"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 6,
+  "text": "is 10.30.4.17",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 7,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "assigned IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 7,
+  "text": "aa:bb:cc:11:22:33",
+  "cat": "R",
+  "note": "MAC"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 7,
+  "text": "PC-LMOREAU",
+  "cat": "R",
+  "note": "DHCP hostname"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 7,
+  "text": "DHCPACK(eth0)",
+  "cat": "K",
+  "note": "message type"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 8,
+  "text": "10.30.4.52",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 8,
+  "text": "b8:27:eb:12:34:56",
+  "cat": "R",
+  "note": "MAC"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 9,
+  "text": "iPhone-de-Sophie",
+  "cat": "R",
+  "note": "device name with first name"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 9,
+  "text": "02:42:ac:11:00:02",
+  "cat": "R",
+  "note": "MAC"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 10,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "client IP"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 10,
+  "text": "lmoreau-pc",
+  "cat": "R",
+  "note": "hostname in a length-prefixed label"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 10,
+  "text": "000001A2B3C4D5E6",
+  "cat": "K",
+  "note": "packet pointer"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 10,
+  "text": "0A1C",
+  "cat": "K",
+  "note": "thread id"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 10,
+  "text": "(8)fakecorp(5)local(0)",
+  "cat": "D",
+  "note": "organization domain, length+label format"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 11,
+  "text": "(6)github(3)com(0)",
+  "cat": "K",
+  "note": "public domain in length+label format"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 12,
+  "text": "mehdi-el-amrani-macbook.local",
+  "cat": "R",
+  "note": "hostname with first and last name"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 13,
+  "text": "ocsp.digicert.com",
+  "cat": "K",
+  "note": "public domain"
+ },
+ {
+  "file": "28-dns-servers.log",
+  "line": 13,
+  "text": "to 9.9.9.9",
+  "cat": "R",
+  "note": "public resolver IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "10.30.4.17",
+  "cat": "R",
+  "note": "source private IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "140.82.112.3",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "52.96.166.130",
+  "cat": "R",
+  "note": "NAT public IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "FAKECORP\\lea.moreau",
+  "cat": "R",
+  "note": "source user"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "007051000012345",
+  "cat": "K",
+  "note": "firewall serial number"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "10.0.0.0-10.255.255.255",
+  "cat": "K",
+  "note": "generic private-range label: this is not a host"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "7012345678901234567",
+  "cat": "K",
+  "note": "session id: 19-digit integer"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "0x400053",
+  "cat": "K",
+  "note": "flags"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": ",,7012",
+  "cat": "K",
+  "note": "empty field (no destination user): commas must remain"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 1,
+  "text": "web-browsing",
+  "cat": "K",
+  "note": "PAN-OS application id, not a hostname"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 2,
+  "text": "10.30.4.52",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 2,
+  "text": ",,,dns,",
+  "cat": "K",
+  "note": "consecutive empty fields"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 3,
+  "text": "m.elamrani@fakecorp.org",
+  "cat": "R",
+  "note": "user as email form"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 3,
+  "text": "185.199.108.153",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 4,
+  "text": "185.199.108.153",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 4,
+  "text": "10.30.1.40",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 4,
+  "text": "0.0.0.0,0.0.0.0",
+  "cat": "K",
+  "note": "null addresses"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 4,
+  "text": "\"Microsoft Windows SMB Remote Code Execution Vulnerability(32540)\"",
+  "cat": "K",
+  "note": "threat name in quotes with potential comma: keep whole"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 4,
+  "text": ",1234567890",
+  "cat": "K",
+  "note": "last 10-digit numeric field: this is not a phone"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 5,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "email in the URL of a quoted field"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 5,
+  "text": "FAKECORP\\lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 5,
+  "text": "social-networking",
+  "cat": "K",
+  "note": "URL category"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 5,
+  "text": "ref=a,b",
+  "cat": "K",
+  "note": "comma in a quoted field"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 5,
+  "text": "web-browsing",
+  "cat": "K",
+  "note": "PAN-OS application id, not a hostname"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 5,
+  "text": "/login?user=",
+  "cat": "K",
+  "note": "\"login\" in a URL path: a common word, not an account"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 6,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "source IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 6,
+  "text": "User name: lea.moreau",
+  "cat": "R",
+  "note": "username in a message"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 6,
+  "text": "Microsoft Windows 11 Enterprise , 64-bit",
+  "cat": "K",
+  "note": "OS version, with space before the comma"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 6,
+  "text": "user login succeeded. Login from:",
+  "cat": "K",
+  "note": "GlobalProtect message text: \"login\" is not an account"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 7,
+  "text": "FAKECORP\\sobrien",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 7,
+  "text": "PC-SOBRIEN",
+  "cat": "R",
+  "note": "machine name"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 7,
+  "text": "10.30.50.20",
+  "cat": "R",
+  "note": "assigned IP"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 7,
+  "text": "5.2.1.1234",
+  "cat": "K",
+  "note": "client version"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 7,
+  "text": "vpn.fakecorp.org",
+  "cat": "D",
+  "note": "organization VPN gateway name"
+ },
+ {
+  "file": "29-panos-traffic.csv",
+  "line": 7,
+  "text": "gateway-auth,login,",
+  "cat": "K",
+  "note": "GLOBALPROTECT \"stage\" column, not an account"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 1,
+  "text": "outside:91.198.174.192/51234 (91.198.174.192/51234)",
+  "cat": "R",
+  "note": "duplicate source IP/port (with and without NAT)"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 1,
+  "text": "inside:10.30.1.20/443",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 1,
+  "text": "(52.96.166.130/443)",
+  "cat": "R",
+  "note": "public NAT IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 1,
+  "text": "%ASA-6-302013",
+  "cat": "K",
+  "note": "message code"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 1,
+  "text": "connection 123456",
+  "cat": "K",
+  "note": "connection number"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 1,
+  "text": "fw-edge-01",
+  "cat": "R",
+  "note": "firewall name"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 2,
+  "text": "10.30.1.9",
+  "cat": "R",
+  "note": "AAA server private IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 2,
+  "text": "user = lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 2,
+  "text": "authentication",
+  "cat": "K",
+  "note": "ordinary word (here not a username): must never become an alias"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 3,
+  "text": "user = sobrien",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 3,
+  "text": "user IP = 185.199.108.153",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 3,
+  "text": "reason = Invalid password",
+  "cat": "K",
+  "note": "reason, contains no password"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 3,
+  "text": "authentication",
+  "cat": "K",
+  "note": "ordinary word (here not a username): must never become an alias"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 3,
+  "text": "Invalid password : server =",
+  "cat": "K",
+  "note": "\"server\" label (follows the word \"password\" but is not a password)"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 4,
+  "text": "User <lea.moreau>",
+  "cat": "R",
+  "note": "user in angle brackets"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 4,
+  "text": "IP <91.198.174.192>",
+  "cat": "R",
+  "note": "public IP in angle brackets"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 4,
+  "text": "<10.30.50.12>",
+  "cat": "R",
+  "note": "assigned IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 4,
+  "text": "<::>",
+  "cat": "K",
+  "note": "unspecified IPv6 address"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 4,
+  "text": "GroupPolicy_VPN",
+  "cat": "K",
+  "note": "policy name"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 5,
+  "text": "outside:185.199.108.153/4444",
+  "cat": "R",
+  "note": "source"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 5,
+  "text": "inside:10.30.1.20/22",
+  "cat": "R",
+  "note": "destination"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 5,
+  "text": "\"OUTSIDE_IN\"",
+  "cat": "K",
+  "note": "ACL name"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 5,
+  "text": "[0x0, 0x0]",
+  "cat": "K",
+  "note": "ACE hash"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 6,
+  "text": "from 10.30.4.17/51234",
+  "cat": "R",
+  "note": "IP/port"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 6,
+  "text": "user \"lea.moreau\"",
+  "cat": "R",
+  "note": "user in quotes"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 6,
+  "text": "inside:10.30.1.1/ssh",
+  "cat": "R",
+  "note": "private IP followed by a service name instead of a port"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 7,
+  "text": "10.30.4.17 Accessed",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 7,
+  "text": "140.82.112.3:https",
+  "cat": "R",
+  "note": "public IP glued to the scheme"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 7,
+  "text": "github.com/fakecorp/crm-private",
+  "cat": "K",
+  "note": "public URL"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 8,
+  "text": "'enable_15'",
+  "cat": "K",
+  "note": "Cisco system account"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 9,
+  "text": "user 'm.elamrani'",
+  "cat": "R",
+  "note": "user in single quotes"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 9,
+  "text": "from 10.30.4.52/0",
+  "cat": "R",
+  "note": "IP/port 0"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 9,
+  "text": "interface inside",
+  "cat": "K",
+  "note": "interface name"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 9,
+  "text": "Authentication",
+  "cat": "K",
+  "note": "ordinary word (here not a username): must never become an alias"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 10,
+  "text": "from 185.199.108.153/445",
+  "cat": "R",
+  "note": "source"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 10,
+  "text": "outside:52.96.166.130/445",
+  "cat": "R",
+  "note": "destination"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 11,
+  "text": "outside:9.9.9.9/53",
+  "cat": "R",
+  "note": "resolver public IP"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 11,
+  "text": "duration 0:00:00",
+  "cat": "K",
+  "note": "duration hh:mm:ss: not an address"
+ },
+ {
+  "file": "30-cisco-asa.log",
+  "line": 11,
+  "text": "bytes 120",
+  "cat": "K",
+  "note": "octets"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 1,
+  "text": "#1697270072",
+  "cat": "K",
+  "note": "bash history epoch timestamp"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 2,
+  "text": "S3cr3tRoot",
+  "cat": "S",
+  "note": "password glued to -p"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 2,
+  "text": "db-prod-02.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 2,
+  "text": "-u root",
+  "cat": "K",
+  "note": "generic account"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 3,
+  "text": "Winter 2026!",
+  "cat": "S",
+  "note": "password with space in single quotes"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 3,
+  "text": "--user=lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 4,
+  "text": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  "cat": "S",
+  "note": "exported AWS secret key"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 5,
+  "text": "{{AKIA}}IOSFODNN7EXAMPLE",
+  "cat": "S",
+  "note": "AWS key id"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 6,
+  "text": "Winter2026!",
+  "cat": "S",
+  "note": "password given to sshpass"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 6,
+  "text": "lea.moreau@10.30.1.20",
+  "cat": "R",
+  "note": "user@IP"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 7,
+  "text": "{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ",
+  "cat": "S",
+  "note": "GitHub token"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 7,
+  "text": "Authorization: Bearer ",
+  "cat": "K",
+  "note": "header, Bearer word preserved"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 7,
+  "text": "https://api.github.com/user",
+  "cat": "K",
+  "note": "public URL"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 8,
+  "text": "{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ",
+  "cat": "S",
+  "note": "token in the URL"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 8,
+  "text": "lea.moreau:",
+  "cat": "R",
+  "note": "user in the URL"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 8,
+  "text": "github.com/fakecorp/crm.git",
+  "cat": "K",
+  "note": "repository"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 9,
+  "text": "sobrien@185.199.108.153",
+  "cat": "R",
+  "note": "user@public IP"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 9,
+  "text": "/srv/backups/",
+  "cat": "K",
+  "note": "path"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 9,
+  "text": "sobrien",
+  "cat": "R",
+  "note": "username in user@IP (scp): the IP is replaced but not the name"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 10,
+  "text": "Winter2026!",
+  "cat": "S",
+  "note": "password sent to sudo -S"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 10,
+  "text": "apt update",
+  "cat": "K",
+  "note": "command"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 11,
+  "text": "\"MyKey2026\"",
+  "cat": "S",
+  "note": "encryption key passed with -k"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 11,
+  "text": "-aes-256-cbc",
+  "cat": "K",
+  "note": "algorithm"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 12,
+  "text": "Pa55w0rd!",
+  "cat": "S",
+  "note": "password as positional argument"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 12,
+  "text": "htpasswd -b /etc/nginx/.htpasswd lea.moreau",
+  "cat": "R",
+  "note": "username after the file"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 13,
+  "text": "Pa55w0rd!",
+  "cat": "S",
+  "note": "password -p"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 13,
+  "text": "-u lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 14,
+  "text": "Pg-S3cret",
+  "cat": "S",
+  "note": "password in the connection URL"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 14,
+  "text": "db-prod-02.fakecorp.local",
+  "cat": "R",
+  "note": "host"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 14,
+  "text": ":5432/crm",
+  "cat": "K",
+  "note": "port and database"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 15,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "email in the key comment"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 15,
+  "text": "-t ed25519",
+  "cat": "K",
+  "note": "key type"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 16,
+  "text": "--password=Pa55w0rd!",
+  "cat": "S",
+  "note": "password"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 16,
+  "text": "--user=lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 16,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "host"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 17,
+  "text": "S3cr3tLdap",
+  "cat": "S",
+  "note": "password -w"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 17,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "email in the filter"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 17,
+  "text": "ldap://10.30.1.9",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 17,
+  "text": "cn=admin,dc=fakecorp,dc=org",
+  "cat": "D",
+  "note": "admin DN with the organization domain"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 18,
+  "text": "P@ssw0rd123!",
+  "cat": "S",
+  "note": "net user password"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 18,
+  "text": "net user jb.delafontaine",
+  "cat": "R",
+  "note": "new account"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 18,
+  "text": "/add /domain",
+  "cat": "K",
+  "note": "options"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 19,
+  "text": "/home/lea.moreau/",
+  "cat": "R",
+  "note": "home directory"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 19,
+  "text": "cd /var/log",
+  "cat": "K",
+  "note": "command"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 20,
+  "text": "history -c",
+  "cat": "K",
+  "note": "command"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 21,
+  "text": "'Pa55w0rd!'",
+  "cat": "S",
+  "note": "cleartext PowerShell password"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 21,
+  "text": "FAKECORP\\lea.moreau",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 22,
+  "text": "JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0AA==",
+  "cat": "K",
+  "note": "UTF-16 base64-encoded command: attack indicator to keep (contains no secret here)"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 22,
+  "text": "-EncodedCommand",
+  "cat": "K",
+  "note": "option"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 23,
+  "text": "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW",
+  "cat": "S",
+  "note": "SSH private key content pasted into a command"
+ },
+ {
+  "file": "31-shell-history.log",
+  "line": 23,
+  "text": "-----BEGIN OPENSSH {{PRIVATE_KEY}}-----",
+  "cat": "K",
+  "note": "PEM marker: the marker alone reveals nothing"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 1,
+  "text": "DEBUG=false",
+  "cat": "K",
+  "note": "boolean"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 2,
+  "text": "PORT=8080",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 3,
+  "text": "Europe/Paris",
+  "cat": "K",
+  "note": "timezone"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 4,
+  "text": "3.12.4.1",
+  "cat": "K",
+  "note": "four-number version: looks like an IP"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 5,
+  "text": "9fceb02d0ae598e95dc970b74767f19372d61af7",
+  "cat": "K",
+  "note": "40-character hexadecimal git hash"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 6,
+  "text": "PASSWORD_MIN_LENGTH=12",
+  "cat": "K",
+  "note": "contains \"PASSWORD\" in the name but the value is a rule, not a secret"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 7,
+  "text": "TOKEN_EXPIRY=3600",
+  "cat": "K",
+  "note": "name with TOKEN, value = duration"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 8,
+  "text": "SECRET_ROTATION_DAYS=90",
+  "cat": "K",
+  "note": "name with SECRET, value = number of days"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 9,
+  "text": "/run/secrets/smtp_password",
+  "cat": "K",
+  "note": "path to a secret, not the secret itself"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 10,
+  "text": "db-prod-02.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 11,
+  "text": "S3cr3t!2026",
+  "cat": "S",
+  "note": "password"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 12,
+  "text": "Pg-S3cret",
+  "cat": "S",
+  "note": "password in the URL"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 12,
+  "text": "db-prod-02.fakecorp.local",
+  "cat": "R",
+  "note": "host"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 13,
+  "text": "R3dis-S3cret",
+  "cat": "S",
+  "note": "password without user (:pass@)"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 13,
+  "text": "10.30.1.30",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 14,
+  "text": "{{sk_test}}4eC39HqLyjWDarjtT1zdp7dc",
+  "cat": "S",
+  "note": "Stripe test key"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 15,
+  "text": "{{SG}}aB3dE5fG7hJ9kL1mN3pQ5r.sT7uV9wX1yZ3aB5cD7eF9gH1iJ3kL5mN7oP9qR1sT3u",
+  "cat": "S",
+  "note": "SendGrid key (SG.xxx.yyy form)"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 16,
+  "text": "{{xoxb}}123456789012-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx",
+  "cat": "S",
+  "note": "Slack token xoxb-"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 17,
+  "text": "{{AIza}}SyA1b2C3d4E5f6G7h8I9j0KlMnOpQrStUvW",
+  "cat": "S",
+  "note": "Google API key (AIza… form)"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 18,
+  "text": "0f8fad5bd9cb469fa16570867728950e0f8fad5bd9cb469fa16570867728950e",
+  "cat": "S",
+  "note": "64-character hexadecimal JWT secret"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 19,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 20,
+  "text": "notifications@fakecorp.org",
+  "cat": "D",
+  "note": "functional notification address"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 21,
+  "text": "S3cr3t-yaml",
+  "cat": "S",
+  "note": "YAML password in quotes"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 22,
+  "text": "abcdef0123456789abcdef0123456789",
+  "cat": "S",
+  "note": "YAML API key in hexadecimal"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 23,
+  "text": "DB_PASSWORD",
+  "cat": "K",
+  "note": "variable name alone on its line"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 24,
+  "text": "S3cr3t-k8s",
+  "cat": "D",
+  "note": "the value is on the line after the name: requires multi-line context"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 25,
+  "text": "{{AKIA}}IOSFODNN7EXAMPLE",
+  "cat": "S",
+  "note": "Terraform access key"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 26,
+  "text": "(sensitive value)",
+  "cat": "K",
+  "note": "Terraform already masks the value"
+ },
+ {
+  "file": "32-config-dump.log",
+  "line": 27,
+  "text": "Tf-S3cret-2026",
+  "cat": "S",
+  "note": "Terraform password"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 1,
+  "text": "id;civilite;nom;prenom;email;telephone;adresse;code_postal;ville;date_naissance;iban;societe;commentaire",
+  "cat": "K",
+  "note": "header: column names to keep, they are the source of meaning"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "Lambert;Chloé",
+  "cat": "R",
+  "note": "first and last name under \"nom\" and \"prenom\" columns"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "chloe.lambert@example.com",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "06 12 34 56 78",
+  "cat": "R",
+  "note": "phone"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "12 rue des Lilas",
+  "cat": "R",
+  "note": "address"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": ";69003;",
+  "cat": "R",
+  "note": "postal code"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "03/05/1987",
+  "cat": "R",
+  "note": "date of birth DD/MM/YYYY (date_naissance column)"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "FR76 3000 6000 0112 3456 7890 189",
+  "cat": "R",
+  "note": "IBAN"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "registration IP"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "Cliente fidèle",
+  "cat": "K",
+  "note": "comment with no personal data"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": ";Mme;",
+  "cat": "K",
+  "note": "courtesy title"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "2026-10-14 08:00:00",
+  "cat": "K",
+  "note": "last login date (not birth)"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 2,
+  "text": "Lyon",
+  "cat": "D",
+  "note": "city"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "\"DE LA FONTAINE\"",
+  "cat": "R",
+  "note": "quoted name, uppercase, with particle"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "Jean-Baptiste",
+  "cat": "R",
+  "note": "compound first name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "\"5, impasse des Roses\"",
+  "cat": "R",
+  "note": "quoted address containing a comma"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "1991-11-27",
+  "cat": "R",
+  "note": "ISO date of birth"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "GB82 WEST 1234 5698 7654 32",
+  "cat": "R",
+  "note": "British IBAN"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "+33 6 98 76 54 32",
+  "cat": "R",
+  "note": "international mobile"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "Mme Girard",
+  "cat": "R",
+  "note": "name after a title in a free comment"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "\"A rappeler; demander",
+  "cat": "K",
+  "note": "the semicolon in a quoted field must not be touched"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 3,
+  "text": "Lemaire & Fils",
+  "cat": "D",
+  "note": "company name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": "O'Brien",
+  "cat": "R",
+  "note": "name with apostrophe"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": "Siobhán",
+  "cat": "R",
+  "note": "accented first name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": "221B Baker Street",
+  "cat": "R",
+  "note": "British address"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": "NW1 6XE",
+  "cat": "R",
+  "note": "British postal code"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": "27 March 1990",
+  "cat": "R",
+  "note": "date in English"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": "+44 7700 900123",
+  "cat": "R",
+  "note": "British mobile"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 4,
+  "text": ";;;;45.33.32.156;",
+  "cat": "K",
+  "note": "four consecutive empty fields before the IP: separators must remain"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "Nguyễn",
+  "cat": "R",
+  "note": "Vietnamese name with diacritics"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "Văn An",
+  "cat": "R",
+  "note": "first name in two words"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "(0)1 23 45 67 89",
+  "cat": "R",
+  "note": "landline with (0)"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "12-07-1985",
+  "cat": "R",
+  "note": "date DD-MM-YYYY"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "DE89 3704 0044 0532 0130 00",
+  "cat": "R",
+  "note": "German IBAN"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "3 avenue Victor Hugo",
+  "cat": "R",
+  "note": "address"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 5,
+  "text": "Né à Hanoï, parle vietnamien",
+  "cat": "D",
+  "note": "sensitive information (origin) in free text"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 6,
+  "text": "Kowalski-Dubois",
+  "cat": "R",
+  "note": "compound name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 6,
+  "text": "Zoë",
+  "cat": "R",
+  "note": "first name with diaeresis"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 6,
+  "text": ";;;;;;;;N/A;;",
+  "cat": "K",
+  "note": "series of empty fields and N/A value: structure must stay identical"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 7,
+  "text": "0033612345678",
+  "cat": "R",
+  "note": "phone in 0033 format"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 7,
+  "text": "8 bd de la République",
+  "cat": "R",
+  "note": "address with \"bd\" abbreviation"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 7,
+  "text": "1978-01-15",
+  "cat": "R",
+  "note": "date of birth"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 7,
+  "text": "Martin;Pierre",
+  "cat": "R",
+  "note": "first and last name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 7,
+  "text": "Martin & Fils SARL",
+  "cat": "D",
+  "note": "company name containing a last name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 8,
+  "text": "06.12.34.56.78",
+  "cat": "R",
+  "note": "phone with dots"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 8,
+  "text": "15/08/2001",
+  "cat": "R",
+  "note": "date of birth"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 8,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 8,
+  "text": "40 quai des Chartrons",
+  "cat": "R",
+  "note": "address"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 8,
+  "text": "Girard;Camille",
+  "cat": "R",
+  "note": "first and last name"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 9,
+  "text": "FR1420041010050500013M02606",
+  "cat": "R",
+  "note": "unspaced French IBAN"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 9,
+  "text": "1 place Bellecour BP 123",
+  "cat": "R",
+  "note": "address with PO box"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 9,
+  "text": "0612345678",
+  "cat": "R",
+  "note": "mobile without separator"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 9,
+  "text": "1969-12-31",
+  "cat": "R",
+  "note": "date of birth"
+ },
+ {
+  "file": "33-crm-export.csv",
+  "line": 10,
+  "text": ";;;;;;;;;;;;;;",
+  "cat": "K",
+  "note": "line of 14 separators with no values"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 1,
+  "text": "Camille Petit",
+  "cat": "R",
+  "note": "name after \"customer\""
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 1,
+  "text": "camille.petit@example.com",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 1,
+  "text": "id=48213",
+  "cat": "K",
+  "note": "identifier"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 1,
+  "text": "[http-nio-8080-exec-3]",
+  "cat": "K",
+  "note": "thread"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 1,
+  "text": "c.f.crm.CustomerService",
+  "cat": "K",
+  "note": "class name"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 2,
+  "text": "10.30.4.5",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 2,
+  "text": "'app_crm'",
+  "cat": "D",
+  "note": "service account"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 2,
+  "text": "java.sql.SQLException",
+  "cat": "K",
+  "note": "exception class"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 3,
+  "text": "SQLError.java:129",
+  "cat": "K",
+  "note": "file:line"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 3,
+  "text": "\tat com.mysql.cj",
+  "cat": "K",
+  "note": "trace line prefix with tab"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 4,
+  "text": "CustomerService.java:88",
+  "cat": "K",
+  "note": "file:line"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 4,
+  "text": "crm-3.12.4.1.jar",
+  "cat": "K",
+  "note": "jar name with four-number version"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 5,
+  "text": "... 42 common frames omitted",
+  "cat": "K",
+  "note": "marker"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 6,
+  "text": "db-prod-02.fakecorp.local/10.30.1.40:3306",
+  "cat": "R",
+  "note": "host/IP:port"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 6,
+  "text": "Caused by: java.net.ConnectException",
+  "cat": "K",
+  "note": "cause chain"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 7,
+  "text": "Native Method",
+  "cat": "K",
+  "note": "marker"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 7,
+  "text": "java.base/sun.nio.ch.Net.connect0",
+  "cat": "K",
+  "note": "JDK frame"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 8,
+  "text": "'lea.moreau'",
+  "cat": "R",
+  "note": "user in single quotes"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 8,
+  "text": "91.198.174.192",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 8,
+  "text": "(attempt 3/5)",
+  "cat": "K",
+  "note": "counter: looks like a date"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 9,
+  "text": "FR7630006000011234567890189",
+  "cat": "R",
+  "note": "IBAN"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 9,
+  "text": "Hugo Petit",
+  "cat": "R",
+  "note": "name after \"holder\""
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 9,
+  "text": "4111111111111111",
+  "cat": "R",
+  "note": "card number"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 10,
+  "text": "PKIX path building failed",
+  "cat": "K",
+  "note": "error text"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 10,
+  "text": "mail.fakecorp.org",
+  "cat": "D",
+  "note": "organization host"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 11,
+  "text": "on srv-web01",
+  "cat": "R",
+  "note": "hostname"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 11,
+  "text": "started by svc_crm",
+  "cat": "D",
+  "note": "service account"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 11,
+  "text": "Java 17.0.9",
+  "cat": "K",
+  "note": "version"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 11,
+  "text": "PID 4321",
+  "cat": "K",
+  "note": "pid"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 12,
+  "text": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "cat": "S",
+  "note": "JWT"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 12,
+  "text": "Bearer ",
+  "cat": "K",
+  "note": "preserved word"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 13,
+  "text": "user=Mehdi El Amrani",
+  "cat": "R",
+  "note": "name with spaces in a key=value field: the value runs until the next key"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 13,
+  "text": "role=ADMIN",
+  "cat": "K",
+  "note": "role"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 13,
+  "text": "rows=15000",
+  "cat": "K",
+  "note": "number"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 13,
+  "text": "Amrani",
+  "cat": "R",
+  "note": "\"El Amrani\" part of a particle name: \"Mehdi\" alone is not enough"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 13,
+  "text": "Mehdi",
+  "cat": "R",
+  "note": "first name after \"user=\""
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 14,
+  "text": "\"firstName\":\"Zoë\"",
+  "cat": "R",
+  "note": "nested JSON in a continuation line"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 14,
+  "text": "\"lastName\":\"Kowalski-Dubois\"",
+  "cat": "R",
+  "note": "name"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 14,
+  "text": "\"phone\":\"+33 6 12 34 56 78\"",
+  "cat": "R",
+  "note": "phone"
+ },
+ {
+  "file": "34-java-stacktrace.log",
+  "line": 14,
+  "text": "7c1d5e2a-9b3f-4f5e-8a47-0d2f6c1b9e33",
+  "cat": "K",
+  "note": "request id"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 1,
+  "text": "CN=Léa Moreau",
+  "cat": "R",
+  "note": "person name in a DN"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 1,
+  "text": "OU=Compta,OU=Utilisateurs,DC=fakecorp,DC=org",
+  "cat": "D",
+  "note": "organization directory structure"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 2,
+  "text": "objectClass: top",
+  "cat": "K",
+  "note": "class"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 3,
+  "text": "objectClass: person",
+  "cat": "K",
+  "note": "class"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 4,
+  "text": "cn: Léa Moreau",
+  "cat": "R",
+  "note": "common name"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 5,
+  "text": "sn: Moreau",
+  "cat": "R",
+  "note": "last name"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 6,
+  "text": "givenName: Léa",
+  "cat": "R",
+  "note": "first name"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 7,
+  "text": "displayName: Léa Moreau",
+  "cat": "R",
+  "note": "display name"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 8,
+  "text": "sAMAccountName: lea.moreau",
+  "cat": "R",
+  "note": "login id"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 9,
+  "text": "lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "UPN"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 10,
+  "text": "mail: lea.moreau@fakecorp.org",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 11,
+  "text": "+33 1 23 45 67 89",
+  "cat": "R",
+  "note": "landline phone"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 12,
+  "text": "+33 6 12 34 56 78",
+  "cat": "R",
+  "note": "mobile"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 13,
+  "text": "12 rue des Lilas",
+  "cat": "R",
+  "note": "address"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 14,
+  "text": "postalCode: 69003",
+  "cat": "R",
+  "note": "postal code"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 15,
+  "text": "l: Lyon",
+  "cat": "D",
+  "note": "city (\"l\" attribute)"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 16,
+  "text": "title: Comptable",
+  "cat": "K",
+  "note": "function"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 17,
+  "text": "department: Compta",
+  "cat": "K",
+  "note": "service"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 18,
+  "text": "CN=Mehdi El Amrani",
+  "cat": "R",
+  "note": "manager name in a DN"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 19,
+  "text": "CN=Comptabilite-RW",
+  "cat": "K",
+  "note": "group name in a DN (not a person)"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 20,
+  "text": "employeeID: 004412",
+  "cat": "D",
+  "note": "metric"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 21,
+  "text": "pwdLastSet: 133745000000000000",
+  "cat": "K",
+  "note": "18-digit Windows timestamp, not to be taken for a card or account number"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 22,
+  "text": "AQUAAAAAAAUVAAAAx3pQ1HxUR8NkRpg+zQQAAA==",
+  "cat": "D",
+  "note": "SID in base64 (binary LDIF value with \"::\")"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 22,
+  "text": "objectSid::",
+  "cat": "K",
+  "note": "LDIF attribute name + base64 \"::\" marker (not an IPv6)"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 23,
+  "text": "userAccountControl: 512",
+  "cat": "K",
+  "note": "account flags"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 24,
+  "text": "Compte de Léa",
+  "cat": "D",
+  "note": "first name in free text"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 24,
+  "text": "bureau 3.12",
+  "cat": "K",
+  "note": "office number"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 26,
+  "text": "CN=Mehdi El Amrani",
+  "cat": "R",
+  "note": "name in the DN of the second entry"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 27,
+  "text": "cn: Mehdi El Amrani",
+  "cat": "R",
+  "note": "name"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 28,
+  "text": "m.elamrani@fakecorp.org",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 29,
+  "text": "+212 5 22 00 00 00",
+  "cat": "R",
+  "note": "Moroccan phone"
+ },
+ {
+  "file": "35-ldap-directory.ldif",
+  "line": 30,
+  "text": "0522 11 22 33",
+  "cat": "R",
+  "note": "Moroccan landline without country code"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"real_name\":\"Léa Moreau\"",
+  "cat": "R",
+  "note": "real profile name"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"display_name\":\"lea.m\"",
+  "cat": "R",
+  "note": "handle"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"name\":\"lea.moreau\"",
+  "cat": "R",
+  "note": "identifier"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"email\":\"lea.moreau@fakecorp.org\"",
+  "cat": "R",
+  "note": "profile email"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "Hugo Lambert",
+  "cat": "R",
+  "note": "name in the text"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "06 98 76 54 32",
+  "cat": "R",
+  "note": "phone"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "<mailto:h.lambert@example.net|h.lambert@example.net>",
+  "cat": "R",
+  "note": "Slack mailto link: the email appears twice"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"user\":\"U024BE7LH\"",
+  "cat": "K",
+  "note": "Slack id"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"ts\":\"1697270072.000100\"",
+  "cat": "K",
+  "note": "timestamp as string"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 1,
+  "text": "\"team\":\"T024BE7LD\"",
+  "cat": "K",
+  "note": "team id"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 2,
+  "text": "<@U024BE7LH>",
+  "cat": "K",
+  "note": "mention by Slack id"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 2,
+  "text": "Siobhán O'Brien",
+  "cat": "R",
+  "note": "name in the text"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 3,
+  "text": "{{xoxb}}123456789012-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx",
+  "cat": "S",
+  "note": "pasted Slack token"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 3,
+  "text": "S3cr3t!2026",
+  "cat": "S",
+  "note": "password announced in the phrase \"le mdp de la base :\""
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 4,
+  "text": "FR76 3000 6000 0112 3456 7890 189",
+  "cat": "R",
+  "note": "IBAN"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 4,
+  "text": "CV_Siobhan_OBrien.pdf",
+  "cat": "R",
+  "note": "name in a filename (promoted from D to R: a person name remains a person name, wherever it is)"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 4,
+  "text": "\"id\":\"F0123\"",
+  "cat": "K",
+  "note": "file id"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 4,
+  "text": "https://files.slack.com/files-pri/T024BE7LD-F0123/",
+  "cat": "K",
+  "note": "hoster public URL"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 4,
+  "text": "cv_siobhan_obrien.pdf",
+  "cat": "R",
+  "note": "same filename in lowercase in the URL (T024BE7LD-F0123/cv_…): another case is still a person name"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 5,
+  "text": "sobrien@10.30.1.20",
+  "cat": "R",
+  "note": "user@IP"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 5,
+  "text": "https://intranet.fakecorp.local/wiki/rh",
+  "cat": "R",
+  "note": "internal host in a URL"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 5,
+  "text": "sobrien",
+  "cat": "R",
+  "note": "username in user@IP (ssh): same"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 6,
+  "text": "12 rue des Lilas, 69003 Lyon",
+  "cat": "R",
+  "note": "address in a message"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 6,
+  "text": "19h30",
+  "cat": "K",
+  "note": "time"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 6,
+  "text": ":wink:",
+  "cat": "K",
+  "note": "Slack emoji"
+ },
+ {
+  "file": "36-slack-export.ndjson",
+  "line": 7,
+  "text": "channel_join",
+  "cat": "K",
+  "note": "subtype"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 1,
+  "text": "<34>1",
+  "cat": "K",
+  "note": "syslog priority and version"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 1,
+  "text": "srv-web01.fakecorp.local",
+  "cat": "R",
+  "note": "emitter hostname"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 1,
+  "text": "user=\"lea.moreau\"",
+  "cat": "R",
+  "note": "value in the [..] structured data"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 1,
+  "text": "ip=\"91.198.174.192\"",
+  "cat": "R",
+  "note": "same for the IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 1,
+  "text": "exampleSDID@32473",
+  "cat": "K",
+  "note": "SD id of form name@number: this is not an email"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 1,
+  "text": "iut=\"3\"",
+  "cat": "K",
+  "note": "technical value"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 2,
+  "text": "User sobrien",
+  "cat": "R",
+  "note": "user in the message after a BOM (byte order mark)"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 2,
+  "text": "from 10.30.4.60",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 2,
+  "text": "10.30.1.50 myapp",
+  "cat": "R",
+  "note": "the header host is an IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 3,
+  "text": "~sobrien/index.html",
+  "cat": "R",
+  "note": "home directory (file path)"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 3,
+  "text": "client: 91.198.174.192",
+  "cat": "R",
+  "note": "client"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 3,
+  "text": "h.lambert@example.net",
+  "cat": "R",
+  "note": "email in the referer"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 3,
+  "text": "1234#1234: *5678",
+  "cat": "K",
+  "note": "pid#tid and connection counter"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 3,
+  "text": "(2: No such file or directory)",
+  "cat": "K",
+  "note": "system error"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 3,
+  "text": "server: www.fakecorp.org",
+  "cat": "D",
+  "note": "organization server name"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 4,
+  "text": "client: 10.30.4.17",
+  "cat": "R",
+  "note": "private client"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 4,
+  "text": "upstream: \"http://10.30.1.21:8080/v1/me\"",
+  "cat": "R",
+  "note": "upstream server private IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 5,
+  "text": "[user: lea.moreau]",
+  "cat": "R",
+  "note": "user in brackets"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 5,
+  "text": "[Source: 10.30.4.17]",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 5,
+  "text": "%SEC_LOGIN-5-LOGIN_SUCCESS",
+  "cat": "K",
+  "note": "message code"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 5,
+  "text": "[localport: 22]",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 6,
+  "text": "by lea.moreau",
+  "cat": "R",
+  "note": "user"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 6,
+  "text": "(10.30.4.17)",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 7,
+  "text": "S3cr3tComm",
+  "cat": "S",
+  "note": "SNMP community string: equivalent to a password"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 8,
+  "text": "$1$abcd$Xy9Zw8Vv7Uu6Tt5Ss4Rr3.",
+  "cat": "S",
+  "note": "Cisco type 5 password hash"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 8,
+  "text": "username lea.moreau",
+  "cat": "R",
+  "note": "configuration username"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 9,
+  "text": "$9$abcdefghijklmnop$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq",
+  "cat": "S",
+  "note": "Cisco type 9 scrypt hash"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 10,
+  "text": "MyPre5haredKey",
+  "cat": "S",
+  "note": "IPsec pre-shared key"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 10,
+  "text": "address 52.96.166.130",
+  "cat": "R",
+  "note": "peer IP"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 11,
+  "text": "GigabitEthernet0/1",
+  "cat": "K",
+  "note": "interface name"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 12,
+  "text": " 255.255.255.0",
+  "cat": "K",
+  "note": "subnet mask: looks like an IP but is not one"
+ },
+ {
+  "file": "37-network-syslog-misc.log",
+  "line": 12,
+  "text": "10.30.1.1",
+  "cat": "R",
+  "note": "interface IP"
+ }
+]

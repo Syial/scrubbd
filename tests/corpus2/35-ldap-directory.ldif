@@ -1,0 +1,30 @@
+dn: CN=Léa Moreau,OU=Compta,OU=Utilisateurs,DC=fakecorp,DC=org
+objectClass: top
+objectClass: person
+cn: Léa Moreau
+sn: Moreau
+givenName: Léa
+displayName: Léa Moreau
+sAMAccountName: lea.moreau
+userPrincipalName: lea.moreau@fakecorp.org
+mail: lea.moreau@fakecorp.org
+telephoneNumber: +33 1 23 45 67 89
+mobile: +33 6 12 34 56 78
+streetAddress: 12 rue des Lilas
+postalCode: 69003
+l: Lyon
+title: Comptable
+department: Compta
+manager: CN=Mehdi El Amrani,OU=Direction,OU=Utilisateurs,DC=fakecorp,DC=org
+memberOf: CN=Comptabilite-RW,OU=Groupes,DC=fakecorp,DC=org
+employeeID: 004412
+pwdLastSet: 133745000000000000
+objectSid:: AQUAAAAAAAUVAAAAx3pQ1HxUR8NkRpg+zQQAAA==
+userAccountControl: 512
+description: Compte de Léa, bureau 3.12
+
+dn: CN=Mehdi El Amrani,OU=Direction,OU=Utilisateurs,DC=fakecorp,DC=org
+cn: Mehdi El Amrani
+mail: m.elamrani@fakecorp.org
+telephoneNumber: +212 5 22 00 00 00
+homePhone: 0522 11 22 33

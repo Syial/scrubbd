@@ -1,0 +1,30 @@
+2026-10-12 12:00:01 DEBUG test: loopback=127.0.0.1 any=0.0.0.0 bcast=255.255.255.255 meta=169.254.169.254
+2026-10-12 12:00:02 DEBUG test: p1=10.0.0.5 p2=172.16.0.9 p3=172.31.255.254 p4=192.168.1.1 cgnat=100.64.0.1
+2026-10-12 12:00:03 DEBUG test: public_near_private=172.32.0.1 other=172.15.0.1
+2026-10-12 12:00:04 DEBUG test: doc1=192.0.2.10 doc2=198.51.100.7 doc3=203.0.113.9 mcast=224.0.0.251
+2026-10-12 12:00:05 DEBUG test: bad1=999.1.1.1 bad2=256.256.256.256 bad3=1.2.3 bad4=1.2.3.4.5 bad5=300.300.300.300
+2026-10-12 12:00:06 DEBUG test: leading_zeros=01.02.03.04 and 08.08.08.08
+2026-10-12 12:00:07 DEBUG test: a=8.8.8.8:443 b=8.8.8.0/24 c=http://8.8.8.8/path d=8.8.8.8,8.8.4.4;1.1.1.1
+2026-10-12 12:00:08 DEBUG test: noip1=port75003 noip2=pid=75004 noip3=size=75005bytes zip=75002
+2026-10-12 12:00:09 DEBUG test: v6a=::1 v6b=fe80::1ff:fe23:4567:890a%eth0 v6c=2001:db8::1 v6d=2606:4700:4700::1111
+2026-10-12 12:00:10 DEBUG test: same_v6_a=2001:4860:4860:0:0:0:0:8888 same_v6_b=2001:4860:4860::8888 mapped=::ffff:1.1.1.1 port=[2001:4860:4860::8888]:53
+2026-10-12 12:00:11 DEBUG test: ver1=10.0.19045.5555 ver2=6.1.7601.17514 FileVersion: 10.0.22621.2506 kernel=5.15.0.89
+2026-10-12 12:00:12 DEBUG test: tz1=+0000 tz2=-0400 tz3=Z tz4=+02:00 epoch=1697035375.59012 hex=0x00000000c000006d
+2026-10-12 12:00:13 DEBUG test: big1=1234567890123456 big2=9400111899223344556677 luhnok=4111111111111111
+2026-10-12 12:00:14 DEBUG test: date1=2026-03-12 date2=25/07/1991 dob=12/03/1987 birthdate=1987-03-12
+2026-10-12 12:00:15 DEBUG test: phonelike1=0000000000 phonelike2=1234567890 ref=01 23 45 67 89
+2026-10-12 12:00:16 DEBUG test: mac1=00:16:3e:5a:7b:9c mac2=00-16-3e-5a-7b-9c mac3=0016.3e5a.7b9c time=10:15:32 short=aa:bb:cc
+2026-10-12 12:00:17 DEBUG test: sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 md5=d41d8cd98f00b204e9800998ecf8427e git=da39a3ee5e6b4b0d3255bfef95601890afd80709
+2026-10-12 12:00:18 DEBUG test: uuid=3f2504e0-4f89-11d3-9a0c-0305e82c3301 sid=S-1-5-21-3623811015-3361044348-30300820-1013
+2026-10-12 12:00:19 DEBUG test: e1=jean.dupont@example.com. e2=<jean.dupont@example.com>, e3="jean.dupont@example.com"; e4=mailto:jean.dupont@example.com
+2026-10-12 12:00:20 DEBUG test: list=jean.dupont@example.com,marie.curie@example.org;paul@x.org sub=name@sub.domain.co.uk
+2026-10-12 12:00:21 DEBUG test: u1=user@localhost u2=foo@bar u3=a@b.c u4=élodie@fakecorp.org u5=jean@café.fr
+2026-10-12 12:00:22 DEBUG test: noemail1=@mention noemail2=@Override noemail3=git@github.com:fakecorp/crm.git noemail4=#hashtag
+2026-10-12 12:00:23 DEBUG test: ent=jean.dupont&#64;example.com zw=jean.dupont@exa​mple.com url=jean.dupont%40example.com
+2026-10-12 12:00:24 DEBUG test: p1=/home/camille/.ssh/id_rsa p2=C:\Users\camille\Desktop p3=\\srv-fichiers\homes\camille p4=file:///home/camille/doc.txt p5=~camille/
+2026-10-12 12:00:25 DEBUG test: u=https://user:pass@host.example/path?x=1 v=ftp://anonymous:guest@ftp.example.org/
+2026-10-12 12:00:26 DEBUG test: password=hunter2 pwd: "p@ss w0rd" api_key={{sk_test}}4eC39HqLyjWDarjtT1zdp7dc secret: abc123
+2026-10-12 12:00:27 DEBUG test: noso1=password policy updated noso2=reset password link sent noso3=secret santa 2026
+2026-10-12 12:00:28 DEBUG test: name_in_word=dupontmarketing path=/billing/address field=address kw=address
+2026-10-12 12:00:29 DEBUG test: host=ubuntu-server host=localhost host=prod-web-01 host=db.fakecorp.local from=mail.google.com
+2026-10-12 12:00:30 DEBUG test: zip=75011 then pid=75011 port=75011 size=75011

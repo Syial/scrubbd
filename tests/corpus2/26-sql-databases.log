@@ -1,0 +1,16 @@
+2026-10-14 08:01:12.123 CEST [1234] lea.moreau@crm LOG:  connection authorized: user=lea.moreau database=crm SSL enabled (protocol=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384, bits=256)
+2026-10-14 08:01:12.100 CEST [1234] [unknown]@[unknown] LOG:  connection received: host=10.30.4.17 port=51234
+2026-10-14 08:01:13.000 CEST [1300] FATAL:  password authentication failed for user "app_crm"
+2026-10-14 08:01:14.000 CEST [1234] lea.moreau@crm STATEMENT:  SELECT * FROM customers WHERE email = 'camille.petit@example.com' AND phone = '0612345678' AND birth_date = '1987-05-03'
+2026-10-14 08:01:15.000 CEST [1234] lea.moreau@crm STATEMENT:  INSERT INTO payments (card_number, holder, iban) VALUES ('4111111111111111', 'CAMILLE PETIT', 'FR7630006000011234567890189')
+2026-10-14 08:01:16.000 CEST [1234] lea.moreau@crm STATEMENT:  UPDATE users SET password_hash='$2y$10$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZ01234', api_token='{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ' WHERE id = 4412
+2026-10-14 08:01:17.000 CEST [1234] lea.moreau@crm STATEMENT:  CREATE ROLE svc_report LOGIN PASSWORD 'S3cr3t!2026'
+2026-10-14 08:01:18.000 CEST [1234] lea.moreau@crm DETAIL:  parameters: $1 = 'camille.petit@example.com', $2 = '2026-10-14 08:00:00', $3 = '4412'
+2026-10-14 08:01:19.000 CEST [1234] lea.moreau@crm LOG:  duration: 2.345 ms  statement: SELECT count(*) FROM orders WHERE created_at > now() - interval '7 days'
+2026-10-14T06:01:12.123456Z 45 Connect	lea.moreau@10.30.4.17 on crm using TCP/IP
+2026-10-14T06:01:13.000000Z 45 Query	SELECT id, nom, prenom FROM clients WHERE nom LIKE 'Dupont%' AND email = 'jean.dupont@example.com'
+2026-10-14T06:01:14.000000Z 46 Connect	Access denied for user 'root'@'localhost' (using password: YES)
+# User@Host: app_crm[app_crm] @ web01 [10.30.4.5]  Id:    47
+# Query_time: 2.345678  Lock_time: 0.000123 Rows_sent: 1  Rows_examined: 145000
+SET timestamp=1697270072;
+INSERT INTO clients (nom, prenom, email, tel, adresse) VALUES ('Lambert', 'Hugo', 'h.lambert@example.net', '06 98 76 54 32', '5 impasse des Roses, 31000 Toulouse');

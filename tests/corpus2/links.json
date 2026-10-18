@@ -1,0 +1,373 @@
+[
+ {
+  "kind": "SAME",
+  "note": "mapped IPv4 (::ffff:a.b.c.d) and plain IPv4 of the same client: same alias",
+  "norm": "v6",
+  "items": [
+   {
+    "file": "10-apache-access.log",
+    "line": 4,
+    "before": "443 ",
+    "value": "::ffff:93.184.216.34",
+    "after": " - -",
+    "outAfter": [
+     " - -"
+    ]
+   },
+   {
+    "file": "10-apache-access.log",
+    "line": 5,
+    "before": "443 ",
+    "value": "93.184.216.34",
+    "after": " - -",
+    "outAfter": [
+     " - -"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the workstation name as FQDN (<Computer>) and the machine account (SubjectUserName with $) designate the same workstation: same alias",
+  "norm": "host",
+  "items": [
+   {
+    "file": "21-windows-events-xml.log",
+    "line": 1,
+    "before": "<Computer>",
+    "value": "PC-LMOREAU.fakecorp.local",
+    "after": "</Computer>",
+    "outAfter": [
+     "</Computer>"
+    ]
+   },
+   {
+    "file": "21-windows-events-xml.log",
+    "line": 1,
+    "before": "\"SubjectUserName\">",
+    "value": "PC-LMOREAU$",
+    "after": "</Data>",
+    "outAfter": [
+     "</Data>"
+    ]
+   },
+   {
+    "file": "21-windows-events-xml.log",
+    "line": 1,
+    "before": "\"WorkstationName\">",
+    "value": "PC-LMOREAU",
+    "after": "</Data>",
+    "outAfter": [
+     "</Data>"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the same recipient (lea.moreau@fakecorp.org) in two Postfix lines: a single alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "24-mail-postfix-dovecot.log",
+    "line": 4,
+    "before": "to=<",
+    "value": "lea.moreau@fakecorp.org",
+    "after": ">, relay",
+    "outAfter": [
+     ">,"
+    ]
+   },
+   {
+    "file": "24-mail-postfix-dovecot.log",
+    "line": 7,
+    "before": "user=<",
+    "value": "lea.moreau@fakecorp.org",
+    "after": ">, method",
+    "outAfter": [
+     ">,"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "DIFF",
+  "note": "external sender and internal recipient: two aliases",
+  "norm": "",
+  "items": [
+   {
+    "file": "24-mail-postfix-dovecot.log",
+    "line": 3,
+    "before": "from=<",
+    "value": "h.lambert@example.net",
+    "after": ">,",
+    "outAfter": [
+     ">,"
+    ]
+   },
+   {
+    "file": "24-mail-postfix-dovecot.log",
+    "line": 4,
+    "before": "to=<",
+    "value": "lea.moreau@fakecorp.org",
+    "after": ">, relay",
+    "outAfter": [
+     ">,"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "sender email in From and in the signature: same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "25-email-message.eml",
+    "line": 7,
+    "before": "<",
+    "value": "h.lambert@example.net",
+    "after": ">",
+    "outAfter": [
+     ">"
+    ]
+   },
+   {
+    "file": "25-email-message.eml",
+    "line": 28,
+    "before": "Contact : ",
+    "value": "h.lambert@example.net",
+    "after": " | ",
+    "outAfter": [
+     " | "
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the name \"Hugo Lambert\" in From and in the signature: same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "25-email-message.eml",
+    "line": 7,
+    "before": "From: \"",
+    "value": "Hugo Lambert",
+    "after": "\" <",
+    "outAfter": [
+     "\" <"
+    ]
+   },
+   {
+    "file": "25-email-message.eml",
+    "line": 26,
+    "before": "",
+    "value": "Hugo Lambert",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the same email (WHERE email = … then $1 parameter): same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "26-sql-databases.log",
+    "line": 4,
+    "before": "email = '",
+    "value": "camille.petit@example.com",
+    "after": "' AND",
+    "outAfter": [
+     "' AND"
+    ]
+   },
+   {
+    "file": "26-sql-databases.log",
+    "line": 8,
+    "before": "$1 = '",
+    "value": "camille.petit@example.com",
+    "after": "', $2",
+    "outAfter": [
+     "', $2"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the same IAM user in userName and in the ARN",
+  "norm": "",
+  "items": [
+   {
+    "file": "19-cloudtrail.ndjson",
+    "line": 1,
+    "before": "\"arn\":\"arn:aws:iam::123456789012:user/",
+    "value": "lea.moreau",
+    "after": "\",\"accountId\"",
+    "outAfter": [
+     "\",\"accountId\""
+    ]
+   },
+   {
+    "file": "19-cloudtrail.ndjson",
+    "line": 1,
+    "before": "\"userName\":\"",
+    "value": "lea.moreau",
+    "after": "\"}",
+    "outAfter": [
+     "\"}"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the same user in two audit events",
+  "norm": "",
+  "items": [
+   {
+    "file": "27-docker-k8s.ndjson",
+    "line": 5,
+    "before": "\"username\":\"",
+    "value": "lea.moreau@fakecorp.org",
+    "after": "\",\"groups\"",
+    "outAfter": [
+     "\",\"groups\""
+    ]
+   },
+   {
+    "file": "27-docker-k8s.ndjson",
+    "line": 7,
+    "before": "\"username\":\"",
+    "value": "lea.moreau@fakecorp.org",
+    "after": "\",\"groups\"",
+    "outAfter": [
+     "\",\"groups\""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the name \"Léa Moreau\" in the DN, cn and displayName: a single alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 1,
+    "before": "dn: CN=",
+    "value": "Léa Moreau",
+    "after": ",OU=Compta",
+    "outAfter": [
+     ",OU="
+    ]
+   },
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 4,
+    "before": "cn: ",
+    "value": "Léa Moreau",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   },
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 7,
+    "before": "displayName: ",
+    "value": "Léa Moreau",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "identical mail and userPrincipalName: a single alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 9,
+    "before": "userPrincipalName: ",
+    "value": "lea.moreau@fakecorp.org",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   },
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 10,
+    "before": "mail: ",
+    "value": "lea.moreau@fakecorp.org",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "Mehdi El Amrani in \"manager\" of the first entry and in his own DN",
+  "norm": "",
+  "items": [
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 18,
+    "before": "manager: CN=",
+    "value": "Mehdi El Amrani",
+    "after": ",OU=Direction",
+    "outAfter": [
+     ",OU="
+    ]
+   },
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 26,
+    "before": "dn: CN=",
+    "value": "Mehdi El Amrani",
+    "after": ",OU=Direction",
+    "outAfter": [
+     ",OU="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "DIFF",
+  "note": "two different people in the directory",
+  "norm": "",
+  "items": [
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 4,
+    "before": "cn: ",
+    "value": "Léa Moreau",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   },
+   {
+    "file": "35-ldap-directory.ldif",
+    "line": 27,
+    "before": "cn: ",
+    "value": "Mehdi El Amrani",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   }
+  ]
+ }
+]

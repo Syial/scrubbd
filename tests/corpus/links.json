@@ -1,0 +1,266 @@
+[
+ {
+  "kind": "SAME",
+  "note": "same person written \"LASTNAME, Firstname\" then \"FIRSTNAME LASTNAME\" (same email): a single alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "04-app-pii.log",
+    "line": 1,
+    "before": "Client créé : ",
+    "value": "Dupont, Jean",
+    "after": " (jean.dupont@",
+    "outAfter": [
+     " ("
+    ]
+   },
+   {
+    "file": "04-app-pii.log",
+    "line": 2,
+    "before": "Contact: ",
+    "value": "JEAN DUPONT",
+    "after": " <JEAN.DUPONT@",
+    "outAfter": [
+     " <"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "IPv4 mapped in IPv6 (::ffff:a.b.c.d) = the same machine as a.b.c.d (dual-stack socket): same alias",
+  "norm": "v6",
+  "items": [
+   {
+    "file": "01-nginx-access.log",
+    "line": 7,
+    "before": "",
+    "value": "::ffff:8.8.4.4",
+    "after": " - - [",
+    "outAfter": [
+     " - - ["
+    ]
+   },
+   {
+    "file": "01-nginx-access.log",
+    "line": 8,
+    "before": "\"kube-probe/1.28\" \"",
+    "value": "8.8.4.4",
+    "after": ", 10.20.30.1\"",
+    "outAfter": [
+     ", "
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same in the edge-cases file",
+  "norm": "v6",
+  "items": [
+   {
+    "file": "06-edge-cases.log",
+    "line": 7,
+    "before": ";",
+    "value": "1.1.1.1",
+    "after": "",
+    "outAfter": [
+     ""
+    ]
+   },
+   {
+    "file": "06-edge-cases.log",
+    "line": 10,
+    "before": "mapped=",
+    "value": "::ffff:1.1.1.1",
+    "after": " port=[",
+    "outAfter": [
+     " port=["
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same IPv6 written three ways (expanded, compressed, bracketed with port): a single alias",
+  "norm": "v6",
+  "items": [
+   {
+    "file": "06-edge-cases.log",
+    "line": 10,
+    "before": "same_v6_a=",
+    "value": "2001:4860:4860:0:0:0:0:8888",
+    "after": " same_v6_b=",
+    "outAfter": [
+     " same_v6_b="
+    ]
+   },
+   {
+    "file": "06-edge-cases.log",
+    "line": 10,
+    "before": "same_v6_b=",
+    "value": "2001:4860:4860::8888",
+    "after": " mapped=",
+    "outAfter": [
+     " mapped="
+    ]
+   },
+   {
+    "file": "06-edge-cases.log",
+    "line": 10,
+    "before": "port=[",
+    "value": "2001:4860:4860::8888",
+    "after": "]:53",
+    "outAfter": [
+     "]:53"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "the nginx login (3rd field) and the local part of the email on the same line designate the same person",
+  "norm": "",
+  "items": [
+   {
+    "file": "01-nginx-access.log",
+    "line": 2,
+    "before": "- ",
+    "value": "camille.rousseau",
+    "after": " [12/Oct",
+    "outAfter": [
+     " [12/Oct"
+    ]
+   },
+   {
+    "file": "01-nginx-access.log",
+    "line": 2,
+    "before": "email=",
+    "value": "camille.rousseau",
+    "after": "%40fakecorp.org",
+    "outAfter": [
+     "@",
+     "%40"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same workstation under three forms (agent short name, computer field FQDN, machine account with $): a single alias",
+  "norm": "host",
+  "items": [
+   {
+    "file": "03-wazuh-windows.ndjson",
+    "line": 2,
+    "before": "\"agent\":{\"id\":\"007\",\"name\":\"",
+    "value": "PC-COMPTA-07",
+    "after": "\",\"ip\"",
+    "outAfter": [
+     "\",\"ip\""
+    ]
+   },
+   {
+    "file": "03-wazuh-windows.ndjson",
+    "line": 2,
+    "before": "\"computer\":\"",
+    "value": "PC-COMPTA-07.fakecorp.local",
+    "after": "\",\"channel\"",
+    "outAfter": [
+     "\",\"channel\""
+    ]
+   },
+   {
+    "file": "03-wazuh-windows.ndjson",
+    "line": 2,
+    "before": "\"subjectUserName\":\"",
+    "value": "PC-COMPTA-07$",
+    "after": "\",\"subjectDomainName\"",
+    "outAfter": [
+     "\",\"subjectDomainName\""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same account in targetUserName (4624) and in the user field (Sysmon)",
+  "norm": "",
+  "items": [
+   {
+    "file": "03-wazuh-windows.ndjson",
+    "line": 2,
+    "before": "\"targetUserName\":\"",
+    "value": "crousseau",
+    "after": "\",\"targetDomainName\"",
+    "outAfter": [
+     "\",\"targetDomainName\""
+    ]
+   },
+   {
+    "file": "03-wazuh-windows.ndjson",
+    "line": 7,
+    "before": "FAKECORP\\\\",
+    "value": "crousseau",
+    "after": "\",\"hashes\"",
+    "outAfter": [
+     "\",\"hashes\""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "DIFF",
+  "note": "two different clients sharing a last name: two aliases",
+  "norm": "",
+  "items": [
+   {
+    "file": "04-app-pii.log",
+    "line": 14,
+    "before": "From: \"",
+    "value": "Élodie Fontaine",
+    "after": "\" <",
+    "outAfter": [
+     "\" <"
+    ]
+   },
+   {
+    "file": "04-app-pii.log",
+    "line": 24,
+    "before": "Client: ",
+    "value": "Rose Fontaine",
+    "after": " a ouvert",
+    "outAfter": [
+     " a ouvert"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "DIFF",
+  "note": "two different nginx users: two aliases",
+  "norm": "",
+  "items": [
+   {
+    "file": "01-nginx-access.log",
+    "line": 2,
+    "before": "- ",
+    "value": "camille.rousseau",
+    "after": " [12/Oct",
+    "outAfter": [
+     " [12/Oct"
+    ]
+   },
+   {
+    "file": "01-nginx-access.log",
+    "line": 9,
+    "before": "- ",
+    "value": "mehdi.benali",
+    "after": " [12/Oct",
+    "outAfter": [
+     " [12/Oct"
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,51 @@
+name: Detection problem
+description: A value was missed, wrongly replaced, aliased inconsistently, or a line was mangled.
+labels: ["detection"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste real data.** Reduce the input to the smallest line(s) that reproduce the problem and replace every identifying value (names, IPs, hosts, accounts, tokens...) with a lookalike of the same shape, **including values scrubbd did not flag**.
+        Vulnerabilities (data leaving the page, XSS, CSP) do not belong here: see `SECURITY.md`.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What went wrong?
+      options:
+        - A sensitive value was not replaced (missed)
+        - Something harmless was replaced (false positive)
+        - Same value, different aliases (or different values, same alias)
+        - The output structure changed (JSON/CSV/line count...)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Input (made-up values only)
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What should happen to which value.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+  - type: checkboxes
+    id: sanitised
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that this report contains no real personal data, secret, hostname or IP.
+          required: true

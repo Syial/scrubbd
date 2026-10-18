@@ -1,0 +1,327 @@
+[
+ {
+  "kind": "SAME",
+  "note": "same public IP in two distant places in the file: same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "51-bulk-scale.log",
+    "line": 1,
+    "before": "src=",
+    "value": "193.93.223.8",
+    "after": " dst=",
+    "outAfter": [
+     " dst="
+    ]
+   },
+   {
+    "file": "51-bulk-scale.log",
+    "line": 1001,
+    "before": "src=",
+    "value": "193.93.223.8",
+    "after": " dst=",
+    "outAfter": [
+     " dst="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same account, distant lines: same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "51-bulk-scale.log",
+    "line": 1,
+    "before": "user=",
+    "value": "l.roux",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   },
+   {
+    "file": "51-bulk-scale.log",
+    "line": 501,
+    "before": "user=",
+    "value": "l.roux",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same account, distant lines: same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "51-bulk-scale.log",
+    "line": 2,
+    "before": "user=",
+    "value": "k.mercier",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   },
+   {
+    "file": "51-bulk-scale.log",
+    "line": 502,
+    "before": "user=",
+    "value": "k.mercier",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same account, distant lines: same alias",
+  "norm": "",
+  "items": [
+   {
+    "file": "51-bulk-scale.log",
+    "line": 251,
+    "before": "user=",
+    "value": "n.fournier",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   },
+   {
+    "file": "51-bulk-scale.log",
+    "line": 751,
+    "before": "user=",
+    "value": "n.fournier",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "DIFF",
+  "note": "two different accounts: different aliases",
+  "norm": "",
+  "items": [
+   {
+    "file": "51-bulk-scale.log",
+    "line": 1,
+    "before": "user=",
+    "value": "l.roux",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   },
+   {
+    "file": "51-bulk-scale.log",
+    "line": 2,
+    "before": "user=",
+    "value": "k.mercier",
+    "after": " bytes=",
+    "outAfter": [
+     " bytes="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same user in the login name and home directory (sudo)",
+  "norm": "",
+  "items": [
+   {
+    "file": "41-vendor-messages.log",
+    "line": 6,
+    "before": "sudo: ",
+    "value": "t.marchand",
+    "after": " : TTY",
+    "outAfter": [
+     " : TTY"
+    ]
+   },
+   {
+    "file": "41-vendor-messages.log",
+    "line": 6,
+    "before": "PWD=/home/",
+    "value": "t.marchand",
+    "after": " ;",
+    "outAfter": [
+     " ;"
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same user in logname=, ruser= and user= (pam)",
+  "norm": "",
+  "items": [
+   {
+    "file": "41-vendor-messages.log",
+    "line": 7,
+    "before": "logname=",
+    "value": "nrousseau",
+    "after": " uid=",
+    "outAfter": [
+     " uid="
+    ]
+   },
+   {
+    "file": "41-vendor-messages.log",
+    "line": 7,
+    "before": "ruser=",
+    "value": "nrousseau",
+    "after": " rhost=",
+    "outAfter": [
+     " rhost="
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same public IP in sshd and in the firewall",
+  "norm": "",
+  "items": [
+   {
+    "file": "41-vendor-messages.log",
+    "line": 3,
+    "before": "user icarvalho ",
+    "value": "185.125.190.36",
+    "after": " port 51022 [pre",
+    "outAfter": [
+     " port 51022 [pre"
+    ],
+    "outBeforeRe": "user \\S+ "
+   },
+   {
+    "file": "41-vendor-messages.log",
+    "line": 10,
+    "before": "for outside:",
+    "value": "185.125.190.36",
+    "after": "/51022 (",
+    "outAfter": [
+     "/51022 ("
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same OIDC identity in two audit events",
+  "norm": "",
+  "items": [
+   {
+    "file": "42-k8s-resources.ndjson",
+    "line": 1,
+    "before": "\"username\":\"",
+    "value": "nadia.rousseau@acmecorp.fr",
+    "after": "\"",
+    "outAfter": [
+     "\""
+    ]
+   },
+   {
+    "file": "42-k8s-resources.ndjson",
+    "line": 7,
+    "before": "\"username\":\"",
+    "value": "nadia.rousseau@acmecorp.fr",
+    "after": "\"",
+    "outAfter": [
+     "\""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "DIFF",
+  "note": "two different OIDC identities",
+  "norm": "",
+  "items": [
+   {
+    "file": "42-k8s-resources.ndjson",
+    "line": 1,
+    "before": "\"username\":\"",
+    "value": "nadia.rousseau@acmecorp.fr",
+    "after": "\"",
+    "outAfter": [
+     "\""
+    ]
+   },
+   {
+    "file": "42-k8s-resources.ndjson",
+    "line": 3,
+    "before": "\"username\":\"",
+    "value": "t.marchand@acmecorp.fr",
+    "after": "\"",
+    "outAfter": [
+     "\""
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same From header address and signature",
+  "norm": "",
+  "items": [
+   {
+    "file": "46-email-greetings.eml",
+    "line": 1,
+    "before": "<",
+    "value": "nadia.rousseau@acmecorp.fr",
+    "after": ">",
+    "outAfter": [
+     ">"
+    ]
+   },
+   {
+    "file": "46-email-greetings.eml",
+    "line": 16,
+    "before": "Acmecorp | ",
+    "value": "nadia.rousseau@acmecorp.fr",
+    "after": " | ",
+    "outAfter": [
+     " | "
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "SAME",
+  "note": "same source IP in two lines of the positional CSV",
+  "norm": "",
+  "items": [
+   {
+    "file": "43-panos-apps.csv",
+    "line": 1,
+    "before": "2026/10/14 09:30:00,",
+    "value": "192.168.50.23",
+    "after": ",",
+    "outAfter": [
+     ","
+    ]
+   },
+   {
+    "file": "43-panos-apps.csv",
+    "line": 4,
+    "before": "2026/10/14 09:30:00,",
+    "value": "192.168.50.23",
+    "after": ",",
+    "outAfter": [
+     ","
+    ]
+   }
+  ]
+ }
+]

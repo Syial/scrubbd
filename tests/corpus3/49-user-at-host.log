@@ -1,0 +1,12 @@
+ssh nadia.rousseau@192.168.50.60
+scp -P 2222 dump.sql.gz t.marchand@172.16.8.11:/srv/backup/
+rsync -avz /srv/data/ deploy@db-prod-07.acmecorp.local:/data/
+git clone git@github.com:acmecorp/erp-backend.git
+ssh -l icarvalho srv-erp01.acmecorp.local
+mysql -u yhaddad -pHiver#2026 -h 172.16.8.12 erp
+psql -U nrousseau -h db-prod-07.acmecorp.local -d erp -W
+curl -u o.lefevre:Moutarde-2026 https://api.partenaire-conseil.com/v1/orders
+ftp ftp://svc_ftp:Pr0d-2026@172.16.8.15/in/
+ssh ssh://thibault.marchand@bastion.acmecorp.fr:2222
+sftp -i ~/.ssh/id_rsa yanis_haddad@185.125.190.36
+ssh git@gitlab.com

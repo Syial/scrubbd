@@ -1,0 +1,11 @@
+Oct 14 2026 08:01:12 fw-edge-01 : %ASA-6-302013: Built inbound TCP connection 123456 for outside:91.198.174.192/51234 (91.198.174.192/51234) to inside:10.30.1.20/443 (52.96.166.130/443)
+Oct 14 2026 08:01:13 fw-edge-01 : %ASA-6-113004: AAA user authentication Successful : server =  10.30.1.9 : user = lea.moreau
+Oct 14 2026 08:01:14 fw-edge-01 : %ASA-6-113005: AAA user authentication Rejected : reason = Invalid password : server =  10.30.1.9 : user = sobrien : user IP = 185.199.108.153
+Oct 14 2026 08:01:15 fw-edge-01 : %ASA-6-722051: Group <GroupPolicy_VPN> User <lea.moreau> IP <91.198.174.192> IPv4 Address <10.30.50.12> IPv6 address <::> assigned to session
+Oct 14 2026 08:01:16 fw-edge-01 : %ASA-4-106023: Deny tcp src outside:185.199.108.153/4444 dst inside:10.30.1.20/22 by access-group "OUTSIDE_IN" [0x0, 0x0]
+Oct 14 2026 08:01:17 fw-edge-01 : %ASA-6-605005: Login permitted from 10.30.4.17/51234 to inside:10.30.1.1/ssh for user "lea.moreau"
+Oct 14 2026 08:01:18 fw-edge-01 : %ASA-5-304001: 10.30.4.17 Accessed URL 140.82.112.3:https://github.com/fakecorp/crm-private
+Oct 14 2026 08:01:19 fw-edge-01 : %ASA-5-111008: User 'enable_15' executed the 'show running-config' command.
+Oct 14 2026 08:01:20 fw-edge-01 : %ASA-6-109005: Authentication succeeded for user 'm.elamrani' from 10.30.4.52/0 to 10.30.1.1/0 on interface inside
+Oct 14 2026 08:01:21 fw-edge-01 : %ASA-3-710003: TCP access denied by ACL from 185.199.108.153/445 to outside:52.96.166.130/445
+Oct 14 2026 08:01:22 fw-edge-01 : %ASA-6-302016: Teardown UDP connection 98765 for outside:9.9.9.9/53 to inside:10.30.4.17/50500 duration 0:00:00 bytes 120

@@ -1,0 +1,7 @@
+2026-10-15 11:00:01 app login user=bob password=
+2026-10-15 11:00:02 app login user=alice password=Zx9!kLm2Qp
+2026-10-15 11:00:03 app logout user=bob
+2026-10-15 11:00:04 api call token= status=200 duration=35ms
+2026-10-15 11:00:05 api call token=abcdef1234567890 status=200
+2026-10-15 11:00:06 app login user=alice password= from=10.0.0.5 ok
+2026-10-15 11:00:07 app login user=alice password= ok

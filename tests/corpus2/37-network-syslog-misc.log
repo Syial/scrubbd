@@ -1,0 +1,12 @@
+<34>1 2026-10-14T08:01:12.123456+02:00 srv-web01.fakecorp.local sshd 1234 ID47 [exampleSDID@32473 iut="3" eventSource="Application" eventID="1011" user="lea.moreau" ip="91.198.174.192"] Failed password for lea.moreau
+<165>1 2026-10-14T08:02:00Z 10.30.1.50 myapp - - - ﻿User sobrien logged in from 10.30.4.60
+2026/10/14 08:03:00 [error] 1234#1234: *5678 open() "/usr/share/nginx/html/~sobrien/index.html" failed (2: No such file or directory), client: 91.198.174.192, server: www.fakecorp.org, request: "GET /~sobrien/ HTTP/1.1", host: "www.fakecorp.org", referrer: "https://mail.example.net/?u=h.lambert@example.net"
+2026/10/14 08:04:00 [error] 1234#1234: *5679 connect() failed (111: Connection refused) while connecting to upstream, client: 10.30.4.17, server: api.fakecorp.org, request: "GET /v1/me HTTP/1.1", upstream: "http://10.30.1.21:8080/v1/me", host: "api.fakecorp.org"
+Oct 14 08:05:00 sw-core-01 %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: lea.moreau] [Source: 10.30.4.17] [localport: 22] at 08:05:00 CEST Tue Oct 14 2026
+Oct 14 08:06:00 sw-core-01 %SYS-5-CONFIG_I: Configured from console by lea.moreau on vty0 (10.30.4.17)
+snmp-server community S3cr3tComm RO
+username lea.moreau privilege 15 secret 5 $1$abcd$Xy9Zw8Vv7Uu6Tt5Ss4Rr3.
+enable secret 9 $9$abcdefghijklmnop$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
+crypto isakmp key MyPre5haredKey address 52.96.166.130
+interface GigabitEthernet0/1
+ ip address 10.30.1.1 255.255.255.0

@@ -1,0 +1,13 @@
+14-Oct-2026 08:01:12.123 queries: info: client @0x7f1234567890 10.30.4.17#51234 (lmoreau-pc.fakecorp.local): query: lmoreau-pc.fakecorp.local IN A + (10.30.1.10)
+14-Oct-2026 08:01:13.001 queries: info: client @0x7f1234567891 91.198.174.192#4444 (www.fakecorp.org): query: www.fakecorp.org IN A +E(0)K (10.30.1.10)
+14-Oct-2026 08:02:00.500 security: error: client @0x7f1234567892 185.199.108.153#53 (fakecorp.org): query (cache) 'fakecorp.org/ANY/IN' denied
+Oct 14 08:03:00 gw01 dnsmasq[1234]: query[A] github.com from 10.30.4.17
+Oct 14 08:03:00 gw01 dnsmasq[1234]: reply github.com is 140.82.112.3
+Oct 14 08:03:05 gw01 dnsmasq[1234]: config lmoreau-pc.fakecorp.local is 10.30.4.17
+Oct 14 08:04:00 gw01 dnsmasq-dhcp[1234]: DHCPACK(eth0) 10.30.4.17 aa:bb:cc:11:22:33 PC-LMOREAU
+Oct 14 08:04:10 gw01 dnsmasq-dhcp[1234]: DHCPREQUEST(eth0) 10.30.4.52 b8:27:eb:12:34:56
+Oct 14 08:04:20 gw01 dnsmasq-dhcp[1234]: DHCPOFFER(eth0) 10.30.4.60 02:42:ac:11:00:02 iPhone-de-Sophie
+10/14/2026 8:01:12 AM 0A1C PACKET  000001A2B3C4D5E6 UDP Rcv 10.30.4.17    b7c1   Q [0001   D   NOERROR] A      (11)lmoreau-pc(8)fakecorp(5)local(0)
+10/14/2026 8:01:13 AM 0A1C PACKET  000001A2B3C4D5E7 UDP Snd 10.30.4.17    b7c1 R Q [8085   DR  NOERROR] A      (6)github(3)com(0)
+Oct 14 08:06:00 pihole FTL[321]: query[A] mehdi-el-amrani-macbook.local from 10.30.4.52
+Oct 14 08:07:00 pihole FTL[321]: forwarded ocsp.digicert.com to 9.9.9.9

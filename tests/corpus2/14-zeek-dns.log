@@ -1,0 +1,8 @@
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	query	qclass_name	qtype_name	rcode_name	answers	TTLs
+1697270100.1	CDk9pV8w0aQ7rMvJo4	10.30.4.17	50500	10.30.1.10	53	udp	4242	lmoreau-pc.fakecorp.local	C_INTERNET	A	NOERROR	10.30.4.17	300.000000
+1697270101.2	CEk0qW9x1bR8sNwKp5	10.30.4.17	50501	10.30.1.10	53	udp	4242	github.com	C_INTERNET	A	NOERROR	140.82.112.3	60.000000
+1697270102.3	CFk1rX0y2cS9tOxLq6	10.30.4.52	50502	10.30.1.10	53	udp	4242	_ldap._tcp.dc._msdcs.fakecorp.local	C_INTERNET	SRV	NOERROR	srv-dc01.fakecorp.local	600.000000
+1697270103.4	CGk2sY1z3dT0uPyMr7	10.30.4.52	50503	10.30.1.10	53	udp	4242	wpad.fakecorp.local	C_INTERNET	A	NXDOMAIN	-	-
+1697270104.5	CHk3tZ2a4eU1vQzNs8	10.30.4.60	50504	8.8.8.8	53	udp	4242	mehdi-el-amrani-macbook.local	C_INTERNET	A	NOERROR	10.30.4.52	120.000000
+1697270105.6	CIk4uA3b5fV2wRaOt9	10.30.4.60	50505	8.8.8.8	53	udp	4242	dGhpcyBpcyBleGZpbA.data.evil-example.test	C_INTERNET	TXT	NOERROR	-	0.000000
+1697270106.7	CJk5vB4c6gW3xSbPu0	10.30.4.17	50506	9.9.9.9	53	udp	4242	ocsp.digicert.com	C_INTERNET	A	NOERROR	13.107.42.14	30.000000

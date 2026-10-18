@@ -1,0 +1,28 @@
+Return-Path: <bounce+abc123@mail.example.net>
+Received: from mail.example.net (mail.example.net [93.184.216.34])
+	by mx1.fakecorp.org (Postfix) with ESMTPS id 4F2A1B2C3D
+	for <lea.moreau@fakecorp.org>; Tue, 14 Oct 2026 08:01:12 +0200 (CEST)
+Received: from [192.168.1.57] (unknown [91.198.174.192])
+X-Originating-IP: [91.198.174.192]
+From: "Hugo Lambert" <h.lambert@example.net>
+To: =?UTF-8?Q?L=C3=A9a_Moreau?= <lea.moreau@fakecorp.org>,
+	Mehdi El Amrani <m.elamrani@fakecorp.org>, "O'Brien, Siobhán" <sobrien@fakecorp.org>
+Subject: =?UTF-8?B?RmFjdHVyZSBuwrAgMjAyNi0wNDUxIOKAlCBNbWUgTWFydGlu?=
+Subject: Facture n° 2026-0451 - Mme Martin (dossier Lemaire & Fils)
+Message-ID: <20261014080112.4F2A1B2C3D@mail.example.net>
+Authentication-Results: mx1.fakecorp.org; spf=pass (sender SPF authorized) smtp.mailfrom=bounce+abc123@mail.example.net; dkim=pass header.d=example.net header.s=default; dmarc=pass header.from=example.net
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.net; s=default;
+	bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=; b=dGhpcyBpcyBhIGZha2Ugc2lnbmF0dXJlIGZvciB0ZXN0aW5nIHB1cnBvc2VzIG9ubHk=
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQHb3Zp0kYqLmN8oRtS1uV2wXyZ4aA==
+Content-Type: text/plain; charset="utf-8"
+
+Bonjour Léa,
+Voici les coordonnées pour le remboursement : IBAN FR76 3000 6000 0112 3456 7890 189, BIC AGRIFRPP.
+Vous pouvez me joindre au 06 12 34 56 78 ou au +33 (0)4 72 00 00 00, ou à la maison : 04.72.11.22.33.
+Mon adresse : 12 rue des Lilas, 69003 Lyon. Née le 3 mai 1987 à Lyon.
+Le mot de passe du portail : Summer2026! (à changer).
+-- 
+Hugo Lambert
+Responsable comptabilité - Example Net SAS
+Contact : h.lambert@example.net | Tél : 01 23 45 67 89 | Mobile : 06 98 76 54 32

@@ -1,0 +1,14 @@
+2026-10-14 08:01:12,123 ERROR [http-nio-8080-exec-3] c.f.crm.CustomerService - Failed to update customer Camille Petit (id=48213, email=camille.petit@example.com)
+java.sql.SQLException: Access denied for user 'app_crm'@'10.30.4.5' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at c.f.crm.CustomerService.update(CustomerService.java:88) ~[crm-3.12.4.1.jar:?]
+	... 42 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused) to db-prod-02.fakecorp.local/10.30.1.40:3306
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+2026-10-14 08:02:00,500 WARN  [scheduler-1] c.f.crm.AuthService - Rejected login for user 'lea.moreau' from 91.198.174.192 (attempt 3/5)
+2026-10-14 08:03:00,001 ERROR [pool-2-thread-1] c.f.crm.PaymentService - Invalid IBAN FR7630006000011234567890189 for holder Hugo Petit; card 4111111111111111 refused
+javax.net.ssl.SSLHandshakeException: PKIX path building failed: unable to find valid certification path to requested target (host=mail.fakecorp.org)
+2026-10-14 08:04:00,010 INFO  [main] o.s.b.StartupInfoLogger - Starting CrmApplication v3.12.4.1 using Java 17.0.9 on srv-web01 with PID 4321 (/opt/crm/crm-3.12.4.1.jar started by svc_crm in /opt/crm)
+2026-10-14 08:05:00,000 DEBUG [http-nio-8080-exec-7] c.f.crm.Http - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+2026-10-14 08:06:00,000 INFO  [http-nio-8080-exec-8] c.f.crm.Audit - user=Mehdi El Amrani role=ADMIN action=EXPORT rows=15000 target=/srv/export/clients_2026.csv
+	{"customer":{"firstName":"Zoë","lastName":"Kowalski-Dubois","phone":"+33 6 12 34 56 78"},"requestId":"7c1d5e2a-9b3f-4f5e-8a47-0d2f6c1b9e33"}

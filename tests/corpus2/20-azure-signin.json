@@ -1,0 +1,91 @@
+[
+  {
+    "id": "1d1f0000-0000-0000-0000-000000000001",
+    "createdDateTime": "2026-10-14T06:01:12Z",
+    "userDisplayName": "Léa Moreau",
+    "userPrincipalName": "lea.moreau@fakecorp.org",
+    "userId": "1d1f0000-0000-0000-0000-00000000000b",
+    "appId": "1d1f0000-0000-0000-0000-000000000015",
+    "appDisplayName": "Microsoft Teams",
+    "ipAddress": "91.198.174.192",
+    "clientAppUsed": "Browser",
+    "correlationId": "1d1f0000-0000-0000-0000-00000000001f",
+    "conditionalAccessStatus": "success",
+    "isInteractive": true,
+    "riskLevelAggregated": "none",
+    "status": {
+      "errorCode": 0,
+      "failureReason": "Other.",
+      "additionalDetails": null
+    },
+    "deviceDetail": {
+      "deviceId": "1d1f0000-0000-0000-0000-000000000029",
+      "displayName": "PC-LMOREAU",
+      "operatingSystem": "Windows 11",
+      "browser": "Chrome 118.0.5993"
+    },
+    "location": {
+      "city": "Lyon",
+      "state": "Auvergne-Rhône-Alpes",
+      "countryOrRegion": "FR",
+      "geoCoordinates": {
+        "latitude": 45.764043,
+        "longitude": 4.835659
+      }
+    }
+  },
+  {
+    "id": "1d1f0000-0000-0000-0000-000000000002",
+    "createdDateTime": "2026-10-14T06:02:00Z",
+    "userDisplayName": "Siobhán O'Brien",
+    "userPrincipalName": "sobrien@fakecorp.org",
+    "userId": "1d1f0000-0000-0000-0000-00000000000c",
+    "appDisplayName": "Azure Portal",
+    "ipAddress": "2606:4700:4700::1111",
+    "clientAppUsed": "Mobile Apps and Desktop clients",
+    "correlationId": "1d1f0000-0000-0000-0000-000000000020",
+    "conditionalAccessStatus": "failure",
+    "isInteractive": false,
+    "status": {
+      "errorCode": 50126,
+      "failureReason": "Error validating credentials due to invalid username or password.",
+      "additionalDetails": null
+    },
+    "deviceDetail": {
+      "deviceId": "",
+      "displayName": "",
+      "operatingSystem": "Android 13",
+      "browser": "Rich Client 4.2.0"
+    },
+    "location": null
+  },
+  {
+    "id": "1d1f0000-0000-0000-0000-000000000003",
+    "createdDateTime": "2026-10-14T06:03:00Z",
+    "userDisplayName": "Hugo Lambert",
+    "userPrincipalName": "hugo.lambert_example.net#EXT#@fakecorp.onmicrosoft.com",
+    "userId": "1d1f0000-0000-0000-0000-00000000000d",
+    "appDisplayName": "SharePoint Online",
+    "ipAddress": "140.82.112.3",
+    "clientAppUsed": "Browser",
+    "correlationId": "1d1f0000-0000-0000-0000-000000000021",
+    "conditionalAccessStatus": "notApplied",
+    "isInteractive": true,
+    "status": {
+      "errorCode": 0
+    },
+    "deviceDetail": {
+      "operatingSystem": "MacOs",
+      "browser": "Safari 17.0"
+    },
+    "location": {
+      "city": "Paris",
+      "state": "Île-de-France",
+      "countryOrRegion": "FR",
+      "geoCoordinates": {
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      }
+    }
+  }
+]

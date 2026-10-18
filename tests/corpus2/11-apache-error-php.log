@@ -1,0 +1,14 @@
+[Tue Oct 14 08:01:12.123456 2026] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Oct 14 08:02:30.554412 2026] [authz_core:error] [pid 20411] [client 151.101.1.69:51234] AH01630: client denied by server configuration: /var/www/html/.htpasswd
+[Tue Oct 14 08:03:01.100000 2026] [php:warn] [pid 20412] [client 91.198.174.192:44012] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'app_crm'@'10.30.4.5' (using password: YES) in /var/www/app/db.php on line 12
+[Tue Oct 14 08:03:44.000001 2026] [php:error] [pid 20413] [client 10.30.4.17:51888] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'lmoreau'@'10.30.4.17' (using password: NO) in /var/www/app/db.php:12
+[Tue Oct 14 08:03:44.000200 2026] [php:error] [pid 20413] [client 10.30.4.17:51888] Stack trace: #0 /var/www/app/db.php(12): PDO->__construct('mysql:host=db-p...', 'app_crm', 'S3cr3t-Pa55!')
+[Tue Oct 14 08:04:10.010101 2026] [php:error] [pid 20414] PHP Warning:  include(/home/lmoreau/public_html/inc/config.php): failed to open stream: No such file or directory in /var/www/app/index.php on line 3
+[Tue Oct 14 08:05:00.222222 2026] [core:error] [pid 20415] [client 185.199.108.153:60000] AH00126: Invalid URI in request GET /~sobrien/../../etc/passwd HTTP/1.1
+[Tue Oct 14 08:06:12.000000 2026] [php:notice] [pid 20416] PHP Notice:  Undefined index: email in /var/www/app/contact.php on line 88
+[Tue Oct 14 08:07:30.100000 2026] [php:error] [pid 20417] Mail error: SMTP connect() failed to smtp.fakecorp.org:587 as lea.moreau@fakecorp.org (535 5.7.8 Error: authentication failed)
+[Tue Oct 14 08:08:15.100000 2026] [php:error] [pid 20418] Failed sending mail to "Camille Petit" <camille.petit@example.com>: Recipient address rejected
+[Tue Oct 14 08:09:00.000000 2026] [security2:error] [pid 20419] [client 185.199.108.153:61111] ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Rx'" against ARGS:email. [data "' OR 1=1--"] [uri "/login"] [unique_id "ZNr7vH8AAAEAAFAbQ9EAAAAA"]
+[Tue Oct 14 08:10:00.000000 2026] [ssl:error] [pid 20420] [client 104.16.132.229:40404] AH02032: Hostname www.fakecorp.org provided via SNI and hostname 10.30.1.20 provided via HTTP are different
+[Tue Oct 14 08:11:00.000000 2026] [php:warn] [pid 20421] PHP Deprecated:  Function create_function() is deprecated in /var/www/vendor/lib.php on line 1337
+[Tue Oct 14 08:12:00.000000 2026] [php:error] [pid 20422] [client 216.58.214.174:2222] session_start(): Failed to read session data: files (path: /var/lib/php/sessions), PHPSESSID=0123456789abcdef0123456789abcdef

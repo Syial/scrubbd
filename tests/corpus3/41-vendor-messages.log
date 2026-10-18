@@ -1,0 +1,13 @@
+Oct 14 09:20:01 fw-core-02 : %ASA-6-113005: AAA user accounting Started : server = 172.16.8.10 : user = nrousseau
+Oct 14 09:20:02 fw-core-02 : %ASA-4-113021: AAA user authorization Denied : reason = ACL : server = 172.16.8.10 : user = t.marchand
+Oct 14 09:20:03 srv-erp01 sshd[2201]: Connection closed by authenticating user icarvalho 185.125.190.36 port 51022 [preauth]
+Oct 14 09:20:04 srv-erp01 sshd[2202]: Failed password for invalid user oracle from 198.41.0.4 port 40222 ssh2
+Oct 14 09:20:05 srv-erp01 sshd[2203]: Accepted publickey for yhaddad from 192.168.50.60 port 51500 ssh2: RSA SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
+Oct 14 09:20:06 srv-erp01 sudo: t.marchand : TTY=pts/1 ; PWD=/home/t.marchand ; USER=root ; COMMAND=/usr/bin/systemctl restart erpd
+Oct 14 09:20:07 srv-erp01 sudo: pam_unix(sudo:auth): authentication failure; logname=nrousseau uid=1001 euid=0 tty=/dev/pts/2 ruser=nrousseau rhost=  user=nrousseau
+Oct 14 09:20:08 srv-erp01 su: (to root) icarvalho on pts/0
+Oct 14 09:20:09 srv-erp01 sshd[2204]: pam_unix(sshd:session): session opened for user yhaddad(uid=1004) by (uid=0)
+Oct 14 09:20:10 fw-core-02 : %ASA-6-302013: Built inbound TCP connection 99812 for outside:185.125.190.36/51022 (185.125.190.36/51022) to inside:172.16.8.10/443 (172.16.8.10/443)
+Oct 14 09:20:11 vpn-gw-01 pulsesecure: User authentication succeeded for user nrousseau (Realm: Employees) from 20.190.151.131
+Oct 14 09:20:12 mail-01 dovecot: imap-login: Login: user=<ines.carvalho@acmecorp.fr>, method=PLAIN, rip=192.168.50.77, lip=172.16.8.12, TLS
+Oct 14 09:20:13 srv-erp01 kernel: [ 1234.567890] audit: type=1400 audit(1697271613.123:42): apparmor="DENIED" operation="open" profile="/usr/sbin/cupsd" name="/home/yhaddad/.cache/x" pid=2244 comm="cupsd" requested_mask="r" denied_mask="r" fsuid=0 ouid=1004

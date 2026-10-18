@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2026-10-14-08-00-00
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	user_agent	status_code	username	password	orig_fuids	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	count	string	string	vector[string]	vector[string]
+1697270072.123456	CYk4kQ3r5vL2mHqEj9	10.30.4.17	51234	140.82.112.3	443	1	GET	github.com	/fakecorp/crm-private	-	Mozilla/5.0	200	-	-	(empty)	text/html
+1697270073.200000	CZk5lR4s6wM3nIrFk0	10.30.4.17	51235	10.30.1.20	80	1	GET	intranet.fakecorp.local	/wiki/Accueil	-	Mozilla/5.0	401	-	-	(empty)	-
+1697270074.300000	CAk6mS5t7xN4oJsGl1	10.30.4.17	51235	10.30.1.20	80	2	GET	intranet.fakecorp.local	/wiki/Accueil	-	Mozilla/5.0	200	lea.moreau	Summer2026!	FpL3mA1b2C3d4E5f6	text/html
+1697270075.400000	CBk7nT6u8yO5pKtHm2	10.30.4.52	52000	185.199.108.153	80	1	GET	185.199.108.153	/login?email=h.lambert@example.net	http://mail.example.net/read?u=hugo	curl/8.4.0	403	-	-	-	text/plain
+1697270076.500000	CCk8oU7v9zP6qLuIn3	10.30.4.60	52001	2606:4700:4700::1111	443	1	POST	cloud.example.net	/upload?name=CV_Siobhan_OBrien.pdf&token={{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ	-	Mozilla/5.0	200	-	-	FqM4nB2c3D4e5F6g7	application/pdf

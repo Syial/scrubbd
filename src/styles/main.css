@@ -1,0 +1,266 @@
+:root {
+  color-scheme: dark light;
+  --bg: #0a0a0a;
+  --fg: #e8e8e8;
+  --muted: #8a8a8a;
+  --line: #222;
+  --panel: #111;
+  --accent: #c8c8c8;
+  --warn: #c9a227;
+  --ok: #6a9b6a;
+  --focus: #ddd;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f7f5;
+    --fg: #161616;
+    --muted: #666;
+    --line: #ddd;
+    --panel: #fff;
+    --accent: #222;
+    --warn: #8a6d1a;
+    --ok: #2f6f2f;
+    --focus: #111;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.page {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.trust {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.trust a {
+  margin-left: 0.35rem;
+}
+
+.section {
+  margin-bottom: 1.75rem;
+}
+
+.section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+button,
+.file-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+}
+
+button:hover,
+.file-btn:hover {
+  border-color: var(--muted);
+}
+
+button.primary {
+  border-color: var(--accent);
+}
+
+textarea,
+pre,
+.code {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  padding: 0.75rem;
+}
+
+textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.summary {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table td:nth-child(3),
+.table td:nth-child(4) {
+  min-width: 9rem;
+  max-width: 24rem;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.actions {
+  margin-top: 0.75rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.table th {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.status-ok {
+  color: var(--ok);
+}
+
+.status-warn {
+  color: var(--warn);
+}
+
+.limits p {
+  max-width: 62ch;
+  margin: 0 0 1rem;
+}
+
+.nav-links {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.drop {
+  border: 1px dashed var(--line);
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.drop.dragover {
+  border-color: var(--accent);
+  color: var(--fg);
+}
+
+.hidden-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.options {
+  margin-top: 0.75rem;
+}
+
+.options-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.25rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.option input {
+  margin: 0;
+}

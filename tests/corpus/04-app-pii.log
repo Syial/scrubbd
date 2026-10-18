@@ -1,0 +1,24 @@
+2026-10-12T10:00:17+02:00 INFO  crm: Client créé : Dupont, Jean (jean.dupont@example.com) tel 06 12 34 56 78
+2026-10-12T10:00:34+02:00 INFO  crm: Contact: JEAN DUPONT <JEAN.DUPONT@EXAMPLE.COM>
+2026-10-12T10:00:51+02:00 INFO  crm: Téléphones: +33612345678 / 0033 6 12 34 56 78 / 06.12.34.56.78 / 06-12-34-56-78
+2026-10-12T10:01:08+02:00 INFO  crm: Autres pays: (415) 555-0132 | +1-202-555-0143 | +44 20 7946 0958
+2026-10-12T10:01:25+02:00 INFO  crm: Fixe: 01 23 45 67 89 ; contacter Mme Sophie Lefèvre ou par mail
+2026-10-12T10:01:42+02:00 INFO  crm: Fiche: né le 12/03/1987 ; date de naissance: 1987-03-12 ; DOB 12 March 1987 ; créé le 03/10/2026 10:00
+2026-10-12T10:01:59+02:00 WARN  billing: Adresse de facturation: 12 Rue de la Paix, 75002 Paris, France | 45 avenue Victor Hugo 69003 LYON | 221B Baker Street, London NW1 6XE
+2026-10-12T10:02:16+02:00 INFO  payment: carte 4111 1111 1111 1111 exp 12/28 | carte 4111 1111 1111 1112 | carte 5500 0000 0000 0004 | amex 378282246310005
+2026-10-12T10:02:33+02:00 INFO  payment: virement IBAN FR1420041010050500013M02606 BIC PSSTFRPPPAR ref FAC-2026-0451
+2026-10-12T10:02:50+02:00 DEBUG db: connecting postgres://app_crm:S3cr3tP%40ss@db-prod-01.fakecorp.local:5432/crm?sslmode=require
+2026-10-12T10:03:07+02:00 DEBUG cfg: AWS_ACCESS_KEY_ID={{AKIA}}IOSFODNN7EXAMPLE AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+2026-10-12T10:03:24+02:00 DEBUG auth: Authorization: Bearer eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJzdWIiOiAiNDgyMTMiLCAiZW1haWwiOiAiY2FtaWxsZS5yb3Vzc2VhdUBmYWtlY29ycC5vcmciLCAibmFtZSI6ICJDYW1pbGxlIFJvdXNzZWF1IiwgImlhdCI6IDE3NjAyNTkwMDB9.OQyMfXJHNCzYEA8vb3cNZdZw5Y4DUdiujk9urDQvwjE
+2026-10-12T10:03:41+02:00 DEBUG git: remote https://x-access-token:{{ghp}}A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8@github.com/fakecorp/crm.git
+2026-10-12T10:03:58+02:00 INFO  mail: Subject: "Re: facture n°2026-0451 - Mme Martin" From: "Élodie Fontaine" <efontaine@fakecorp.org> To: mehdi.benali+factures@fakecorp.org
+2026-10-12T10:04:15+02:00 INFO  mail: contact: jean [dot] dupont [at] example [dot] com
+2026-10-12T10:04:32+02:00 INFO  geo: position 48.8698, 2.3312 ; lat=45.764043&lon=4.835659
+2026-10-12T10:04:49+02:00 INFO  ids: user_id=48213 order_id=2026-0451 trace_id=4bf92f3577b34da6a3ce929d0e0e4736 span=00f067aa0ba902b7 request_id=7c1d5e2a-9b3f-4f5e-8a47-0d2f6c1b9e33
+2026-10-12T10:05:06+02:00 INFO  boot: Starting crm-service v3.12.4.1 build 20261012 on kernel 6.18.44 (openjdk 17.0.9.1)
+2026-10-12T10:05:23+02:00 INFO  wiki: fetch https://camille:Pa55w0rd@intranet.fakecorp.local/wiki/Accueil
+2026-10-12T10:05:40+02:00 INFO  sec: Le 12/10/2026 à 10:42, 3 tentatives depuis 8.8.8.8 pour l'utilisateur 'camille.rousseau'
+2026-10-12T10:05:57+02:00 ERROR net: Impossible de joindre 192.168.0.12:8080 (timeout 30s)
+2026-10-12T10:06:14+02:00 INFO  crm: Dossier traité par Pierre Martin (service Paris), voir Martin & Fils SARL
+2026-10-12T10:06:31+02:00 INFO  crm: Nouveau client: Zoë Müller-Lindström, tel +46 70 123 45 67
+2026-10-12T10:06:48+02:00 INFO  crm: Client: Rose Fontaine a ouvert le ticket #4920 « Problème avec ma rose »

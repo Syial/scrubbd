@@ -1,0 +1,27 @@
+DEBUG=false
+PORT=8080
+TZ=Europe/Paris
+APP_VERSION=3.12.4.1
+COMMIT_SHA=9fceb02d0ae598e95dc970b74767f19372d61af7
+PASSWORD_MIN_LENGTH=12
+TOKEN_EXPIRY=3600
+SECRET_ROTATION_DAYS=90
+SMTP_PASSWORD_FILE=/run/secrets/smtp_password
+DB_HOST=db-prod-02.fakecorp.local
+DB_PASSWORD=S3cr3t!2026
+DATABASE_URL=postgres://app_crm:Pg-S3cret@db-prod-02.fakecorp.local:5432/crm
+REDIS_URL=redis://:R3dis-S3cret@10.30.1.30:6379/0
+STRIPE_SECRET_KEY={{sk_test}}4eC39HqLyjWDarjtT1zdp7dc
+SENDGRID_API_KEY={{SG}}aB3dE5fG7hJ9kL1mN3pQ5r.sT7uV9wX1yZ3aB5cD7eF9gH1iJ3kL5mN7oP9qR1sT3u
+SLACK_BOT_TOKEN={{xoxb}}123456789012-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx
+GOOGLE_API_KEY={{AIza}}SyA1b2C3d4E5f6G7h8I9j0KlMnOpQrStUvW
+JWT_SECRET=0f8fad5bd9cb469fa16570867728950e0f8fad5bd9cb469fa16570867728950e
+ADMIN_EMAIL=lea.moreau@fakecorp.org
+SMTP_USER=notifications@fakecorp.org
+password: "S3cr3t-yaml"
+  api_key: abcdef0123456789abcdef0123456789
+  - name: DB_PASSWORD
+    value: S3cr3t-k8s
+  + access_key = "{{AKIA}}IOSFODNN7EXAMPLE"
+  ~ secret_key = (sensitive value)
+  + master_password = "Tf-S3cret-2026"

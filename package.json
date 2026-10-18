@@ -1,0 +1,55 @@
+{
+  "name": "scrubbd",
+  "private": true,
+  "version": "0.1.0",
+  "description": "scrubbd - local-first security log redactor",
+  "keywords": [
+    "log-anonymization",
+    "pseudonymization",
+    "security",
+    "soc",
+    "privacy",
+    "local-first",
+    "typescript"
+  ],
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syial/scrubbd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Syial/scrubbd/issues"
+  },
+  "homepage": "https://github.com/Syial/scrubbd#readme",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.app.json --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:corpus": "npm run test:corpus:1 && npm run test:corpus:2 && npm run test:corpus:3",
+    "test:corpus:1": "tsx scripts/redact-corpus.ts tests/corpus tmp/corpus-out && node scripts/check-corpus.mjs tests/corpus tmp/corpus-out",
+    "test:corpus:2": "tsx scripts/redact-corpus.ts tests/corpus2 tmp/corpus2-out && node scripts/check-corpus.mjs tests/corpus2 tmp/corpus2-out",
+    "test:corpus:3": "tsx scripts/redact-corpus.ts tests/corpus3 tmp/corpus3-out && node scripts/check-corpus.mjs tests/corpus3 tmp/corpus3-out",
+    "test:corpus:redact": "tsx scripts/redact-corpus.ts",
+    "test:corpus:check": "node scripts/check-corpus.mjs tests/corpus tmp/corpus-out --verbose",
+    "check": "tsc -p tsconfig.app.json --noEmit && vitest run"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.5.2",
+    "jsdom": "^26.1.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^3.2.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

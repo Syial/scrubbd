@@ -1,0 +1,10 @@
+2026-10-14 13:00:01 fw deny src=185.199.108.153 dst=172.16.8.10 user=nrousseau
+2026-10-14 13:00:02 note Rapport : l'IP 185.199.108.153 a été bloquée. Voir 185.199.108.153.
+2026-10-14 13:00:03 note Le poste 172.16.8.10. Contact : nrousseau.
+2026-10-14 13:00:04 note Depuis 151.101.65.69. Merci de contacter le support.
+2026-10-14 13:00:05 note Adresses vues : 151.101.65.69, 185.199.108.153; 172.16.8.10! 172.16.8.10? (172.16.8.10) [151.101.65.69] "185.199.108.153" '172.16.8.10'
+2026-10-14 13:00:06 note ping 185.199.108.153... timeout puis 185.199.108.153…
+2026-10-14 13:00:07 mail Écrire à nadia.rousseau@acmecorp.fr. Ou à t.marchand@acmecorp.fr, merci.
+2026-10-14 13:00:08 net mac 00:16:3e:5a:7b:9c. puis (00:16:3e:5a:7b:9c)
+2026-10-14 13:00:09 auth user=nrousseau password=Printemps2026! ok
+2026-10-14 13:00:10 support note: le client dit que son mot de passe Printemps2026! ne marche plus

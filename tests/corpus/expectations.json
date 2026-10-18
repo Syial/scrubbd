@@ -1,0 +1,2438 @@
+[
+ {
+  "file": "01-nginx-access.log",
+  "line": 1,
+  "text": "8.8.8.8",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 1,
+  "text": "Chrome/118.0.5993.88",
+  "cat": "K",
+  "note": "browser version (4 numbers): not an IP"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 1,
+  "text": "Windows NT 10.0",
+  "cat": "K",
+  "note": "OS version"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 2,
+  "text": "8.8.8.9",
+  "cat": "R",
+  "note": "same /24 as line 1: the prefix must stay consistent"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 2,
+  "text": "camille.rousseau%40fakecorp.org",
+  "cat": "R",
+  "note": "URL-encoded email (%40): classic trap"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 2,
+  "text": "- camille.rousseau [",
+  "cat": "R",
+  "note": "basic-auth user"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 3,
+  "text": "1.1.1.1",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 3,
+  "text": "curl/8.4.0",
+  "cat": "K",
+  "note": "tool version"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 4,
+  "text": "3f9a1c7e5b2d4a8e9c0b6d1f7a2e4c58",
+  "cat": "S",
+  "note": "reset token in the URL"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 4,
+  "text": "uid=48213",
+  "cat": "D",
+  "note": "internal user id: alias or not?"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 5,
+  "text": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJzdWIiOiAiNDgyMTMiLCAiZW1haWwiOiAiY2FtaWxsZS5yb3Vzc2VhdUBmYWtlY29ycC5vcmciLCAibmFtZSI6ICJDYW1pbGxlIFJvdXNzZWF1IiwgImlhdCI6IDE3NjAyNTkwMDB9.OQyMfXJHNCzYEA8vb3cNZdZw5Y4DUdiujk9urDQvwjE",
+  "cat": "S",
+  "note": "JWT: its payload (base64) contains an email and a name, so replace the whole token"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 6,
+  "text": "2001:4860:4860::8888",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 7,
+  "text": "8.8.4.4",
+  "cat": "R",
+  "note": "IPv4 mapped in IPv6; ideally same alias as plain 8.8.4.4 (next line)"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 8,
+  "text": "8.8.4.4",
+  "cat": "R",
+  "note": "IP in X-Forwarded-For (end of line)"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 8,
+  "text": "10.20.30.40",
+  "cat": "R",
+  "note": "private IP: must remain a private IP (not an [IP-01] that loses the internal/external information)"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 9,
+  "text": "mehdi.benali@fakecorp.org",
+  "cat": "R",
+  "note": "email in the Referer"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 9,
+  "text": "- mehdi.benali [",
+  "cat": "R",
+  "note": "same identifier as the email: same alias expected"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 10,
+  "text": "Élodie-Fontaine",
+  "cat": "D",
+  "note": "name in a URL path: no structural hint"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 11,
+  "text": "0612345678",
+  "cat": "R",
+  "note": "phone without separator in a query"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 11,
+  "text": "dupont+jean",
+  "cat": "D",
+  "note": "name in a search query"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 12,
+  "text": "v1.2.3.4",
+  "cat": "K",
+  "note": "version number glued to a \"v\": valid as IPv4 but not an IP"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 13,
+  "text": "app.3.2.1.4.js",
+  "cat": "D",
+  "note": "filename with 4 numbers: valid IPv4, but in context it is a filename"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 14,
+  "text": "2026-10-12",
+  "cat": "K",
+  "note": "ordinary date"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 15,
+  "text": "ops@fakecorp.org",
+  "cat": "R",
+  "note": "email in the User-Agent"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 15,
+  "text": "MonitorBot/2.1",
+  "cat": "K",
+  "note": "version"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 16,
+  "text": "%C3%A9",
+  "cat": "K",
+  "note": "encoded character: must stay as-is"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 17,
+  "text": "1.1.1.1",
+  "cat": "R",
+  "note": "IP present even in an invalid request"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 17,
+  "text": "\\x16\\x03\\x01\\x02\\x00\\x01\\x00\\x01\\xFC\\x03\\x03",
+  "cat": "K",
+  "note": "bytes of a TLS handshake sent on the wrong port: do not touch, nor crash"
+ },
+ {
+  "file": "01-nginx-access.log",
+  "line": 18,
+  "text": "+0000",
+  "cat": "K",
+  "note": "unformatted line: must not produce anything false"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 1,
+  "text": "45.33.32.156",
+  "cat": "R",
+  "note": "public IP (attacker)"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 1,
+  "text": "srv-bastion-01",
+  "cat": "R",
+  "note": "syslog hostname (positional field, no key)"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 1,
+  "text": "oracle",
+  "cat": "D",
+  "note": "made-up account tried by an attacker: useful to the analyst, not personal data"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 2,
+  "text": "port 51822",
+  "cat": "K",
+  "note": "port number"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 3,
+  "text": "45.33.32.20",
+  "cat": "R",
+  "note": "same /24 as 45.33.32.156"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 3,
+  "text": "for root",
+  "cat": "K",
+  "note": "generic account: keep (useful for analysis)"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 4,
+  "text": "for crousseau",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 4,
+  "text": "10.20.30.45",
+  "cat": "R",
+  "note": "private IP -> stays private"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 4,
+  "text": "SHA256:q3XvK0lYk1m5P7nJbGf0eE3a1Jx4yq0Z8s0t5uH2vRk",
+  "cat": "D",
+  "note": "SSH key fingerprint: correlation id, keep by default?"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 5,
+  "text": "user crousseau(",
+  "cat": "R",
+  "note": "same account as the previous line: same alias"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 5,
+  "text": "uid=1001",
+  "cat": "K",
+  "note": "system UID"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 6,
+  "text": "PWD=/home/crousseau",
+  "cat": "R",
+  "note": "account name in a path: propagation from previous lines"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 6,
+  "text": "USER=root",
+  "cat": "K",
+  "note": "generic target account"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 6,
+  "text": "/etc/hosts",
+  "cat": "K",
+  "note": "system path"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 7,
+  "text": "for m.benali",
+  "cat": "R",
+  "note": "account of form \"initial.lastname\""
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 7,
+  "text": "2001:db8:85a3::8a2e:370:7334",
+  "cat": "D",
+  "note": "documentation IPv6 (RFC 3849): keep if following the special-ranges rule"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 8,
+  "text": "rhost=8.8.4.4",
+  "cat": "R",
+  "note": "IP after a key=value in text"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 8,
+  "text": "user=m.benali",
+  "cat": "R",
+  "note": "same account"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 8,
+  "text": "uid=0 euid=0",
+  "cat": "K",
+  "note": "UID"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 9,
+  "text": "for efontaine",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 10,
+  "text": "user backup",
+  "cat": "K",
+  "note": "generic service account"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 11,
+  "text": "srv-compta-01.fakecorp.local",
+  "cat": "R",
+  "note": "internal FQDN"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 11,
+  "text": "FAKECORP\\mbenali",
+  "cat": "R",
+  "note": "DOMAIN\\account: the account must be processed (link with m.benali = user decision)"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 12,
+  "text": "1.0.0.1",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 12,
+  "text": "port 22: 11",
+  "cat": "K",
+  "note": "port followed by a code"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": "00:16:3e:5a:7b:9c",
+  "cat": "R",
+  "note": "destination MAC (UFW MAC= field: 2 MACs + Ethernet type glued)"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": "b8:27:eb:12:34:56",
+  "cat": "R",
+  "note": "source MAC"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": "SRC=1.1.1.1",
+  "cat": "R",
+  "note": "public source IP"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": "DST=10.20.30.2",
+  "cat": "R",
+  "note": "private destination IP"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": "ID=54321",
+  "cat": "K",
+  "note": "packet id"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": "WINDOW=64240",
+  "cat": "K",
+  "note": "TCP window size"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 13,
+  "text": ":08:00 SRC=",
+  "cat": "K",
+  "note": "Ethernet type (08:00) glued to the source MAC: this is not an identifier. Trap: 8 hex groups = a valid IPv6!"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 14,
+  "text": "0.0.0.0",
+  "cat": "K",
+  "note": "special address"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 15,
+  "text": "on :: port",
+  "cat": "K",
+  "note": "unspecified IPv6 address"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 16,
+  "text": "kex_exchange_identification",
+  "cat": "K",
+  "note": "text"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 17,
+  "text": "192.168.1.10",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 17,
+  "text": "192.168.1.1 ",
+  "cat": "R",
+  "note": "private IP (router)"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 18,
+  "text": "camille.rousseau@fakecorp.org",
+  "cat": "R",
+  "note": "email used as account name"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 18,
+  "text": "8.8.8.9",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 19,
+  "text": "for jdupont",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 20,
+  "text": "srv-bastion-01",
+  "cat": "R",
+  "note": "hostname in a \"user@host\" prompt"
+ },
+ {
+  "file": "02-auth-syslog.log",
+  "line": 20,
+  "text": "/etc/passwd",
+  "cat": "K",
+  "note": "system path"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"ipAddress\":\"8.8.8.8\"",
+  "cat": "R",
+  "note": "IP in a structured field"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"targetUserName\":\"efontaine\"",
+  "cat": "R",
+  "note": "account in a structured field"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "Account Name:\\t\\tefontaine",
+  "cat": "R",
+  "note": "PROPAGATION: same account in full_log (free text)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "Source Network Address:\\t8.8.8.8",
+  "cat": "R",
+  "note": "PROPAGATION: same IP in full_log"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "FAKECORP\\\\EFONTAINE",
+  "cat": "R",
+  "note": "same account, different case, DOMAIN\\ACCOUNT form"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"workstationName\":\"PC-RH-04\"",
+  "cat": "R",
+  "note": "workstation name"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "Workstation Name:\\tPC-RH-04",
+  "cat": "R",
+  "note": "PROPAGATION: workstation name in full_log"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"computer\":\"SRV-DC-01.fakecorp.local\"",
+  "cat": "R",
+  "note": "FQDN in data.win.system.computer"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"subjectUserSid\":\"S-1-0-0\"",
+  "cat": "K",
+  "note": "well-known SID (no account)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"status\":\"0xc000006d\"",
+  "cat": "K",
+  "note": "Windows status code"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"ipPort\":\"49733\"",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"eventRecordID\":\"9283712\"",
+  "cat": "K",
+  "note": "registration number"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"subjectDomainName\":\"-\"",
+  "cat": "K",
+  "note": "\"-\" sentinel: never treat it as a value to alias"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "Logon Failure - Unknown",
+  "cat": "K",
+  "note": "a dash in text must not be replaced"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "Account Name:\\t\\t-\\r\\n",
+  "cat": "K",
+  "note": "\"-\" sentinel in full_log free text"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 1,
+  "text": "\"targetDomainName\":\"FAKECORP\"",
+  "cat": "D",
+  "note": "NetBIOS domain name: keep or alias?"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 2,
+  "text": "\"targetUserName\":\"crousseau\"",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 2,
+  "text": "\"ipAddress\":\"10.20.30.45\"",
+  "cat": "R",
+  "note": "private IP -> stays private"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 2,
+  "text": "\"targetUserSid\":\"S-1-5-21-3623811015-3361044348-30300820-1013\"",
+  "cat": "D",
+  "note": "domain SID: identifies the domain (domain SID) and the user (RID 1013)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 2,
+  "text": "\"logonGuid\":\"{3f2504e0-4f89-11d3-9a0c-0305e82c3301}\"",
+  "cat": "K",
+  "note": "session GUID (correlation id)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 2,
+  "text": "\"subjectUserName\":\"PC-COMPTA-07$\"",
+  "cat": "D",
+  "note": "machine account (hostname + $): treated as host or as account?"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 2,
+  "text": "\"workstationName\":\"-\"",
+  "cat": "K",
+  "note": "empty value \"-\": replace nothing"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 3,
+  "text": "\"ipAddress\":\"-\"",
+  "cat": "K",
+  "note": "dash = no address"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 3,
+  "text": "\"targetUserName\":\"SYSTEM\"",
+  "cat": "K",
+  "note": "system account"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 3,
+  "text": "\"targetDomainName\":\"NT AUTHORITY\"",
+  "cat": "K",
+  "note": "system domain"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 3,
+  "text": "\"ipPort\":\"-\"",
+  "cat": "K",
+  "note": "\"-\" sentinel in a port field"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 4,
+  "text": "Winter2026!",
+  "cat": "S",
+  "note": "password in the command line"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 4,
+  "text": "\\\\\\\\srv-compta-01\\\\partage",
+  "cat": "R",
+  "note": "hostname in a UNC path"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 4,
+  "text": "FAKECORP\\\\mbenali Winter",
+  "cat": "R",
+  "note": "account after /user:"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 4,
+  "text": "C:\\\\Users\\\\mbenali\\\\AppData",
+  "cat": "R",
+  "note": "account in a profile path"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 4,
+  "text": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+  "cat": "K",
+  "note": "system path"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 4,
+  "text": "\"subjectUserName\":\"mbenali\"",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\"displayName\":\"Karim Lefèvre\"",
+  "cat": "R",
+  "note": "person name (displayName field)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\"userPrincipalName\":\"k.lefevre@fakecorp.org\"",
+  "cat": "R",
+  "note": "UPN = email"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\\\\\\\\srv-fichiers\\\\homes\\\\k.lefevre",
+  "cat": "R",
+  "note": "server + account in a UNC path"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\"samAccountName\":\"k.lefevre\"",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\"subjectUserName\":\"Administrateur\"",
+  "cat": "D",
+  "note": "generic French account: missing from the admin/root list?"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\"primaryGroupId\":\"513\"",
+  "cat": "K",
+  "note": "group RID"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 5,
+  "text": "\"profilePath\":\"-\"",
+  "cat": "K",
+  "note": "\"-\" sentinel"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "\"sourceIp\":\"10.20.31.7\"",
+  "cat": "R",
+  "note": "private IP -> stays private"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "\"destinationIp\":\"142.250.74.206\"",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "\"sourceHostname\":\"PC-COMPTA-07.fakecorp.local\"",
+  "cat": "R",
+  "note": "FQDN"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "\"destinationHostname\":\"par21s22-in-f14.1e100.net\"",
+  "cat": "D",
+  "note": "PUBLIC hostname (Google reverse DNS): keep? useful info for the analyst"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "FAKECORP\\\\mbenali",
+  "cat": "R",
+  "note": "DOMAIN\\account"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "\"utcTime\":\"2026-10-12 06:15:02.331\"",
+  "cat": "K",
+  "note": "timestamp"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "\"processGuid\":\"{a1b2c3d4-0000-0000-0000-001122334455}\"",
+  "cat": "K",
+  "note": "process GUID"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "Sysmon - Event 3",
+  "cat": "K",
+  "note": "the dash in a rule title"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 6,
+  "text": "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe",
+  "cat": "K",
+  "note": "program path: contains no username"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "Pa55w0rd",
+  "cat": "S",
+  "note": "password after -u"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "{{ghp}}A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8",
+  "cat": "S",
+  "note": "GitHub token (ghp_ prefix)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "-u camille:",
+  "cat": "R",
+  "note": "username before the password"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host in a URL"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "SHA256=E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "cat": "K",
+  "note": "SHA-256 fingerprint: 64 hex, neither a secret nor a personal identifier"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "Sysmon - Event 1",
+  "cat": "K",
+  "note": "the dash in a rule title"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 7,
+  "text": "Authorization: Bearer ",
+  "cat": "K",
+  "note": "the word Bearer remains; only the token is replaced"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 8,
+  "text": "CN=Camille Rousseau",
+  "cat": "R",
+  "note": "person name in an LDAP DN: replace while keeping the CN=…,OU=… format"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 8,
+  "text": "DC=fakecorp,DC=org",
+  "cat": "D",
+  "note": "domain in a DN"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 8,
+  "text": "\"targetUserName\":\"Comptabilite-RW\"",
+  "cat": "K",
+  "note": "group name (targetUserName field but this is not an account!): field-name rule trap"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 9,
+  "text": "camille.rousseau@fakecorp.org",
+  "cat": "R",
+  "note": "JSON INSIDE a JSON string: after replacement, the line must remain valid JSON (escapes)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 9,
+  "text": "0612345678",
+  "cat": "R",
+  "note": "phone in the nested JSON"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 9,
+  "text": "8.8.8.8",
+  "cat": "R",
+  "note": "IP in the nested JSON"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "\\u00c9lodie Fontaine",
+  "cat": "R",
+  "note": "name written with \\uXXXX escapes: must decode to recognize"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "elodie.fontaine\\u0040fakecorp.org",
+  "cat": "R",
+  "note": "@ written \\u0040: an email that regexes do not see"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "\"phone\":null",
+  "cat": "K",
+  "note": "null stays null"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "\"ip\":\"\"",
+  "cat": "K",
+  "note": "empty string stays empty"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "48.8698",
+  "cat": "R",
+  "note": "latitude = number: replacement must stay a number (or null), never [GEO-01]"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "9007199254740993",
+  "cat": "D",
+  "note": "integer > 2^53: never round it (JSON.parse + stringify corrupts it)"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "\"tags\":[]",
+  "cat": "K",
+  "note": "empty array"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "Mehdi Benali",
+  "cat": "R",
+  "note": "name in an object array"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "+33 6 98 76 54 32",
+  "cat": "R",
+  "note": "spaced international phone"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "Zo\\u00eb M\\u00fcller-Lindstr\\u00f6m",
+  "cat": "R",
+  "note": "name with diacritics, hyphen, escapes"
+ },
+ {
+  "file": "03-wazuh-windows.ndjson",
+  "line": 10,
+  "text": "\"ip\":\"1.1.1.1\"",
+  "cat": "R",
+  "note": "DUPLICATE KEY \"ip\" (valid JSON): the 2nd value must also be processed, key order preserved"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 1,
+  "text": "Dupont, Jean",
+  "cat": "R",
+  "note": "\"LASTNAME, Firstname\" form"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 1,
+  "text": "jean.dupont@example.com",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 1,
+  "text": "06 12 34 56 78",
+  "cat": "R",
+  "note": "spaced FR mobile"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 2,
+  "text": "JEAN DUPONT",
+  "cat": "R",
+  "note": "same person in uppercase: same alias"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 2,
+  "text": "JEAN.DUPONT@EXAMPLE.COM",
+  "cat": "R",
+  "note": "same email, different case: same alias"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 3,
+  "text": "+33612345678",
+  "cat": "R",
+  "note": "same number, glued E.164 format"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 3,
+  "text": "0033 6 12 34 56 78",
+  "cat": "R",
+  "note": "0033 prefix"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 3,
+  "text": "06.12.34.56.78",
+  "cat": "R",
+  "note": "points"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 3,
+  "text": "06-12-34-56-78",
+  "cat": "R",
+  "note": "dashes"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 4,
+  "text": "(415) 555-0132",
+  "cat": "R",
+  "note": "US format with parentheses"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 4,
+  "text": "+1-202-555-0143",
+  "cat": "R",
+  "note": "E.164 US"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 4,
+  "text": "+44 20 7946 0958",
+  "cat": "R",
+  "note": "UK"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 5,
+  "text": "01 23 45 67 89",
+  "cat": "R",
+  "note": "FR landline line"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 5,
+  "text": "Sophie Lefèvre",
+  "cat": "R",
+  "note": "name after the title \"Mme\""
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 6,
+  "text": "12/03/1987",
+  "cat": "R",
+  "note": "date of birth (\"born on\" label)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 6,
+  "text": "1987-03-12",
+  "cat": "R",
+  "note": "date of birth (\"date of birth\" label)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 6,
+  "text": "12 March 1987",
+  "cat": "R",
+  "note": "date of birth (DOB label)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 6,
+  "text": "03/10/2026 10:00",
+  "cat": "K",
+  "note": "creation date: not a date of birth"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 7,
+  "text": "12 Rue de la Paix, 75002 Paris",
+  "cat": "R",
+  "note": "FR address with postal code"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 7,
+  "text": "45 avenue Victor Hugo 69003 LYON",
+  "cat": "R",
+  "note": "FR address without comma"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 7,
+  "text": "221B Baker Street, London NW1 6XE",
+  "cat": "R",
+  "note": "UK address (alphanumeric postal code)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 8,
+  "text": "4111 1111 1111 1111",
+  "cat": "R",
+  "note": "test Visa (valid Luhn)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 8,
+  "text": "4111 1111 1111 1112",
+  "cat": "K",
+  "note": "16 digits but invalid Luhn: not a card"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 8,
+  "text": "5500 0000 0000 0004",
+  "cat": "R",
+  "note": "test Mastercard"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 8,
+  "text": "378282246310005",
+  "cat": "R",
+  "note": "test Amex (15 digits)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 9,
+  "text": "FR1420041010050500013M02606",
+  "cat": "R",
+  "note": "valid IBAN (mod 97 check)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 9,
+  "text": "PSSTFRPPPAR",
+  "cat": "K",
+  "note": "BIC: public bank code"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 9,
+  "text": "FAC-2026-0451",
+  "cat": "K",
+  "note": "invoice reference (business id)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 10,
+  "text": "S3cr3tP%40ss",
+  "cat": "S",
+  "note": "password in the connection URL"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 10,
+  "text": "db-prod-01.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 10,
+  "text": "app_crm",
+  "cat": "D",
+  "note": "application service account: keep (useful) or alias?"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 10,
+  "text": "5432",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 11,
+  "text": "{{AKIA}}IOSFODNN7EXAMPLE",
+  "cat": "S",
+  "note": "AWS key id (example key from the docs)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 11,
+  "text": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  "cat": "S",
+  "note": "AWS secret key (example key from the docs)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 12,
+  "text": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJzdWIiOiAiNDgyMTMiLCAiZW1haWwiOiAiY2FtaWxsZS5yb3Vzc2VhdUBmYWtlY29ycC5vcmciLCAibmFtZSI6ICJDYW1pbGxlIFJvdXNzZWF1IiwgImlhdCI6IDE3NjAyNTkwMDB9.OQyMfXJHNCzYEA8vb3cNZdZw5Y4DUdiujk9urDQvwjE",
+  "cat": "S",
+  "note": "JWT in a header"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 13,
+  "text": "{{ghp}}A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8",
+  "cat": "S",
+  "note": "GitHub token in a URL"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 13,
+  "text": "github.com/fakecorp/crm.git",
+  "cat": "K",
+  "note": "public repo/URL: do not break the URL shape"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 14,
+  "text": "Élodie Fontaine",
+  "cat": "R",
+  "note": "quoted name with accent"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 14,
+  "text": "efontaine@fakecorp.org",
+  "cat": "R",
+  "note": "email"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 14,
+  "text": "mehdi.benali+factures@fakecorp.org",
+  "cat": "R",
+  "note": "email with +tag subaddress"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 14,
+  "text": "Mme Martin",
+  "cat": "D",
+  "note": "title + last name alone: very ambiguous (\"Martin\" is also a first name and a common company name)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 15,
+  "text": "jean [dot] dupont [at] example [dot] com",
+  "cat": "D",
+  "note": "obfuscated email: known limit, to document"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 16,
+  "text": "lat=45.764043&lon=4.835659",
+  "cat": "R",
+  "note": "coordinates with label"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 16,
+  "text": "48.8698, 2.3312",
+  "cat": "D",
+  "note": "unlabeled number pair: could be anything"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 17,
+  "text": "user_id=48213",
+  "cat": "D",
+  "note": "user id"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 17,
+  "text": "order_id=2026-0451",
+  "cat": "K",
+  "note": "business id (keep by default)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 17,
+  "text": "trace_id=4bf92f3577b34da6a3ce929d0e0e4736",
+  "cat": "K",
+  "note": "correlation id (32 hex)"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 17,
+  "text": "request_id=7c1d5e2a-9b3f-4f5e-8a47-0d2f6c1b9e33",
+  "cat": "K",
+  "note": "UUID"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 18,
+  "text": "v3.12.4.1",
+  "cat": "K",
+  "note": "version"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 18,
+  "text": "17.0.9.1",
+  "cat": "D",
+  "note": "version that is also a valid IPv4: must stay intact"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 18,
+  "text": "20261012",
+  "cat": "K",
+  "note": "build number"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 19,
+  "text": "Pa55w0rd",
+  "cat": "S",
+  "note": "password in the URL"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 19,
+  "text": "intranet.fakecorp.local",
+  "cat": "R",
+  "note": "internal host"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 19,
+  "text": "https://camille:",
+  "cat": "R",
+  "note": "identifier in the URL (userinfo): a real first name/login, not only the password"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 20,
+  "text": "8.8.8.8",
+  "cat": "R",
+  "note": "IP"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 20,
+  "text": "'camille.rousseau'",
+  "cat": "R",
+  "note": "user in single quotes"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 20,
+  "text": "12/10/2026 à 10:42",
+  "cat": "K",
+  "note": "date and time"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 21,
+  "text": "192.168.0.12",
+  "cat": "R",
+  "note": "private IP with port -> stays private, port preserved"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 21,
+  "text": ":8080",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 22,
+  "text": "Pierre Martin",
+  "cat": "R",
+  "note": "first name + last name"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 22,
+  "text": "Martin & Fils SARL",
+  "cat": "D",
+  "note": "company name containing a last name: do not confuse with a person"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 23,
+  "text": "Zoë Müller-Lindström",
+  "cat": "R",
+  "note": "diacritics and hyphen"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 23,
+  "text": "+46 70 123 45 67",
+  "cat": "R",
+  "note": "Swedish phone"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 24,
+  "text": "Rose Fontaine",
+  "cat": "R",
+  "note": "first name that is also a common noun"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 24,
+  "text": "#4920",
+  "cat": "K",
+  "note": "ticket number"
+ },
+ {
+  "file": "04-app-pii.log",
+  "line": 24,
+  "text": "ma rose",
+  "cat": "K",
+  "note": "common word that is also a first name: do not replace"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "devname=\"FGT-PARIS-01\"",
+  "cat": "R",
+  "note": "equipment name (devname field)"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "devid=\"FGT60FTK20000001\"",
+  "cat": "D",
+  "note": "firewall serial number"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "srcip=10.20.31.7",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "dstip=142.250.74.206",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "srcname=\"PC-COMPTA-07\"",
+  "cat": "R",
+  "note": "workstation name"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "user=\"mbenali\"",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "srcmac=\"b8:27:eb:12:34:56\"",
+  "cat": "R",
+  "note": "MAC"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "srcport=51234",
+  "cat": "K",
+  "note": "port"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "sentbyte=1234",
+  "cat": "K",
+  "note": "counter"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 1,
+  "text": "dstcountry=\"United States\"",
+  "cat": "K",
+  "note": "country: analysis information, not personal data"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 2,
+  "text": "camille.rousseau%40fakecorp.org",
+  "cat": "R",
+  "note": "email encoded in a URL (url= field)"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 2,
+  "text": "hostname=\"www.exemple.fr\"",
+  "cat": "D",
+  "note": "visited public website: keep (the analyst needs it)"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 2,
+  "text": "catdesc=\"Social Networking\"",
+  "cat": "K",
+  "note": "category"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 3,
+  "text": "remip=8.8.8.8",
+  "cat": "R",
+  "note": "VPN remote IP"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 3,
+  "text": "tunnelip=10.212.134.200",
+  "cat": "R",
+  "note": "tunnel private IP"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 3,
+  "text": "user=\"crousseau\"",
+  "cat": "R",
+  "note": "account"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 3,
+  "text": "group=\"VPN-USERS\"",
+  "cat": "K",
+  "note": "group name"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 4,
+  "text": "https(8.8.4.4) because",
+  "cat": "R",
+  "note": "IP in parentheses in a message (2nd occurrence)"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 4,
+  "text": "ui=\"https(8.8.4.4)\"",
+  "cat": "R",
+  "note": "IP in parentheses in a field"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 4,
+  "text": "user=\"admin\"",
+  "cat": "K",
+  "note": "generic account"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 5,
+  "text": "srcip=45.33.32.156",
+  "cat": "R",
+  "note": "public IP"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 5,
+  "text": "dstip=10.20.30.2",
+  "cat": "R",
+  "note": "private IP"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 5,
+  "text": "attack=\"SSH.Brute.Force\"",
+  "cat": "K",
+  "note": "attack name"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 5,
+  "text": "http://www.fortinet.com/ids/VID12345",
+  "cat": "K",
+  "note": "public reference URL"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 6,
+  "text": "fe80::ba27:ebff:fe12:3456",
+  "cat": "D",
+  "note": "EUI-64 link-local: derived from the machine MAC, so replacing is defensible; keeping also (non-routable address)"
+ },
+ {
+  "file": "05-firewall-kv.log",
+  "line": 6,
+  "text": "dstip=ff02::1",
+  "cat": "K",
+  "note": "multicast"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 1,
+  "text": "127.0.0.1",
+  "cat": "K",
+  "note": "loopback"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 1,
+  "text": "0.0.0.0",
+  "cat": "K",
+  "note": "unspecified"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 1,
+  "text": "255.255.255.255",
+  "cat": "K",
+  "note": "broadcast"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 1,
+  "text": "169.254.169.254",
+  "cat": "K",
+  "note": "cloud metadata service: the analyst MUST see it (SSRF)"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 2,
+  "text": "10.0.0.5",
+  "cat": "R",
+  "note": "RFC 1918 private -> stays private"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 2,
+  "text": "172.16.0.9",
+  "cat": "R",
+  "note": "private"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 2,
+  "text": "172.31.255.254",
+  "cat": "R",
+  "note": "last address of the private /12"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 2,
+  "text": "192.168.1.1",
+  "cat": "R",
+  "note": "private"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 2,
+  "text": "100.64.0.1",
+  "cat": "D",
+  "note": "CGNAT (RFC 6598): neither public nor private in the RFC 1918 sense"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 3,
+  "text": "172.32.0.1",
+  "cat": "R",
+  "note": "PUBLIC (outside 172.16/12): classic \"172.* = private\" trap"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 3,
+  "text": "172.15.0.1",
+  "cat": "R",
+  "note": "PUBLIC"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 4,
+  "text": "192.0.2.10",
+  "cat": "D",
+  "note": "RFC 5737 documentation range: keep (special-ranges rule)"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 4,
+  "text": "198.51.100.7",
+  "cat": "D",
+  "note": "same"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 4,
+  "text": "203.0.113.9",
+  "cat": "D",
+  "note": "same"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 4,
+  "text": "224.0.0.251",
+  "cat": "K",
+  "note": "mDNS multicast"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 5,
+  "text": "999.1.1.1",
+  "cat": "K",
+  "note": "octet > 255"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 5,
+  "text": "256.256.256.256",
+  "cat": "K",
+  "note": "octets > 255"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 5,
+  "text": "bad3=1.2.3 ",
+  "cat": "K",
+  "note": "only 3 numbers"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 5,
+  "text": "300.300.300.300",
+  "cat": "K",
+  "note": "octets > 255"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 5,
+  "text": "1.2.3.4.5",
+  "cat": "D",
+  "note": "5 numbers: neither an IP nor an \"IP subset\" to split"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 6,
+  "text": "01.02.03.04",
+  "cat": "D",
+  "note": "leading zeros: ambiguous (octal?), strict parsers reject"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 6,
+  "text": "08.08.08.08",
+  "cat": "D",
+  "note": "same"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 7,
+  "text": "8.8.8.8:443",
+  "cat": "R",
+  "note": "IP:port -> keep the port"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 7,
+  "text": "8.8.8.0/24",
+  "cat": "R",
+  "note": "CIDR -> keep the /24"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 7,
+  "text": "http://8.8.8.8/path",
+  "cat": "R",
+  "note": "IP in a URL"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 7,
+  "text": "8.8.4.4;1.1.1.1",
+  "cat": "R",
+  "note": "IP list separated by , or ;"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 8,
+  "text": "port75003",
+  "cat": "K",
+  "note": "5 digits: not a postal code"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 8,
+  "text": "pid=75004",
+  "cat": "K",
+  "note": "PID"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 8,
+  "text": "size=75005bytes",
+  "cat": "K",
+  "note": "size"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 8,
+  "text": "zip=75002",
+  "cat": "D",
+  "note": "postal code with \"zip\" label"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 9,
+  "text": "::1 ",
+  "cat": "K",
+  "note": "loopback"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 9,
+  "text": "fe80::1ff:fe23:4567:890a%eth0",
+  "cat": "D",
+  "note": "EUI-64 link-local: derived from the machine MAC, so replacing is defensible; keeping also (non-routable address)"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 9,
+  "text": "2001:db8::1",
+  "cat": "D",
+  "note": "RFC 3849 documentation"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 9,
+  "text": "2606:4700:4700::1111",
+  "cat": "R",
+  "note": "public IPv6"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 10,
+  "text": "2001:4860:4860:0:0:0:0:8888",
+  "cat": "R",
+  "note": "same address as the next, different notation: same alias expected"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 10,
+  "text": "2001:4860:4860::8888 ",
+  "cat": "R",
+  "note": "compressed notation"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 10,
+  "text": "::ffff:1.1.1.1",
+  "cat": "R",
+  "note": "mapped IPv4"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 10,
+  "text": "[2001:4860:4860::8888]:53",
+  "cat": "R",
+  "note": "IPv6 in brackets with port"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 11,
+  "text": "10.0.19045.5555",
+  "cat": "K",
+  "note": "Windows version (octets > 255)"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 11,
+  "text": "6.1.7601.17514",
+  "cat": "K",
+  "note": "version"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 11,
+  "text": "10.0.22621.2506",
+  "cat": "K",
+  "note": "version"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 11,
+  "text": "kernel=5.15.0.89",
+  "cat": "D",
+  "note": "valid IPv4 but preceded by \"kernel=\": context"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 12,
+  "text": "+0000",
+  "cat": "K",
+  "note": "timezone (not a phone)"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 12,
+  "text": "-0400",
+  "cat": "K",
+  "note": "timezone"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 12,
+  "text": "+02:00",
+  "cat": "K",
+  "note": "timezone"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 12,
+  "text": "1697035375.59012",
+  "cat": "K",
+  "note": "epoch.fraction"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 12,
+  "text": "0x00000000c000006d",
+  "cat": "K",
+  "note": "status code"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 13,
+  "text": "1234567890123456",
+  "cat": "K",
+  "note": "16 digits without Luhn"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 13,
+  "text": "9400111899223344556677",
+  "cat": "K",
+  "note": "tracking number"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 13,
+  "text": "luhnok=4111111111111111",
+  "cat": "D",
+  "note": "16 Luhn-valid digits BUT label \"luhnok\": without context, ambiguous"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 14,
+  "text": "date1=2026-03-12",
+  "cat": "K",
+  "note": "ordinary date"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 14,
+  "text": "date2=25/07/1991",
+  "cat": "K",
+  "note": "date without birth label"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 14,
+  "text": "dob=12/03/1987",
+  "cat": "R",
+  "note": "dob label"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 14,
+  "text": "birthdate=1987-03-12",
+  "cat": "R",
+  "note": "birthdate label"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 15,
+  "text": "0000000000",
+  "cat": "K",
+  "note": "only zeros"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 15,
+  "text": "1234567890",
+  "cat": "K",
+  "note": "digit sequence"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 15,
+  "text": "ref=01 23 45 67 89",
+  "cat": "D",
+  "note": "looks like a FR landline but labeled \"ref\""
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 16,
+  "text": "00:16:3e:5a:7b:9c",
+  "cat": "R",
+  "note": "MAC with :"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 16,
+  "text": "00-16-3e-5a-7b-9c",
+  "cat": "R",
+  "note": "MAC with -"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 16,
+  "text": "0016.3e5a.7b9c",
+  "cat": "R",
+  "note": "Cisco-style MAC"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 16,
+  "text": "time=10:15:32",
+  "cat": "K",
+  "note": "time"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 16,
+  "text": "short=aa:bb:cc",
+  "cat": "K",
+  "note": "only 3 octets"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 17,
+  "text": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cat": "K",
+  "note": "SHA-256"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 17,
+  "text": "d41d8cd98f00b204e9800998ecf8427e",
+  "cat": "K",
+  "note": "MD5"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 17,
+  "text": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "cat": "K",
+  "note": "SHA-1"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 18,
+  "text": "3f2504e0-4f89-11d3-9a0c-0305e82c3301",
+  "cat": "K",
+  "note": "UUID"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 18,
+  "text": "S-1-5-21-3623811015-3361044348-30300820-1013",
+  "cat": "D",
+  "note": "Windows SID"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 19,
+  "text": "jean.dupont@example.com.",
+  "cat": "R",
+  "note": "the trailing period does not belong to the email: do not swallow it, do not leave the email"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 19,
+  "text": "<jean.dupont@example.com>",
+  "cat": "R",
+  "note": "in angle brackets"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 19,
+  "text": "\"jean.dupont@example.com\"",
+  "cat": "R",
+  "note": "in quotes"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 19,
+  "text": "mailto:jean.dupont@example.com",
+  "cat": "R",
+  "note": "mailto:"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 20,
+  "text": "marie.curie@example.org",
+  "cat": "R",
+  "note": "comma-separated list"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 20,
+  "text": "paul@x.org",
+  "cat": "R",
+  "note": "after a ;"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 20,
+  "text": "name@sub.domain.co.uk",
+  "cat": "R",
+  "note": "subdomains"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 21,
+  "text": "user@localhost",
+  "cat": "D",
+  "note": "without TLD"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 21,
+  "text": "foo@bar",
+  "cat": "D",
+  "note": "without TLD"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 21,
+  "text": "a@b.c",
+  "cat": "D",
+  "note": "one-letter TLD: invalid"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 21,
+  "text": "élodie@fakecorp.org",
+  "cat": "R",
+  "note": "Unicode local part"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 21,
+  "text": "jean@café.fr",
+  "cat": "R",
+  "note": "IDN domain"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 22,
+  "text": "@mention",
+  "cat": "K",
+  "note": "mention"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 22,
+  "text": "@Override",
+  "cat": "K",
+  "note": "annotation"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 22,
+  "text": "git@github.com:fakecorp/crm.git",
+  "cat": "D",
+  "note": "SSH git: looks like an email, but \"git\" is a generic account"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 23,
+  "text": "jean.dupont&#64;example.com",
+  "cat": "D",
+  "note": "@ as an HTML entity: evasion"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 23,
+  "text": "exa​mple.com",
+  "cat": "D",
+  "note": "zero-width character in the domain: evasion"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 23,
+  "text": "jean.dupont%40example.com",
+  "cat": "R",
+  "note": "@ encoded as %40"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 24,
+  "text": "/home/camille/.ssh/id_rsa",
+  "cat": "R",
+  "note": "account in a Unix path"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 24,
+  "text": "C:\\Users\\camille\\Desktop",
+  "cat": "R",
+  "note": "account in a Windows path"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 24,
+  "text": "\\\\srv-fichiers\\homes\\camille",
+  "cat": "R",
+  "note": "UNC"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 24,
+  "text": "file:///home/camille/doc.txt",
+  "cat": "R",
+  "note": "file:// URL"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 24,
+  "text": "~camille/",
+  "cat": "R",
+  "note": "~user"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 25,
+  "text": "user:pass@",
+  "cat": "S",
+  "note": "credentials in the URL"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 25,
+  "text": "anonymous:guest@",
+  "cat": "D",
+  "note": "anonymous FTP: not a real secret"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 26,
+  "text": "hunter2",
+  "cat": "S",
+  "note": "password="
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 26,
+  "text": "p@ss w0rd",
+  "cat": "S",
+  "note": "quoted value with space"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 26,
+  "text": "{{sk_test}}4eC39HqLyjWDarjtT1zdp7dc",
+  "cat": "S",
+  "note": "API key"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 26,
+  "text": "abc123",
+  "cat": "S",
+  "note": "secret: …"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 27,
+  "text": "password policy updated",
+  "cat": "K",
+  "note": "the word \"password\" is not a value"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 27,
+  "text": "reset password link sent",
+  "cat": "K",
+  "note": "same"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 27,
+  "text": "secret santa 2026",
+  "cat": "K",
+  "note": "same"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 28,
+  "text": "/billing/address",
+  "cat": "K",
+  "note": "URL path containing the word \"address\": not a postal address"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 28,
+  "text": "field=address",
+  "cat": "K",
+  "note": "the word \"address\" alone"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 29,
+  "text": "host=localhost",
+  "cat": "K",
+  "note": "localhost"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 29,
+  "text": "host=prod-web-01",
+  "cat": "R",
+  "note": "internal hostname"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 29,
+  "text": "db.fakecorp.local",
+  "cat": "R",
+  "note": "internal FQDN"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 29,
+  "text": "host=ubuntu-server",
+  "cat": "D",
+  "note": "default Ubuntu hostname"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 29,
+  "text": "from=mail.google.com",
+  "cat": "D",
+  "note": "public domain name"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 30,
+  "text": "zip=75011",
+  "cat": "D",
+  "note": "postal code with label"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 30,
+  "text": "pid=75011",
+  "cat": "K",
+  "note": "PROPAGATION: a short value seen as postal code must not destroy the other numeric fields in the file"
+ },
+ {
+  "file": "06-edge-cases.log",
+  "line": 30,
+  "text": "size=75011",
+  "cat": "K",
+  "note": "same"
+ },
+ {
+  "file": "07-stress.log",
+  "line": 6,
+  "text": "camille.rousseau@fakecorp.org",
+  "cat": "R",
+  "note": "a real value buried in the middle of a 50,000-character line: must be found, fast"
+ },
+ {
+  "file": "07-stress.log",
+  "line": 6,
+  "text": "06 12 34 56 78",
+  "cat": "R",
+  "note": "same for the phone"
+ },
+ {
+  "file": "07-stress.log",
+  "line": 9,
+  "text": "user=camille.rousseau",
+  "cat": "R",
+  "note": "the last, normal line must be processed correctly after the pathological lines"
+ },
+ {
+  "file": "07-stress.log",
+  "line": 9,
+  "text": "ip=8.8.8.8",
+  "cat": "R",
+  "note": "same"
+ }
+]

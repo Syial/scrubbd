@@ -1,0 +1,18 @@
+type=USER_AUTH msg=audit(1697270072.123:456): pid=3055 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:authentication acct="sobrien" exe="/usr/sbin/sshd" hostname=185.199.108.153 addr=185.199.108.153 terminal=ssh res=failed'
+type=USER_LOGIN msg=audit(1697270100.001:457): pid=3100 uid=0 auid=1001 ses=3 subj=unconfined msg='op=login id=1001 exe="/usr/sbin/sshd" hostname=PC-LMOREAU addr=10.30.4.17 terminal=/dev/pts/0 res=success'
+type=EXECVE msg=audit(1697270200.500:458): argc=4 a0="curl" a1="-u" a2="lea.moreau:Summer2026!" a3="https://intranet.fakecorp.local/api"
+type=PROCTITLE msg=audit(1697270200.500:458): proctitle=6375726C202D75206C65612E6D6F726561753A53756D6D657232303236212068747470733A2F2F696E7472616E65742E66616B65636F72702E6C6F63616C2F617069
+type=SYSCALL msg=audit(1697270200.500:458): arch=c000003e syscall=59 success=yes exit=0 a0=55d0a1b2 a1=55d0a1c3 a2=55d0a1d4 a3=7ffc1234 items=2 ppid=1000 pid=1234 auid=1001 uid=1001 gid=1001 euid=0 suid=0 fsuid=0 egid=1001 sgid=1001 fsgid=1001 tty=pts0 ses=3 comm="sudo" exe="/usr/bin/sudo" key="priv_esc"
+type=PATH msg=audit(1697270300.000:459): item=0 name="/home/lea.moreau/.ssh/id_rsa" inode=262344 dev=08:01 mode=0100600 ouid=1001 ogid=1001 rdev=00:00 nametype=NORMAL
+type=USER_CMD msg=audit(1697270400.000:460): pid=4000 uid=1001 auid=1001 ses=3 subj=unconfined msg='cwd="/home/lea.moreau" cmd=2F7573722F62696E2F636174202F6574632F736861646F77 exe="/usr/bin/sudo" terminal=pts/0 res=success'
+Oct 14 08:10:00 srv-web01 sudo:  lea.moreau : TTY=pts/0 ; PWD=/home/lea.moreau ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Oct 14 08:10:30 srv-web01 sudo: pam_unix(sudo:auth): authentication failure; logname=lea.moreau uid=1001 euid=0 tty=/dev/pts/0 ruser=lea.moreau rhost=  user=lea.moreau
+Oct 14 08:11:00 srv-web01 su: (to root) lea.moreau on pts/0
+Oct 14 08:12:00 srv-web01 useradd[2000]: new user: name=jb.delafontaine, UID=1005, GID=1005, home=/home/jb.delafontaine, shell=/bin/bash, from=/dev/pts/0
+Oct 14 08:13:00 srv-web01 passwd[2010]: pam_unix(passwd:chauthtok): password changed for sobrien
+Oct 14 08:14:00 srv-web01 login[900]: FAILED LOGIN 3 FROM tty1 FOR lea.moreau, Authentication failure
+Oct 14 08:15:00 srv-web01 sshd[3200]: Accepted publickey for lea.moreau from 10.30.4.17 port 49822 ssh2: ED25519 SHA256:q3XvK0lYk1m5P7nJbGf0eE3a1Jx4yq0Z8s0t5uH2vRk
+Oct 14 08:16:00 srv-web01 sshd[3201]: Invalid user admin from 185.199.108.153 port 60000
+Oct 14 08:17:00 srv-web01 systemd-logind[700]: New session 3 of user lea.moreau.
+Oct 14 08:18:00 srv-web01 CRON[5000]: (lea.moreau) CMD (/home/lea.moreau/backup.sh >/dev/null 2>&1)
+Oct 14 08:19:00 srv-web01 polkitd[650]: Registered Authentication Agent for unix-session:3 (system bus name :1.45 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale fr_FR.UTF-8)

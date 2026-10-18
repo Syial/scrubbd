@@ -1,0 +1,10 @@
+id;civilite;nom;prenom;email;telephone;adresse;code_postal;ville;date_naissance;iban;societe;commentaire;ip_inscription;derniere_connexion
+1;Mme;Lambert;Chloé;chloe.lambert@example.com;06 12 34 56 78;12 rue des Lilas;69003;Lyon;03/05/1987;FR76 3000 6000 0112 3456 7890 189;;Cliente fidèle;91.198.174.192;2026-10-14 08:00:00
+2;M.;"DE LA FONTAINE";Jean-Baptiste;jb.delafontaine@example.org;+33 6 98 76 54 32;"5, impasse des Roses";31000;Toulouse;1991-11-27;GB82 WEST 1234 5698 7654 32;Lemaire & Fils;"A rappeler; demander Mme Girard";185.199.108.153;2026-10-13 17:22:10
+3;M.;O'Brien;Siobhán;sobrien@example.net;+44 7700 900123;221B Baker Street;NW1 6XE;London;27 March 1990;;;;45.33.32.156;
+4;Mme;Nguyễn;Văn An;an.nguyen@example.com;(0)1 23 45 67 89;3 avenue Victor Hugo;75016;Paris;12-07-1985;DE89 3704 0044 0532 0130 00;SARL Dubois;"Né à Hanoï, parle vietnamien";104.16.132.229;2026-10-12 09:00:00
+5;;Kowalski-Dubois;Zoë;;;;;;;;;N/A;;
+6;Dr;Martin;Pierre;pierre.martin@example.com;0033612345678;8 bd de la République;13001;Marseille;1978-01-15;;Martin & Fils SARL;Contact principal;216.58.214.174;2026-10-14 07:55:00
+7;Mme;Girard;Camille;camille.girard@example.net;06.12.34.56.78;40 quai des Chartrons;33000;Bordeaux;15/08/2001;;;"Mineure ? vérifier";2606:4700:4700::1111;2026-10-14 08:30:00
+8;M.;Petit;Hugo;h.petit@example.com;0612345678;1 place Bellecour BP 123;69002;Lyon CEDEX 02;1969-12-31;FR1420041010050500013M02606;;;151.101.1.69;2026-10-14 08:31:00
+;;;;;;;;;;;;;;

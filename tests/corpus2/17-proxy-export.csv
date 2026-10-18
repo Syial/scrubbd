@@ -1,0 +1,7 @@
+"Date","Time","User","ClientIP","Method","URL","Category","Bytes","Action"
+"2026-10-14","08:01:12","lea.moreau@fakecorp.org","10.30.4.17","GET","https://github.com/fakecorp/crm-private","Source Code","12345","Allowed"
+"2026-10-14","08:02:00","-","10.30.4.52","GET","https://www.example.com/search?q=dupont,jean&tel=0612345678","Search Engines","900","Allowed"
+"2026-10-14","08:03:00","FAKECORP\sobrien","10.30.4.60","POST","https://webmail.example.net/compose?to=h.lambert@example.net&subject=Facture ""2026-0451""","Web Email","4410","Blocked"
+"2026-10-14","08:04:00","","10.30.4.60","CONNECT","cloud.example.net:443","Cloud Storage","0","Allowed"
+"2026-10-14","08:05:00","jb.delafontaine@fakecorp.org","2606:4700:4700::1111","GET","https://vpn.fakecorp.org/dana-na/auth/url_default/welcome.cgi","Business","210","Allowed"
+"2026-10-14","08:06:00","m.elamrani@fakecorp.org","10.30.4.52","GET","https://intranet.fakecorp.local/api?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c","Intranet","333","Allowed"

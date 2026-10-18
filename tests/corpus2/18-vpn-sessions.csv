@@ -1,0 +1,7 @@
+utilisateur;nom_complet;ip_publique;ip_attribuee;appareil;mac;debut;fin;octets_rx;octets_tx;pays;latitude;longitude;version_client
+lea.moreau;Léa Moreau;91.198.174.192;10.30.50.12;PC-LMOREAU;aa:bb:cc:11:22:33;2026-10-14 08:00:01;2026-10-14 12:03:44;1048576;524288;FR;48,8566;2,3522;5.2.1.1234
+m.elamrani;Mehdi El Amrani;151.101.1.69;10.30.50.13;iPhone de Mehdi;b8:27:eb:12:34:56;2026-10-14 08:10:00;2026-10-14 09:00:00;2048;1024;MA;33,5731;-7,5898;5.2.1.1234
+jb.delafontaine;Jean-Baptiste de La Fontaine;185.199.108.153;10.30.50.14;Galaxy-S23-de-Jean-Baptiste;;2026-10-14 08:15:00;;0;0;;;;5.1.9.890
+ext_pbernard;Paul Bernard (prestataire);140.82.112.3;10.30.50.15;MBP-PBERNARD;ac:de:48:00:11:22;2026-10-14 08:20:00;2026-10-14 08:21:00;12;12;BE;50,8503;4,3517;5.2.1.1234
+nguyen.van.an;Nguyễn Văn An;216.58.214.174;10.30.50.16;PC-ANGUYEN;02:42:ac:11:00:02;2026-10-14 08:30:00;2026-10-14 08:31:00;100;100;VN;10,8231;106,6297;5.2.1.1234
+admin;Administrateur;10.30.4.5;10.30.50.1;SRV-VPN01;;2026-10-14 00:00:00;;0;0;;;;5.2.1.1234

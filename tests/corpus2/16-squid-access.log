@@ -1,0 +1,7 @@
+1697270400.123     456 10.30.4.17 TCP_MISS/200 12345 GET https://github.com/fakecorp/crm-private/archive/main.zip lea.moreau HIER_DIRECT/140.82.112.3 application/zip
+1697270401.200      12 10.30.4.17 TCP_TUNNEL/200 5120 CONNECT www.google.com:443 - HIER_DIRECT/216.58.214.174 -
+1697270402.300      80 10.30.4.52 TCP_MISS/200 900 GET http://lea.moreau:Summer2026!@ftp.example.net/pub/ m.elamrani HIER_DIRECT/93.184.216.34 text/html
+1697270403.400       3 2606:4700:4700::1111 NONE_NONE/400 3650 GET error:invalid-request - HIER_NONE/- text/html
+1697270404.500      22 10.30.4.60 TCP_DENIED/403 4120 GET http://www.example.com/track?email=hugo.lambert%40example.net&utm_source=newsletter FAKECORP%5Csobrien HIER_NONE/- text/html
+1697270405.600     130 pc-lmoreau.fakecorp.local TCP_HIT/200 2210 GET http://intranet.fakecorp.local/~sobrien/cv.pdf - HIER_NONE/- application/pdf
+1697270406.700    9000 10.30.4.17 TCP_MISS_ABORTED/000 0 POST https://upload.example.net/api/v1/files?token={{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ lea.moreau HIER_DIRECT/104.16.132.229 -

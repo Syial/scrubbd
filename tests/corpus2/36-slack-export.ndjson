@@ -1,0 +1,7 @@
+{"type":"message","user":"U024BE7LH","text":"Peux-tu appeler Hugo Lambert au 06 98 76 54 32 ? son mail <mailto:h.lambert@example.net|h.lambert@example.net>","ts":"1697270072.000100","team":"T024BE7LD","user_profile":{"real_name":"Léa Moreau","display_name":"lea.m","name":"lea.moreau","email":"lea.moreau@fakecorp.org"}}
+{"type":"message","user":"U061F7AUR","text":"<@U024BE7LH> oui, je m'en occupe. Dossier de Siobhán O'Brien aussi ?","ts":"1697270100.000200","team":"T024BE7LD"}
+{"type":"message","user":"U061F7AUR","text":"voici le token : {{xoxb}}123456789012-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx et le mdp de la base : S3cr3t!2026","ts":"1697270200.000300","team":"T024BE7LD"}
+{"type":"message","user":"U024BE7LH","text":"mon IBAN pour le remboursement : FR76 3000 6000 0112 3456 7890 189","ts":"1697270300.000400","team":"T024BE7LD","files":[{"id":"F0123","name":"CV_Siobhan_OBrien.pdf","url_private":"https://files.slack.com/files-pri/T024BE7LD-F0123/cv_siobhan_obrien.pdf"}]}
+{"type":"message","user":"U061F7AUR","text":"le serveur est sur 10.30.1.20 (ssh sobrien@10.30.1.20) et la page https://intranet.fakecorp.local/wiki/rh","ts":"1697270400.000500","team":"T024BE7LD"}
+{"type":"message","user":"U024BE7LH","text":"rdv au 12 rue des Lilas, 69003 Lyon ce soir, 19h30 :wink:","ts":"1697270500.000600","team":"T024BE7LD"}
+{"type":"message","subtype":"channel_join","user":"U061F7AUR","text":"<@U061F7AUR> has joined the channel","ts":"1697270600.000700"}

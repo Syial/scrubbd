@@ -1,0 +1,17 @@
+# Git does not support {a,b} brace patterns: one pattern per line.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.zip binary
+*.gz binary
+
+# Corpora: collapsed by default in GitHub diffs and left out of language stats.
+# No `-diff` on purpose: corpus changes must stay reviewable in `git diff`.
+tests/corpus*/** linguist-generated=true

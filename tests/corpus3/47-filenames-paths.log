@@ -1,0 +1,8 @@
+type=PATH msg=audit(1697271600.100:101): item=0 name="/home/nrousseau/Documents/Contrat_Marchand_Thibault.pdf" inode=1234 dev=08:01 mode=0100644 ouid=1001
+\\srv-files01\RH\Paie\2026\Bulletin_Carvalho_Ines_09.pdf
+C:\Users\Océane.Lefèvre\Desktop\scan_cni_Haddad.jpg
+10.60.4.8 - - [14/Oct/2026:09:50:00 +0200] "GET /download?file=facture-2026-09_ROUSSEAU.pdf&dl=1 HTTP/1.1" 200 88211
+s3://acmecorp-hr-docs/2026/contrats/CDI_Marchand.pdf
+ls -la /var/mail/ines.carvalho /home/yhaddad/.ssh/id_ed25519
+rm -rf /tmp/export_clients_Rousseau_Nadia/
+Created file 'CV_Carvalho.docx' in 'Recrutement 2026/Candidats/Haddad Yanis'

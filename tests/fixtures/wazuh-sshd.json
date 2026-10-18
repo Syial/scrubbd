@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-11T14:40:12.884+0200",
+  "rule": {
+    "level": 5,
+    "description": "SSHD authentication success.",
+    "id": "5715",
+    "firedtimes": 1
+  },
+  "agent": {
+    "id": "004",
+    "name": "prod-web-01",
+    "ip": "172.16.42.10"
+  },
+  "manager": {
+    "name": "wazuh-manager"
+  },
+  "id": "1697035212.44810",
+  "decoder": {
+    "name": "sshd"
+  },
+  "data": {
+    "srcip": "198.51.100.12",
+    "dstuser": "thomas.dubois",
+    "systemname": "ubuntu-server"
+  },
+  "location": "/var/log/auth.log"
+}

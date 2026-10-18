@@ -1,0 +1,10 @@
+2026-10-14 09:15:42,871 - app.auth - INFO - login ok for nadia.rousseau from 192.168.50.23
+2026-10-14 09:15:43.002 [pool-3-thread-2] SEVERE c.a.Billing - payment failed for Thibault Marchand card 4111111111111111
+[2026-10-14 09:15:44.310] FATAL: disk full on db-prod-07.acmecorp.local
+2026-10-14T09:15:45.871+02:00 srv-erp01 erpd[812]: TRACE session 4412 opened for ines.carvalho
+Oct 14 09:15:47 srv-erp01 CRON[991]: (yhaddad) CMD (/opt/erp/backup.sh >/dev/null 2>&1)
+2026-10-14 09:15:48,100 CRITICAL [main] Watchdog - uptime 12:03:44 load 0.15 0.10 0.05
+2026-10-14 09:15:49.001 DEBUG Retrying in 00:00:05.123 (attempt 2/5) for user=Océane Lefèvre
+2026-10-14 09:15:50,000 NOTICE  audit: user=Nadia Rousseau role=ADMIN action=DELETE rows=3 target=/srv/erp/export/clients_2026.csv
+2026-10-14 09:15:51,444 WARNING db: connection to db-prod-07.acmecorp.local:5432 as svc_deploy refused (password=Hiver2026!)
+2026-10-14 09:15:52.000 INFO  Scheduler - next run 2026-10-15 02:00:00 (in 16:44:08), build 7.3.1.2210 on java 21.0.2

@@ -1,0 +1,20 @@
+Oct 12 02:11:03 srv-bastion-01 sshd[18211]: Invalid user oracle from 45.33.32.156 port 51822
+Oct 12 02:11:05 srv-bastion-01 sshd[18211]: Failed password for invalid user oracle from 45.33.32.156 port 51822 ssh2
+Oct 12 02:11:40 srv-bastion-01 sshd[18211]: Failed password for root from 45.33.32.20 port 40012 ssh2
+Oct 12 07:58:12 srv-bastion-01 sshd[19002]: Accepted publickey for crousseau from 10.20.30.45 port 49822 ssh2: RSA SHA256:q3XvK0lYk1m5P7nJbGf0eE3a1Jx4yq0Z8s0t5uH2vRk
+Oct 12 07:58:12 srv-bastion-01 sshd[19002]: pam_unix(sshd:session): session opened for user crousseau(uid=1001) by (uid=0)
+Oct 12 08:03:55 srv-bastion-01 sudo:  crousseau : TTY=pts/0 ; PWD=/home/crousseau ; USER=root ; COMMAND=/usr/bin/vim /etc/hosts
+Oct 12 08:10:21 srv-bastion-01 sshd[19050]: Failed password for m.benali from 2001:db8:85a3::8a2e:370:7334 port 60001 ssh2
+Oct 12 08:12:00 srv-bastion-01 sshd[19050]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=8.8.4.4  user=m.benali
+Oct 12 08:12:44 srv-bastion-01 sshd[19061]: Failed password for efontaine from 8.8.8.8 port 33210 ssh2
+Oct 12 09:00:01 srv-bastion-01 CRON[19210]: pam_unix(cron:session): session opened for user backup by (uid=0)
+Oct 12 09:30:17 srv-compta-01.fakecorp.local sshd[2210]: Accepted password for FAKECORP\mbenali from 10.20.31.7 port 50122 ssh2
+Oct 12 09:45:02 srv-bastion-01 sshd[19400]: Received disconnect from 1.0.0.1 port 22: 11: Bye Bye [preauth]
+Oct 12 10:02:00 srv-bastion-01 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=00:16:3e:5a:7b:9c:b8:27:eb:12:34:56:08:00 SRC=1.1.1.1 DST=10.20.30.2 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=54321 DF PROTO=TCP SPT=44321 DPT=22 WINDOW=64240 RES=0x00 SYN URGP=0
+Oct 12 10:30:00 srv-bastion-01 sshd[19500]: Server listening on 0.0.0.0 port 22.
+Oct 12 10:30:00 srv-bastion-01 sshd[19500]: Server listening on :: port 22.
+Oct 12 10:31:12 srv-bastion-01 sshd[19511]: error: kex_exchange_identification: Connection closed by remote host
+Oct 12 10:32:01 srv-bastion-01 sshd[19520]: Connection from 192.168.1.10 port 54022 on 192.168.1.1 port 22 rdomain ""
+Oct 12 10:40:00 srv-bastion-01 sshd[19600]: Failed password for invalid user camille.rousseau@fakecorp.org from 8.8.8.9 port 22222 ssh2
+Oct 12 11:05:30 srv-bastion-01 sshd[19700]: Accepted keyboard-interactive/pam for jdupont from 9.9.9.9 port 41000 ssh2
+Oct 12 11:06:00 srv-bastion-01 bash[19710]: root@srv-bastion-01:~# cat /etc/passwd

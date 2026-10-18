@@ -1,0 +1,10 @@
+$cred = New-Object System.Net.NetworkCredential('nrousseau','Printemps2026!','ACMECORP')
+Get-ADUser -Identity t.marchand -Properties * | Select Name,EmailAddress
+Invoke-Command -ComputerName PC-ICARVALHO -ScriptBlock { Get-Process }
+Start-Process -FilePath C:\Users\yhaddad\AppData\Local\Temp\upd.exe -ArgumentList '/s'
+$secure = ConvertTo-SecureString 'Ete#2026x' -AsPlainText -Force; Connect-AzAccount -Credential (Get-Credential)
+Set-ADAccountPassword -Identity icarvalho -NewPassword (ConvertTo-SecureString 'Aut0mne-2026' -AsPlainText -Force) -Reset
+net user o.lefevre Sup3rS3cret! /add /domain
+schtasks /create /tn "Backup-Nightly" /tr "C:\Scripts\backup.bat" /sc daily /ru ACMECORP\svc_deploy /rp Pa$$w0rd2026
+wmic /node:"srv-erp01" /user:"ACMECORP\nrousseau" /password:"Lundi2026!" process call create "cmd.exe"
+Enter-PSSession -ComputerName db-prod-07.acmecorp.local -Credential ACMECORP\t.marchand

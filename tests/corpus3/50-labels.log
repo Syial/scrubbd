@@ -1,0 +1,6 @@
+src_user=nrousseau dest_user=t.marchand src_ip=192.168.50.23 dest_ip=172.16.8.10 action=allowed
+{"client_ip":"192.168.50.23","username":"icarvalho","hostname":"PC-ICARVALHO","event":"login","status":"ok"}
+Account Name:		nrousseau
+user_name: Yanis Haddad ; email_address: y.haddad@acmecorp.fr ; phone: +33 6 11 22 33 44
+<user name="t.marchand" ip="192.168.50.41"/>
+Reporting-User: Océane Lefèvre | Reporting-Host: PC-OLEFEVRE | Reporting-IP: 172.16.8.99

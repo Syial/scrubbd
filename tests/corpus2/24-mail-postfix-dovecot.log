@@ -1,0 +1,14 @@
+Oct 14 08:01:00 mx1 postfix/smtpd[1000]: connect from unknown[185.199.108.153]
+Oct 14 08:01:01 mx1 postfix/smtpd[1000]: NOQUEUE: reject: RCPT from unknown[185.199.108.153]: 554 5.7.1 <spammer@evil-example.test>: Relay access denied; from=<spammer@evil-example.test> to=<lea.moreau@fakecorp.org> proto=ESMTP helo=<mail.evil-example.test>
+Oct 14 08:02:00 mx1 postfix/qmgr[1010]: 4F2A1B2C3D: from=<h.lambert@example.net>, size=4521, nrcpt=1 (queue active)
+Oct 14 08:02:01 mx1 postfix/smtp[1020]: 4F2A1B2C3D: to=<lea.moreau@fakecorp.org>, relay=mail.fakecorp.org[10.30.1.25]:25, delay=1.2, delays=0.1/0.01/0.2/0.9, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 7A8B9C0D1E)
+Oct 14 08:02:02 mx1 postfix/cleanup[1030]: 4F2A1B2C3D: message-id=<20261014080112.4F2A1B2C3D@mail.example.net>
+Oct 14 08:03:00 mx1 postfix/smtpd[1040]: 5A6B7C8D9E: client=pc-lmoreau.fakecorp.local[10.30.4.17], sasl_method=PLAIN, sasl_username=lea.moreau@fakecorp.org
+Oct 14 08:04:00 mx1 dovecot: imap-login: Login: user=<lea.moreau@fakecorp.org>, method=PLAIN, rip=91.198.174.192, lip=10.30.1.25, mpid=12345, TLS, session=<abc123XYZ+/0>
+Oct 14 08:04:30 mx1 dovecot: imap(lea.moreau@fakecorp.org)<4521><abc123XYZ+/0>: Disconnected: Logged out in=123 out=456
+Oct 14 08:05:00 mx1 dovecot: pop3-login: Aborted login (auth failed, 1 attempts in 2 secs): user=<h.lambert@example.net>, method=PLAIN, rip=185.199.108.153, lip=10.30.1.25, session=<zzz999>
+Oct 14 08:06:00 mx1 postfix/smtpd[1050]: warning: unknown[185.199.108.153]: SASL LOGIN authentication failed: UGFzc3dvcmQ6
+Oct 14 08:06:30 mx1 postfix/smtpd[1050]: warning: unknown[185.199.108.153]: SASL PLAIN authentication failed: AGxlYS5tb3JlYXVAZmFrZWNvcnAub3JnAFN1bW1lcjIwMjYh
+Oct 14 08:07:00 mx1 spamd[500]: spamd: result: Y 12 - BAYES_99,URIBL_BLOCKED scantime=1.2,size=4521,user=lea.moreau,uid=1001,required_score=5.0,rhost=::1,raddr=::1,rport=39222,mid=<20261014080112.4F2A1B2C3D@mail.example.net>,bayes=0.99,autolearn=no
+Oct 14 08:08:00 mx1 opendkim[600]: 4F2A1B2C3D: s=default d=example.net SSL
+Oct 14 08:09:00 mx1 postfix/bounce[1060]: 6B7C8D9E0F: sender non-delivery notification: 8C9D0E1F2A
